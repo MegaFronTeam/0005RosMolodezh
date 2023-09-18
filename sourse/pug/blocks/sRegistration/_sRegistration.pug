@@ -1,0 +1,23 @@
+mixin sRegistration(data)
+	// start sRegistration
+	+b.SECTION.sRegistration.section#sRegistration&attributes(attributes)
+		.container-fluid
+			+img('img/logo.svg')
+			+e.content
+				.section-title
+					+e.return-link
+						+icon('arrow-left')
+					+e.header.h1 Регистрация работника
+				+form-wrap
+					+e.row.row
+						.col-4
+							+input('Фамилия','text')
+						.col-4
+							+input('Имя','text')
+						.col-4
+							+input('Отчество','text')
+						.col-6
+							+input('Отчество','text')
+						.col-6
+							+input('E-mail','email')
+	// end sRegistration

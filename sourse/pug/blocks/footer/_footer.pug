@@ -1,0 +1,17 @@
+mixin footer()
+	+b.FOOTER.footer.section
+		.container
+			+e.row.row
+				.col-12.col-lg-6
+					address 
+						+e.title Адрес
+						p 109028, Москва, Большой Трехсвятительский переулок, д. 2/1, стр. 2, станция метро «Китай-город»
+				.col-6.col-sm-4.col-lg-2
+						+e.title Понедельник - Четверг
+						+e.schedule 9:00-18:00
+				.col-6.col-sm-4.col-lg-2
+						+e.title Пятница
+						+e.schedule  9:00-16:45
+				.col-sm-4.col-lg-2
+						+e.tel(href="tel:+74956688008") Телефон Росмолодёжи
+			+e.copyright © 2008-2023 Федеральное агентство по делам молодёжи (Росмолодёжь)

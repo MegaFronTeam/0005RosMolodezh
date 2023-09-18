@@ -1,0 +1,37 @@
+mixin sEnter(data)
+	// start sEnter
+	+b.SECTION.sEnter.section#sEnter&attributes(attributes)
+		.container-fluid
+			+img('img/logo.svg')
+			+e.content
+				+e.tabs.tabs
+					+e.tabs-caption.tabs__caption
+						+e.tabs-btn.tabs__btn.active Вход для работника
+						+e.tabs-btn.tabs__btn Вход для организации
+					+e.tabs-content.tabs__content.active
+						+form-wrap
+							.row
+								.col-12
+									+input("E-mail",'text')(required)
+								.col-12
+									+input("Пароль",'password')(required)
+								+e.btn-col.col-12.col-sm-6
+									+btn("Забыли пароль?").btn.btn-secondary
+								+e.btn-col.col-12.col-sm-6
+									+btn("Войти").btn.btn-primary
+					+e.tabs-content.tabs__content
+						+form-wrap
+							.row
+								.col-12
+									+input("ИНН",'number')(required)
+								.col-12
+									+input("Пароль",'password')(required)
+								+e.btn-col.col-12.col-sm-6
+									+btn("Забыли пароль?").btn.btn-secondary
+								+e.btn-col.col-12.col-sm-6
+									+btn("Войти").btn.btn-primary
+				+e.registration
+					+btn("Зарегистрироваться как работник").btn.btn-accent
+					+btn("Зарегистрироваться как юр. лицо").btn.btn-primary
+
+	// end sEnter
