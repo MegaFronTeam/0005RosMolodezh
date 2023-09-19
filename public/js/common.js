@@ -62,6 +62,40 @@ function eventHandler() {
 
 	});
 
+	function inputFile(){
+		if (document.querySelector('.upload-field__input-wrap')){
+			let uploadField = document.querySelectorAll('.upload-field__input-wrap');
+			for (let i=0;i<uploadField.length;i++){
+				let inputFile = uploadField[i].querySelector('.input-upload');
+				inputFile.addEventListener('change',() => uploadField[i].querySelector('.upload-field__file-name').innerHTML = inputFile.files[0].name);
+			}
+		}
+	}
+	inputFile();
+	
+	const floatSelect = function(select) {
+		return function() {
+			// let fName = $('.selectize-input');
+			console.log(select);
+			// $('.selectize-input').append('<div class="float-select"><span class="name">' + fName + '</span></div>');
+		};
+	}
+	$("select").each(function(){
+		$(this).selectize();
+	});
+		
+		
+	// 	selectize({
+	// 	placeholder: 'Тип',
+	// 	// plugins: ["restore_on_backspace", "clear_button"],
+	// 	onFocus: function() {
+	// 		let keys = Object.keys(this.options);
+	// 		let fName = this.options[keys[0]].text;
+	// 		customSelect.append('<div class="float-select"><span class="name">' + fName + '</span></div>');
+	// 		// console.log(this.placeholder);
+	// 	},
+  // });
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

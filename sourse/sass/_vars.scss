@@ -44,7 +44,7 @@ $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #DAEF14 !default;
-$teal:    #20c997 !default;
+$teal:    #16b6691a !default;
 $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
 
@@ -301,7 +301,7 @@ $cyans: (
 $accent:    $green !default;
 $primary:       $indigo !default;
 $secondary:     rgba(140, 100, 216, 0.10) !default;
-$success:       $green !default;
+$success:       $teal !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
@@ -489,7 +489,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  // xxl: 1400px
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -506,8 +506,8 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
+  xl: 1144px,
+  // xxl: 1320px
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -938,9 +938,9 @@ $form-color-width:                      3rem !default;
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
-$form-check-input-width:                  1em !default;
-$form-check-min-height:                   $font-size-base * $line-height-base !default;
-$form-check-padding-start:                $form-check-input-width + .5em !default;
+$form-check-input-width:                  20px !default;
+$form-check-min-height:                   20px !default;
+$form-check-padding-start:                28px !default;
 $form-check-margin-bottom:                .125rem !default;
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
@@ -1064,20 +1064,20 @@ $form-range-thumb-transition:              background-color .15s ease-in-out, bo
 // scss-docs-end form-range-variables
 
 // scss-docs-start form-file-variables
-$form-file-button-color:          $input-color !default;
-$form-file-button-bg:             var(--#{$prefix}tertiary-bg) !default;
+$form-file-button-color:          $primary !default;
+$form-file-button-bg:             #8c64d81a !default;
 $form-file-button-hover-bg:       var(--#{$prefix}secondary-bg) !default;
 // scss-docs-end form-file-variables
 
 // scss-docs-start form-floating-variables
-$form-floating-height:                  add(3.5rem, $input-height-border) !default;
+$form-floating-height:                  56px !default;
 $form-floating-line-height:             1.25 !default;
-$form-floating-padding-x:               $input-padding-x !default;
-$form-floating-padding-y:               1rem !default;
+$form-floating-padding-x:               rem(16) !default;
+$form-floating-padding-y:               rem(15) !default;
 $form-floating-input-padding-t:         1.625rem !default;
 $form-floating-input-padding-b:         .625rem !default;
 $form-floating-label-height:            1.5em !default;
-$form-floating-label-opacity:           .65 !default;
+$form-floating-label-opacity:           1 !default;
 $form-floating-label-transform:         scale(.85) translateY(-.5rem) translateX(.15rem) !default;
 $form-floating-label-disabled-color:    $gray-600 !default;
 $form-floating-transition:              opacity .1s ease-in-out, transform .1s ease-in-out !default;
@@ -1546,10 +1546,10 @@ $modal-scale-transform:             scale(1.02) !default;
 // Define alert colors, border radius, and padding.
 
 // scss-docs-start alert-variables
-$alert-padding-y:               $spacer !default;
-$alert-padding-x:               $spacer !default;
+$alert-padding-y:               8px !default;
+$alert-padding-x:               8px !default;
 $alert-margin-bottom:           1rem !default;
-$alert-border-radius:           var(--#{$prefix}border-radius) !default;
+$alert-border-radius:           4px !default;
 $alert-link-font-weight:        $font-weight-bold !default;
 $alert-border-width:            var(--#{$prefix}border-width) !default;
 $alert-dismissible-padding-r:   $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side

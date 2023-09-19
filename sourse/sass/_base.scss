@@ -135,6 +135,9 @@ main{
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	&--link {
+		display: flex;
+	}
 }
 
 .btn-primary {
@@ -170,6 +173,41 @@ main{
 	}
 }
 
+.alert {
+	position: relative;
+	padding: 16px;
+	padding-left: 40px;
+	border-radius: 4px;
+	&::before {
+		position: absolute;
+		content: '';
+		left: 16px;
+		top: 16px;
+		width: 16px;
+		height: 16px;
+	}
+	&--success {
+		background: rgba(22, 182, 105, 0.10);
+		&::before {
+			background-image: url('../img/ok.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+	&__title {
+		margin-bottom: 8px;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 140%;
+	}
+	p {
+		margin-bottom: 0;
+		color: #43485A;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 130%;
+	}
+}
 
 .mono {
 	font-family: $font-family-code;

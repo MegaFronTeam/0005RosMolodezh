@@ -3,9 +3,9 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	.container-fluid {
-		max-width: 1122px;
-	}
+	// .container-fluid {
+	// 	max-width: 1122px;
+	// }
 	&__content {
 		padding-top: 30px;
 		@include media-breakpoint-up(lg) {

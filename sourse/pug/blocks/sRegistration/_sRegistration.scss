@@ -2,8 +2,68 @@
 .sRegistration {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
-
+	--sTPB: #{rem(32)};
+	&--leg {
+		.form-wrap .form-wrap__btn-col {
+			margin-bottom: 0;
+		}
+	}
+	&__content {
+		max-width: 736px;
+		padding: 24px;
+		margin: 0 auto;
+		margin-top: 30px;
+		background: $white;
+		box-shadow: 0px 25px 43px -12px rgba(0, 0, 0, 0.14);
+		border-radius: $border-radius;
+		@include media-breakpoint-up(xl) {
+			position: relative;
+			top: -51px;
+		} 
+	}
+	&__return-link {
+		display: inline-block;
+		margin-right: 15px;
+		.icon {
+			stroke: $primary;
+			stroke-width: 2;
+		}
+	}
+	&__header {
+		margin-bottom: 0;
+		font-size: rem(24);
+		font-weight: 500;
+	}
+	.form-wrap__subtitle {
+		padding-top: 8px;
+		margin-bottom: 24px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+	.form-wrap__btn-col {
+		padding-top: 8px;
+		margin-bottom: 32px;
+		text-align: right;
+	}
+	.form-wrap__btn {
+		width: 100%;
+		margin-bottom: 0;
+		@include media-breakpoint-up(sm) {
+			width: 350px;
+		}
+	}
+	.form-check {
+		margin-bottom: 24px;
+	}
+	.form-check-input {
+		margin-top: 0;
+	}
+	.custom-input__text {
+		font-weight: 300;
+	}
+	label.form-wrap__subtitle {
+		margin-bottom: 16px;
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
