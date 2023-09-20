@@ -138,7 +138,16 @@ input::-webkit-inner-spin-button {
 	font-size: rem(18);
 	font-weight: 300;
 	line-height: 150%;
+	// white-space: nowrap;
+	// overflow: hidden; 
+	// text-overflow: ellipsis;
 }
+// .select-one {
+// 	white-space: nowrap;
+// 	overflow: hidden; 
+// 	text-overflow: ellipsis;
+// 	max-width: 100%;
+// }
 .selectize-control.single .selectize-input:after {
 	margin-top: 0;
 	width: 24px;
@@ -221,6 +230,10 @@ input::-webkit-inner-spin-button {
 		color:rgba($gray-600, .3);
 		font-weight: 300;
 		@include mt;
+		white-space: nowrap;
+		overflow: hidden; 
+		text-overflow: ellipsis;
+		max-width: 100%;
 	}
 	.selectize-input.items.has-options.full.has-items.dropdown-active.focus.input-active {
 		border-color: $primary;
