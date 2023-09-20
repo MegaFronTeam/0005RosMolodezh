@@ -73,28 +73,27 @@ function eventHandler() {
 	}
 	inputFile();
 	
-	const floatSelect = function(select) {
-		return function() {
-			// let fName = $('.selectize-input');
-			console.log(select);
-			// $('.selectize-input').append('<div class="float-select"><span class="name">' + fName + '</span></div>');
-		};
-	}
 	$("select").each(function(){
-		$(this).selectize();
+		let floatLabel;
+		let customSelect = $(this).selectize({
+			onInitialize: function() {
+				let targetSelect = this.$control[0];
+				let placeholderName = targetSelect.querySelector('input').getAttribute('placeholder');
+				let floatSelect = targetSelect.querySelector('.float-select')
+				if (!floatSelect) {
+					$(targetSelect).append('<div class="float-select"><span class="name">' + placeholderName + '</span></div>');
+					floatLabel = placeholderName;
+				}
+			},
+			onChange: function() {
+				let targetSelect = this.$control[0];
+				let floatSelect = targetSelect.querySelector('.float-select')
+				if (!floatSelect) {
+					$(targetSelect).append('<div class="float-select"><span class="name">' + floatLabel + '</span></div>');
+				}
+			}
+		});
 	});
-		
-		
-	// 	selectize({
-	// 	placeholder: 'Тип',
-	// 	// plugins: ["restore_on_backspace", "clear_button"],
-	// 	onFocus: function() {
-	// 		let keys = Object.keys(this.options);
-	// 		let fName = this.options[keys[0]].text;
-	// 		customSelect.append('<div class="float-select"><span class="name">' + fName + '</span></div>');
-	// 		// console.log(this.placeholder);
-	// 	},
-  // });
 
 };
 if (document.readyState !== 'loading') {
