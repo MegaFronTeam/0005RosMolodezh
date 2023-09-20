@@ -7,7 +7,7 @@ $file-format:woff2;
 
 // If font from googlefont, next lines remove
 
-@include font-face ($default-font, $addr + "GTEestiProDisplay-Regular", $file-formats: $file-format);
+@include font-face ($default-font, $addr + "GTEestiProDisplayRegular", $file-formats: $file-format);
 @include font-face ($default-font, $addr + "GTEestiProTextBold", bold, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "GTEestiProDisplayLightMedium", 500, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "GTEestiProDisplayLight", 300, $file-formats: $file-format);

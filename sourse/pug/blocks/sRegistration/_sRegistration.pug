@@ -7,7 +7,7 @@ mixin sRegistration(data)
 				.section-title.section-title--link
 					+e.return-link
 						+icon('arrow-left')
-					+e.header.h1 Регистрация работника
+					+e.header.H1 Регистрация работника
 				+form-wrap
 					+e.row.row
 						.col-12.col-sm-6.col-md-4
@@ -102,6 +102,7 @@ mixin sRegistration2(data)
 							+in-c('checkbox','Субсидия от РОИВ')
 							+in-c('checkbox','Субсидия от МО')
 						.col-12
+							+e.subtitle--upload Положение или устав юридического лица
 							.upload-field__input-wrap
 								label.upload-field__btn.btn.btn-secondary
 									input.input-upload(type="file" name="file")

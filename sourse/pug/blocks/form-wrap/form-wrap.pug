@@ -78,9 +78,9 @@ mixin policy()
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
 
-mixin floatInput(id,placeholder,type="text",name)
+mixin floatInput(id,placeholder,type="text",name, value)
 	.form-floating.form-wrap__input-wrap
-		input.form-control(id=id placeholder=placeholder type= type name-name)
+		input.form-control(id=id placeholder=placeholder type=type name=name value=value)
 		label(for=id)= placeholder
 
 

@@ -101,6 +101,15 @@ input::-webkit-inner-spin-button {
 // .select2-selection__arrow {
 // 	background-image: url('../img/select-arrow.svg');
 // }
+.form-wrap__subtitle {
+	padding-top: 8px;
+	margin-bottom: 24px;
+	font-size: 18px;
+	font-weight: 500;
+	&--upload {
+		margin-bottom: 16px;
+	}
+}
 
 .input-upload {
 	display: none;

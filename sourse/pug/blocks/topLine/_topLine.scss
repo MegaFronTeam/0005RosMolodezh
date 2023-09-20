@@ -1,15 +1,43 @@
 
 	// start .topLine
-	.topLine {
-		 
-		// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	.topLine {		 
+	// --sPT: #{rem(22)};
+	// --sPB: #{rem(26)};
 	// --sTPB: #{rem()};
+	padding-top: rem(22);
+	padding-bottom: rem(26);
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__logo-link {
+		margin-right: 15px;
+	}
+	&__leave-link {
+		display: flex;
+		align-items: flex-end;
+		color: $body-color;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 140%;
+		&:hover {
+			.icon {
+				color: $body-color;
+			}
+		}
+		.icon {
+			margin-left: 8px;
+			color: $red;
+			font-size: 24px;
+			@include mt;
+		}
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
+	
 	.section-title{
 		
 	}

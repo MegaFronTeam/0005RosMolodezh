@@ -97,6 +97,12 @@ body {
 .enter-page {
 	background-color: $primary;
 }
+.main-page {
+	background-color: $gray-100;
+}
+.row--profile {
+	--bs-gutter-x: #{rem(32)};
+}
 .main-wrapper { 
 	position: relative;
 	width: 100%;
@@ -139,7 +145,16 @@ main{
 		display: flex;
 	}
 }
-
+h1 {
+	@include media-breakpoint-down(sm) {
+		font-size: 20px;
+	}
+}
+.btn {
+	@include media-breakpoint-down(sm) {
+		font-size: 16px;
+	}
+}
 .btn-primary {
 	color: $accent;
 	&:hover {

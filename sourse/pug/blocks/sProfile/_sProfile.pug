@@ -1,0 +1,65 @@
+mixin sProfile(data)
+	// start sProfile
+	+b.SECTION.sProfile.section#sProfile&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h1 МИНМОЛОДЕЖИ КБР
+			+form-wrap
+				+e.row.row
+					.col-12.col-sm-6
+						+floatInput('tax','ИНН','number','tax','458979879643')
+					.col-12.col-sm-6
+						select(placeholder="Тип")
+							option
+							option placeholder1
+							option placeholder2
+							option placeholder3
+					.col-12
+						select(placeholder="Уровень бюджетного финансирования")
+							option
+							option placeholder1
+							option placeholder2
+							option placeholder3
+					.col-12.col-sm-6
+						select(placeholder="Регион")
+							option
+							option placeholder1
+							option placeholder2
+							option placeholder3
+					.col-12.col-sm-6
+						select(placeholder="Муниципалитет")
+							option
+							option placeholder1
+							option placeholder2
+							option placeholder3
+					+e.subtitle--upload Положение или устав юридического лица
+					.upload-field__input-wrap
+						label.upload-field__btn.btn.btn-secondary
+							input.input-upload(type="file" name="file")
+							span Выбрать файл
+						.upload-field__file-name Файл не выбран
+					.col-12.col-sm-6
+						+floatInput('leg-tel','Телефон юр. лица','tel','leg-tel')
+					.col-12.col-sm-6
+						+floatInput('leg-email','Электронная почта юр. лица', 'email', 'leg-email')
+					.col-12
+						+floatInput('leg-name','ФИО ответственного за регистрацию юридического лица','text','leg-name')
+					.col-12
+						+floatInput('leg-position','Должность ответственного за регистрацию юридического лица','text','leg-position')
+					.col-12
+						+floatInput('leg2-email','Почта ответственного за регистрацию юридического лица', 'email', 'leg2-email')
+					.col-12
+						+floatInput('address','Адрес юридического лица', 'text', 'address')
+					+e.btn-col.col-12.col-sm
+						+e.btn.btn.btn-primary.BUTTON(type="submit") Сохранить изменения
+					+e.subtitle Придумайте пароль для доступа в кабинет юридического лица
+					.col-12.col-sm-4 
+						+floatInput('password','Старый пароль','password','password')
+					.col-12.col-sm-4 
+						+floatInput('password','Новый пароль','password','password')
+					.col-12.col-sm-4 
+						+floatInput('password-conf','Повторите пароль','password','password-conf')
+					+e.btn-col.col-12.col-sm
+						+e.btn.btn.btn-primary.BUTTON(type="submit") Сменить пароль
+
+	// end sProfile

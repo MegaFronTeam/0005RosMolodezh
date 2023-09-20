@@ -10,12 +10,15 @@
 	}
 	&__content {
 		max-width: 736px;
-		padding: 24px;
+		padding: 16px;
 		margin: 0 auto;
 		margin-top: 30px;
 		background: $white;
 		box-shadow: 0px 25px 43px -12px rgba(0, 0, 0, 0.14);
 		border-radius: $border-radius;
+		@include media-breakpoint-up(sm) {
+			padding: 24px;
+		}
 		@include media-breakpoint-up(xl) {
 			position: relative;
 			top: -51px;
@@ -33,12 +36,9 @@
 		margin-bottom: 0;
 		font-size: rem(24);
 		font-weight: 500;
-	}
-	.form-wrap__subtitle {
-		padding-top: 8px;
-		margin-bottom: 24px;
-		font-size: 18px;
-		font-weight: 500;
+		@include media-breakpoint-down(sm) {
+			font-size: rem(20);
+		}
 	}
 	.form-wrap__btn-col {
 		padding-top: 8px;
