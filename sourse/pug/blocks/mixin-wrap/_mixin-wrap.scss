@@ -111,3 +111,39 @@
 	width: auto;
 	margin-right: rem(32);
 }
+
+.filter {
+	display: flex;
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		&:not(:last-child) {
+			margin-right: 32px;
+		}
+	}
+	&__title {
+		margin-right: 8px;
+		color: $gray-700;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	&__btn {
+		padding: 0;
+		color: $link-color;
+		font-size: 14px;
+		font-weight: 500;
+		.icon {
+			font-size: 16px;
+			fill: none;
+			stroke:  $link-color;
+			stroke-width: 2;
+			stroke-linecap: round;
+		}
+	}
+	&__dropdown {
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+}

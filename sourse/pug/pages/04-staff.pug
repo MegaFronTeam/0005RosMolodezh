@@ -1,0 +1,36 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sStaff/_sStaff.pug
+include ../blocks/sProfileNav/_sProfileNav.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Сотрудники'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		.container
+			.row.row--profile
+				.col-lg-3
+					+sProfileNav
+				.col-lg-9
+					+sStaff
+	+parts('footer')
+
+
+
+

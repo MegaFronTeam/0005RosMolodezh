@@ -24,7 +24,7 @@ mixin sRegistration(data)
 							+floatInput('position','Должность','text','position')
 						.col-12
 							+e.input-wrap
-								select(placeholder="Территориальный уровень").form-select
+								select(placeholder="Территориальный уровень").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
@@ -37,7 +37,7 @@ mixin sRegistration(data)
 							//- 		option placeholder3
 						.col-12
 							+e.input-wrap
-								select(placeholder="Принадлежность к территориальному уровню").form-select
+								select(placeholder="Принадлежность к территориальному уровню").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
@@ -78,28 +78,28 @@ mixin sRegistration2(data)
 							+floatInput('tax','ИНН','number','tax')
 						.col-12.col-sm-6
 							+e.input-wrap
-								select(placeholder="Тип").form-select
+								select(placeholder="Тип").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
 									option placeholder3
 						.col-12
 							+e.input-wrap
-								select(placeholder="Уровень бюджетного финансирования").form-select
+								select(placeholder="Уровень бюджетного финансирования").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
 									option placeholder3
 						.col-12.col-md-6
 							+e.input-wrap
-								select(placeholder="Регион").form-select
+								select(placeholder="Регион").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
 									option placeholder3
 						.col-12.col-md-6
 							+e.input-wrap
-								select(placeholder="Муниципалитет").form-select
+								select(placeholder="Муниципалитет").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2

@@ -10,28 +10,28 @@ mixin sProfile(data)
 						+floatInput('tax','ИНН','number','tax','458979879643')(disabled)
 					.col-12.col-sm-6
 						+e.input-wrap
-							select(placeholder="Тип" disabled).form-select
+							select(placeholder="Тип" disabled).floating-select.form-select
 								option 
 								option(selected) Тип
 								option placeholder2
 								option placeholder3
 					.col-12
 						+e.input-wrap
-							select(placeholder="Уровень бюджетного финансирования").form-select
+							select(placeholder="Уровень бюджетного финансирования").floating-select.form-select
 								option
 								option placeholder1
 								option placeholder2
 								option placeholder3
 					.col-12.col-sm-6
 						+e.input-wrap
-							select(placeholder="Регион").form-select
+							select(placeholder="Регион").floating-select.form-select
 								option
 								option placeholder1
 								option placeholder2
 								option placeholder3
 					.col-12.col-sm-6
 						+e.input-wrap
-							select(placeholder="Муниципалитет").form-select
+							select(placeholder="Муниципалитет").floating-select.form-select
 								option
 								option placeholder1
 								option placeholder2

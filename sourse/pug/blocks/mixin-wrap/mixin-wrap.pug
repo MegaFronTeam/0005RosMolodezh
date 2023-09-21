@@ -50,3 +50,19 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin filter
+	+b.filter
+		//- +select('Регион','Все','Все1','Все2','Все3')
+		mixin filterItem(title,btn,...items)
+			+e.item
+				+e.title= title
+				+e.btn.btn.BUTTON= btn
+					+icon('arrow-down')
+				+e.dropdown
+					each item in items
+						+in-c('checkbox',`${item}`)
+		+filterItem('Регион','Все','Все1','Все2','Все3')
+		+filterItem('Месяц','Все','Все1','Все2','Все3')
+		+filterItem('Сотрудник','Выбрано 3','Все1','Все2','Все3')
+		+filterItem('Роль','Все','Все1','Все2','Все3')
