@@ -34,7 +34,7 @@ mixin addblock()
 mixin search()
 	+b.search-block
 		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти" inputmode='search')
+			input(type="text" placeholder="Поиск" inputmode='search')
 			button 
 				+icon("search")
 
@@ -57,11 +57,10 @@ mixin filter
 		mixin filterItem(title,btn,...items)
 			+e.item
 				+e.title= title
-				+e.btn.btn.BUTTON= btn
-					+icon('arrow-down')
+				+e.btn--js.btn.BUTTON= btn
 				+e.dropdown
 					each item in items
-						+in-c('checkbox',`${item}`)
+						+in-c('checkbox',`${item}`).filter__checkbox
 		+filterItem('Регион','Все','Все1','Все2','Все3')
 		+filterItem('Месяц','Все','Все1','Все2','Все3')
 		+filterItem('Сотрудник','Выбрано 3','Все1','Все2','Все3')

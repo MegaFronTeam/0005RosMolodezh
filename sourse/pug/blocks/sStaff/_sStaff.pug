@@ -1,9 +1,106 @@
-mixin sStaff(data)
+mixin staffItem(id="ID 458",add,tel="8 800 658 94 45", email='victorovskiy.victor@mail.ru',name,position="Администратор ресепшн")
+	+e.item.LI(class=add)
+		+e.item-top
+			+e.badge--id= id
+			if add
+				+e.badge--new Новый
+			else
+				+e.badge--existing Действующий
+			+e.tel(href="tel:")= tel
+			+e.mail(href="mailto:")= email
+			+e.dropdown-wrap
+				+e.btn--js.btn.BUTTON
+					+icon('more')
+				+e.dropdown.dropdown.visually-hidden.UL
+					if add
+						+e.dropdown-item.LI
+							+e.dropdown-link--confirm(href="#") Подтвердить
+						+e.dropdown-item.LI
+							+e.dropdown-link(href="#") Отклонить
+						+e.dropdown-item.LI
+							+e.dropdown-link--remove(href="#") Удалить
+					else
+						+e.dropdown-item.LI
+							+e.dropdown-link--remove(href="#") Уволить
+		+e.name= name
+		+e.position= position
+
+mixin orgItem(id="ID 458",add,grant,tel="8 800 658 94 45", email='Ufsin_komi@mail.ru',name)
+	+e.item--org.LI(class=add)
+		+e.item-top
+			+e.badges
+				+e.badge--id= id
+				if add
+					+e.badge--new Новая
+				else
+					+e.badge--existing Статус
+				if grant
+					+e.badge--grant Субсидия
+			+e.reg(href="#") Устав
+			+e.dropdown-wrap
+				+e.btn--js.btn.BUTTON
+					+icon('more')
+				+e.dropdown.dropdown.visually-hidden.UL
+					if add
+						+e.dropdown-item.LI
+							+e.dropdown-link--confirm(href="#") Подтвердить
+						+e.dropdown-item.LI
+							+e.dropdown-link(href="#") Отклонить
+						+e.dropdown-item.LI
+							+e.dropdown-link--remove(href="#") Удалить
+					else
+						+e.dropdown-item.LI
+							+e.dropdown-link--remove(href="#") Уволить
+		+e.name= name
+		+e.contacts
+			+e.tel(href="tel:")= tel
+			+e.mail(href="mailto:")= email
+			+e.tax ИНН 1105585335598
+
+mixin formItem(name, notice, date="Октябрь 2023")
+	+e.item--form.LI(class=add)
+		+e.item-top
+			+e.name(href="#")= name
+			+e.dropdown-wrap
+				+e.btn--js.btn.BUTTON= notice
+				+e.dropdown.dropdown.visually-hidden.UL
+					+e.dropdown-item.LI
+						+e.dropdown-link--confirm(href="#") Сформировать сводный отчет
+					+e.dropdown-item.LI
+						+e.dropdown-link(href="#") Сводный отчет
+		+e.date= date
+
+mixin userFormItem(done,name, date="Октябрь 2023")
+	+e.item--userform.LI(class=add)
+		+e.item-left
+			if done
+				+e.badge-sm--done Заполнено
+			else
+				+e.badge-sm--undone Необходимо заполнить
+			+e.date= date
+			+e.name(href="#")= name
+		if done
+			+e.item-right
+				+e.download-link(href="#")
+					+icon('push-down')
+		else
+			+e.item-right--fill
+				+e.fill-btn.btn.btn-primary Заполнить
+mixin sStaff(header="Сотрудники")
 	// start sStaff
 	+b.SECTION.sStaff.section#sStaff&attributes(attributes)
 		.container
 			+b.section-title
-				h1 Сотрудники
+				h1= header
 			+filter
-			+e.row.row
+			+search
+			+e.list.UL
+				if block
+					block
+				else
+					+staffItem("ID 458",'add','8 800 658 94 45','victorovskiy.victor@mail.ru','Моджайский Виктор Валентинович')
+					+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Семенов Игорь Николаевич')
+					+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Сикорская Валентина Игоревна')
+					+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
+					+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
 	// end sStaff

@@ -1,5 +1,7 @@
 "use strict";
 
+// const { active } = require("browser-sync");
+
 const $ = jQuery;
 
 
@@ -91,6 +93,51 @@ function eventHandler() {
 			}
 		});
 	});
+
+	const filterBtns = document.querySelectorAll('.filter__btn--js');
+	const filterDropdowns = document.querySelectorAll('.filter__dropdown');
+	filterBtns.forEach(btn => {
+		btn.addEventListener('click', (e) => {
+				e.currentTarget.closest('.filter__item').querySelector('.filter__dropdown').classList.toggle('active');
+				filterDropdowns.forEach(el => {
+					if (el !== e.currentTarget.closest('.filter__item').querySelector('.filter__dropdown')) {
+						el.classList.remove('active');
+					}
+					
+				})
+		});
+	 document.addEventListener('click', (e) => {
+		if (!(e.target.closest('.filter__dropdown')) && (!e.target.classList.contains('filter__btn'))) {
+			filterDropdowns.forEach(el => {
+				el.classList.remove('active');
+			})
+		}
+	})
+ });
+
+ function dropDown(btn,dropdown,wrap) {
+	let buttons = document.querySelectorAll('.' + btn);
+	let dropdowns = document.querySelectorAll('.' + dropdown);
+	buttons.forEach(btn => {
+		btn.addEventListener('click',(e) => {
+			// console.log(e.currentTarget);
+			e.currentTarget.closest('.' + wrap).querySelector('.' + dropdown).classList.toggle('visually-hidden');
+			dropdowns.forEach(el => {
+				if (el !== e.currentTarget.closest('.' + wrap).querySelector('.dropdown')) {
+					el.classList.add('visually-hidden');
+				}
+			})
+	})
+	});
+	document.addEventListener('click', (e) => {
+		if (!(e.target.closest('.' + dropdown)) && (!e.target.classList.contains(btn)) && (!e.target.classList.contains('icon'))) {
+			dropdowns.forEach(el => {
+				el.classList.add('visually-hidden');
+			})
+		}
+	})
+ }
+ dropDown('sStaff__btn','sStaff__dropdown','sStaff__dropdown-wrap');
 
 };
 if (document.readyState !== 'loading') {

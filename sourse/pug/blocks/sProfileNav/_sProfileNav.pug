@@ -27,3 +27,18 @@ mixin sProfileNav(data)
 				+navItem('desktop','Формы','2')
 				+navItem('screen','Bi аналитика',)
 	// end sProfileNav
+
+mixin sUserProfileNav(data)
+	// start sProfileNav
+	+b.SECTION.sProfileNav.section#sProfileNav&attributes(attributes)
+		+e.top
+			.bagde.bagde--employee РАБОТНИК
+			+e.name Викторовский В.В.
+			+e.tax-number МИНМОЛОДЕЖИ КБР
+			+e.action-row
+				+e.action-btn(href="#")
+					+icon('user')
+					| Профиль
+				+e.action-btn(href="#")
+					+icon('redo')
+					| Обновить

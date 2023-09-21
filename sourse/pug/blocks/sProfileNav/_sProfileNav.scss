@@ -27,6 +27,10 @@
 		line-height: 1;
 		border-radius: 4px;
 		background:#7BEAFE;
+		text-transform: uppercase;
+		&--employee {
+			background-color: $yellow;
+		}
 	}
 	&__name {
 		margin-bottom: 4px;
