@@ -7,11 +7,11 @@ mixin sProfile(data)
 			+form-wrap
 				+e.row.row
 					.col-12.col-sm-6
-						+floatInput('tax','ИНН','number','tax','458979879643')
+						+floatInput('tax','ИНН','number','tax','458979879643')(disabled)
 					.col-12.col-sm-6
-						select(placeholder="Тип")
-							option
-							option placeholder1
+						select(placeholder="Тип" disabled)
+							option 
+							option(selected) Тип
 							option placeholder2
 							option placeholder3
 					.col-12
@@ -39,17 +39,17 @@ mixin sProfile(data)
 							span Выбрать файл
 						.upload-field__file-name Файл не выбран
 					.col-12.col-sm-6
-						+floatInput('leg-tel','Телефон юр. лица','tel','leg-tel')
+						+floatInput('leg-tel','Телефон юр. лица','tel','leg-tel','+7 985 988 99 88')
 					.col-12.col-sm-6
-						+floatInput('leg-email','Электронная почта юр. лица', 'email', 'leg-email')
+						+floatInput('leg-email','Электронная почта юр. лица', 'email', 'leg-email','sample@sample.com')
 					.col-12
-						+floatInput('leg-name','ФИО ответственного за регистрацию юридического лица','text','leg-name')
+						+floatInput('leg-name','ФИО ответственного за регистрацию юридического лица','text','leg-name','Викторовский Валентин Витальевич')
 					.col-12
-						+floatInput('leg-position','Должность ответственного за регистрацию юридического лица','text','leg-position')
+						+floatInput('leg-position','Должность ответственного за регистрацию юридического лица','text','leg-position','Системный Аналити')
 					.col-12
-						+floatInput('leg2-email','Почта ответственного за регистрацию юридического лица', 'email', 'leg2-email')
+						+floatInput('leg2-email','Почта ответственного за регистрацию юридического лица', 'email', 'leg2-email','sample@sample.com')
 					.col-12
-						+floatInput('address','Адрес юридического лица', 'text', 'address')
+						+floatInput('address','Адрес юридического лица', 'text', 'address','353458 г. Москва, ул. Набережная, 64')
 					+e.btn-col.col-12.col-sm
 						+e.btn.btn.btn-primary.BUTTON(type="submit") Сохранить изменения
 					+e.subtitle Придумайте пароль для доступа в кабинет юридического лица

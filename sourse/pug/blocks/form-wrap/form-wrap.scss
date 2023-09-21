@@ -21,10 +21,14 @@
 	label {
 		color: rgba($body-color, .5);
 		font-weight: 300;
+		// font-size: 12px;
 	}
 	.form-control:placeholder-shown  > label {
 		color: $body-color;
 	}
+}
+.form-floating>.form-control-plaintext~label, .form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
+	font-size: 12px;
 }
 
 //
@@ -129,6 +133,12 @@ input::-webkit-inner-spin-button {
 	font-size: 14px;
 	font-weight: 300;
 }
+.upload-field__input-wrap .upload-field__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+}
 
 .selectize-input  {
 	padding: rem(15) rem(16);
@@ -167,6 +177,7 @@ input::-webkit-inner-spin-button {
 	top: 50%;
 	transform: translateY(-50%);
 	border: none;
+	
 }
 
 .selectize-dropdown {
@@ -205,6 +216,9 @@ input::-webkit-inner-spin-button {
 	color:rgba($gray-600, .3);
 	font-weight: 300;
 	@include mt;
+	.item {
+		font-size: 16px;
+	}
 }
 
 .selectize-input.items.not-full.has-options.dropdown-active.focus.input-active {
@@ -247,5 +261,9 @@ input::-webkit-inner-spin-button {
 	}
 	.selectize-input.items.has-options.full.has-items.dropdown-active.focus.input-active {
 		border-color: $primary;
+	}
+	
+	.form-floating .form-control {
+		font-weight: 300;
 	}
 	// selectize-input.items.has-options.focus.full.has-items.dropdown-active.input-active

@@ -99,6 +99,15 @@ body {
 }
 .main-page {
 	background-color: $gray-100;
+	address p, .footer__schedule {
+		color: $body-color;
+	}
+	.footer__title, .footer__tel, .footer__copyright {
+		color: #ACB5BD;
+	}
+	.footer__copyright {
+		border-color: #DDE2E5;
+	}
 }
 .row--profile {
 	--bs-gutter-x: #{rem(32)};

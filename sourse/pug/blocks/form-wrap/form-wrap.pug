@@ -80,7 +80,7 @@ mixin policy()
 
 mixin floatInput(id,placeholder,type="text",name, value)
 	.form-floating.form-wrap__input-wrap
-		input.form-control(id=id placeholder=placeholder type=type name=name value=value)
+		input.form-control(id=id placeholder=placeholder type=type name=name value=value)&attributes(attributes)
 		label(for=id)= placeholder
 
 

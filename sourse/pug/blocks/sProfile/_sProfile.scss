@@ -21,6 +21,10 @@
 	&__item{
 		
 	}
+	.form-wrap__btn {
+		padding: 6px 24px;
+		font-size: rem(18);
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
