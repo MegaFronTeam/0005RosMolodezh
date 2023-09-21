@@ -75,23 +75,24 @@ function eventHandler() {
 	
 	$("select").each(function(){
 		let floatLabel;
+		let placeholderName = this.getAttribute('placeholder');
+		let floatDiv = '<div class="float-select"><span class="name">' + placeholderName + '</span></div>';
 		let customSelect = $(this).selectize({
 			onInitialize: function() {
 				let targetSelect = this.$control[0];
-				let placeholderName = targetSelect.querySelector('input').getAttribute('placeholder');
 				let floatSelect = targetSelect.querySelector('.float-select')
 				if (!floatSelect) {
-					$(targetSelect).append('<div class="float-select"><span class="name">' + placeholderName + '</span></div>');
+					targetSelect.insertAdjacentHTML("afterend", floatDiv);
 					floatLabel = placeholderName;
 				}
 			},
-			onChange: function() {
-				let targetSelect = this.$control[0];
-				let floatSelect = targetSelect.querySelector('.float-select')
-				if (!floatSelect) {
-					$(targetSelect).append('<div class="float-select"><span class="name">' + floatLabel + '</span></div>');
-				}
-			}
+			// onChange: function() {
+			// 	let targetSelect = this.$control[0];
+			// 	let floatSelect = targetSelect.querySelector('.float-select')
+			// 	if (!floatSelect) {
+			// 		$(targetSelect).append('<div class="float-select"><span class="name">' + floatLabel + '</span></div>');
+			// 	}
+			// }
 		});
 	});
 

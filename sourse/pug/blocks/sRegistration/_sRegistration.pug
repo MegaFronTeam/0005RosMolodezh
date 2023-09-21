@@ -23,11 +23,12 @@ mixin sRegistration(data)
 						.col-12
 							+floatInput('position','Должность','text','position')
 						.col-12
-							select(placeholder="Территориальный уровень")
-								option
-								option placeholder1
-								option placeholder2
-								option placeholder3
+							+e.input-wrap
+								select(placeholder="Территориальный уровень").form-select
+									option
+									option placeholder1
+									option placeholder2
+									option placeholder3
 							//- .form-wrap__input-wrap.form-group
 							//- 	select.form-wrap__input.form-select(name="select")
 							//- 		option(selected value="Территориальный уровень") Территориальный уровень
@@ -35,11 +36,12 @@ mixin sRegistration(data)
 							//- 		option placeholder2
 							//- 		option placeholder3
 						.col-12
-							select(placeholder="Принадлежность к территориальному уровню")
-								option
-								option placeholder1
-								option placeholder2
-								option placeholder3
+							+e.input-wrap
+								select(placeholder="Принадлежность к территориальному уровню").form-select
+									option
+									option placeholder1
+									option placeholder2
+									option placeholder3
 							//- .form-wrap__input-wrap.form-group
 							//- 	select.form-wrap__input.form-select(name="select")
 							//- 		option(selected value="Принадлежность к территориальному уровню") Принадлежность к территориальному уровню
@@ -75,28 +77,32 @@ mixin sRegistration2(data)
 						.col-12.col-sm-6
 							+floatInput('tax','ИНН','number','tax')
 						.col-12.col-sm-6
-							select(placeholder="Тип")
-								option
-								option placeholder1
-								option placeholder2
-								option placeholder3
+							+e.input-wrap
+								select(placeholder="Тип").form-select
+									option
+									option placeholder1
+									option placeholder2
+									option placeholder3
 						.col-12
-							select(placeholder="Уровень бюджетного финансирования")
-								option
-								option placeholder1
-								option placeholder2
-								option placeholder3
+							+e.input-wrap
+								select(placeholder="Уровень бюджетного финансирования").form-select
+									option
+									option placeholder1
+									option placeholder2
+									option placeholder3
 						.col-12.col-md-6
-							select(placeholder="Регион")
-								option
-								option placeholder1
-								option placeholder2
-								option placeholder3
+							+e.input-wrap
+								select(placeholder="Регион").form-select
+									option
+									option placeholder1
+									option placeholder2
+									option placeholder3
 						.col-12.col-md-6
-							select(placeholder="Муниципалитет")
-								option
-								option placeholder1
-								option placeholder2
+							+e.input-wrap
+								select(placeholder="Муниципалитет").form-select
+									option
+									option placeholder1
+									option placeholder2
 						.col-12
 							+in-c('checkbox','Субсидия от Росмолодежи')
 							+in-c('checkbox','Субсидия от РОИВ')

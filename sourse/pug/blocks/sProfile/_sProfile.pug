@@ -9,29 +9,33 @@ mixin sProfile(data)
 					.col-12.col-sm-6
 						+floatInput('tax','ИНН','number','tax','458979879643')(disabled)
 					.col-12.col-sm-6
-						select(placeholder="Тип" disabled)
-							option 
-							option(selected) Тип
-							option placeholder2
-							option placeholder3
+						+e.input-wrap
+							select(placeholder="Тип" disabled).form-select
+								option 
+								option(selected) Тип
+								option placeholder2
+								option placeholder3
 					.col-12
-						select(placeholder="Уровень бюджетного финансирования")
-							option
-							option placeholder1
-							option placeholder2
-							option placeholder3
+						+e.input-wrap
+							select(placeholder="Уровень бюджетного финансирования").form-select
+								option
+								option placeholder1
+								option placeholder2
+								option placeholder3
 					.col-12.col-sm-6
-						select(placeholder="Регион")
-							option
-							option placeholder1
-							option placeholder2
-							option placeholder3
+						+e.input-wrap
+							select(placeholder="Регион").form-select
+								option
+								option placeholder1
+								option placeholder2
+								option placeholder3
 					.col-12.col-sm-6
-						select(placeholder="Муниципалитет")
-							option
-							option placeholder1
-							option placeholder2
-							option placeholder3
+						+e.input-wrap
+							select(placeholder="Муниципалитет").form-select
+								option
+								option placeholder1
+								option placeholder2
+								option placeholder3
 					+e.subtitle--upload Положение или устав юридического лица
 					.upload-field__input-wrap
 						label.upload-field__btn.btn.btn-secondary

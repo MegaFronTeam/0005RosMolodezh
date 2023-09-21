@@ -12,9 +12,9 @@ mixin sEnter(data)
 						+form-wrap
 							.row
 								.col-12
-									+input("E-mail",'text')(required)
+									+floatInput('enter-email','E-mail','text','enter-email')(required)
 								.col-12
-									+input("Пароль",'password')(required)
+									+floatInput('password','Пароль','password','password')(required)
 								+e.btn-col.col-12.col-sm-6
 									+btn("Забыли пароль?").btn.btn-secondary
 								+e.btn-col.col-12.col-sm-6
@@ -23,9 +23,9 @@ mixin sEnter(data)
 						+form-wrap
 							.row
 								.col-12
-									+input("ИНН",'number')(required)
+									+floatInput('tax','ИНН','number','tax')(required)
 								.col-12
-									+input("Пароль",'password')(required)
+									+floatInput('password','Пароль','password','password')(required)
 								+e.btn-col.col-12.col-sm-6
 									+btn("Забыли пароль?").btn.btn-secondary
 								+e.btn-col.col-12.col-sm-6
