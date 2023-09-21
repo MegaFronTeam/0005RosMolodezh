@@ -110,6 +110,7 @@ input::-webkit-inner-spin-button {
 	margin-bottom: 24px;
 	font-size: 18px;
 	font-weight: 500;
+	line-height: 1.2;
 	&--upload {
 		margin-bottom: 16px;
 	}
@@ -137,7 +138,10 @@ input::-webkit-inner-spin-button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 40px;
+	height: auto;
+	@include media-breakpoint-up(sm) {
+		height: 40px;
+	}
 }
 
 .selectize-input  {
@@ -245,7 +249,7 @@ input::-webkit-inner-spin-button {
 	white-space: nowrap;
 	overflow: hidden; 
 	text-overflow: ellipsis;
-	max-width: 100%;
+	max-width: calc(100% - 50px);
 	transform: translateY(-50%);
 	z-index: 2;
 }
@@ -279,6 +283,9 @@ input::-webkit-inner-spin-button {
 	
 	.form-floating .form-control {
 		font-weight: 300;
+		white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 	}
 	.form-select {
 		padding: 0;
