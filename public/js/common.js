@@ -97,10 +97,6 @@ function eventHandler() {
 					floatLabel = placeholderName;
 				}
 			},
-			// onDropdownOpen() {
-			// 	console.log(this);
-			// 	// console.log($(`.selectize-control .selectize-input:not(.${classSelectize})`));
-			// }
 		});
 		self.parentNode.addEventListener("click", function() {
 			let otherSelect = $(`.selectize-control .selectize-input.focus:not(.${classSelectize})`);
