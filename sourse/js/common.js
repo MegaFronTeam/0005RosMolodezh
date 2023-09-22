@@ -110,7 +110,7 @@ function eventHandler() {
 	const filterDropdowns = document.querySelectorAll('.filter__dropdown');
 	filterBtns.forEach(btn => {
 		btn.addEventListener('click', (e) => {
-				e.currentTarget.closest('.filter__item').querySelector('.filter__dropdown').classList.toggle('active');
+				this.nextEl.querySelector('.filter__dropdown').classList.toggle('active');
 				filterDropdowns.forEach(el => {
 					if (el !== e.currentTarget.closest('.filter__item').querySelector('.filter__dropdown')) {
 						el.classList.remove('active');
@@ -133,7 +133,9 @@ function eventHandler() {
 	buttons.forEach(btn => {
 		btn.addEventListener('click',(e) => {
 			// console.log(e.currentTarget);
-			e.currentTarget.closest('.' + wrap).querySelector('.' + dropdown).classList.toggle('visually-hidden');
+			// console.log(btn.nextElementSibling);
+			let dropDown = btn.nextElementSibling;
+			dropDown.classList.toggle('visually-hidden');
 			dropdowns.forEach(el => {
 				if (el !== e.currentTarget.closest('.' + wrap).querySelector('.dropdown')) {
 					el.classList.add('visually-hidden');
