@@ -66,11 +66,14 @@ function eventHandler() {
 	});
 
 	function inputFile(){
-		if (document.querySelector('.upload-field__input-wrap')){
+		if (document.querySelector('.upload-field__input-wrap ')){
 			let uploadField = document.querySelectorAll('.upload-field__input-wrap');
 			for (let i=0;i<uploadField.length;i++){
 				let inputFile = uploadField[i].querySelector('.input-upload');
-				inputFile.addEventListener('change',() => uploadField[i].querySelector('.upload-field__file-name').innerHTML = inputFile.files[0].name);
+				if (inputFile) {
+
+					inputFile.addEventListener('change',() => uploadField[i].querySelector('.upload-field__file-name').innerHTML = inputFile.files[0].name);
+				}
 			}
 		}
 	}
