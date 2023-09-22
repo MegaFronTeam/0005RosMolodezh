@@ -1,5 +1,7 @@
 "use strict";
 
+const selectize = require("@selectize/selectize");
+
 // const { active } = require("browser-sync");
 
 const $ = jQuery;
@@ -76,11 +78,14 @@ function eventHandler() {
 	inputFile();
 	
 	$(".floating-select").each(function(){
+		let self= $(this);
 		let floatLabel;
 		let placeholderName = this.getAttribute('placeholder');
 		let floatDiv = '<div class="float-select"><span class="name">' + placeholderName + '</span></div>';
 		let customSelect = $(this).selectize({
-			onInitialize: function() {
+			persist: false,
+			closeAfterSelect: true,
+			onInitialize() {
 				let targetSelect = this.$control[0];
 				let floatSelect = targetSelect.querySelector('.float-select')
 				if (!floatSelect) {
@@ -88,8 +93,9 @@ function eventHandler() {
 					floatLabel = placeholderName;
 				}
 			},
-			onDropdownOpen: function() {
-				$(".floating-select").querySelector('.selectize-input').removeClass('dropdown-active, focus, input-active')
+			onDropdownOpen() {
+				$(".floating-select .selectize-input").removeClass('dropdown-active, focus, input-active')
+				// selectize.close()
 			}
 		});
 	});
