@@ -110,8 +110,9 @@ function eventHandler() {
 	const filterDropdowns = document.querySelectorAll('.filter__dropdown');
 	filterBtns.forEach(btn => {
 		btn.addEventListener('click', (e) => {
-				this.nextEl.querySelector('.filter__dropdown').classList.toggle('active');
-				filterDropdowns.forEach(el => {
+				let dropDown = btn.nextElementSibling;
+				dropDown.classList.toggle('active');
+				dropDown.forEach(el => {
 					if (el !== e.currentTarget.closest('.filter__item').querySelector('.filter__dropdown')) {
 						el.classList.remove('active');
 					}
