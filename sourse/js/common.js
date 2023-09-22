@@ -1,6 +1,5 @@
 "use strict";
 
-const selectize = require("@selectize/selectize");
 
 // const { active } = require("browser-sync");
 
@@ -76,28 +75,35 @@ function eventHandler() {
 		}
 	}
 	inputFile();
-	
 	$(".floating-select").each(function(){
-		let self= $(this);
+		let self= this;
+		let customSelect;
 		let floatLabel;
+		let classSelectize = 'selectize-'+ (Math.round(Math.random() * 1000));
+		let targetSelect;
 		let placeholderName = this.getAttribute('placeholder');
 		let floatDiv = '<div class="float-select"><span class="name">' + placeholderName + '</span></div>';
-		let customSelect = $(this).selectize({
+		customSelect = $(this).selectize({
 			persist: false,
 			closeAfterSelect: true,
 			onInitialize() {
-				let targetSelect = this.$control[0];
-				let floatSelect = targetSelect.querySelector('.float-select')
+				targetSelect = this.$control[0];
+				targetSelect.classList.add(classSelectize)
+				let floatSelect = targetSelect.querySelector('.float-select');
+				// console.log(targetSelect);
+				
 				if (!floatSelect) {
 					targetSelect.insertAdjacentHTML("afterend", floatDiv);
 					floatLabel = placeholderName;
 				}
 			},
-			onDropdownOpen() {
-				$(".floating-select .selectize-input").removeClass('dropdown-active, focus, input-active')
-				// selectize.close()
-			}
 		});
+		self.parentNode.addEventListener("click", function() {
+			let otherSelect = $(`.selectize-control .selectize-input.focus:not(.${classSelectize})`);
+			otherSelect.removeClass('dropdown-active  focus input-active')
+				.parent().find(".selectize-dropdown").hide();
+			// console.log(this);
+		})
 	});
 
 	const filterBtns = document.querySelectorAll('.filter__btn--js');

@@ -205,7 +205,11 @@ input::-webkit-inner-spin-button {
 .selectize-input {
 	padding-right: 40px;
 	input[placeholder] {
-		display: none !important;
+		color: $body-color;
+		&::placeholder{
+			color: transparent;
+		}
+		// display: none !important;
 	}
 }
 .selectize-input input {
@@ -217,7 +221,7 @@ input::-webkit-inner-spin-button {
 }
 
 .selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
-	color:rgba($gray-600, .3);
+	// color:rgba($gray-600, .3);
 	font-weight: 300;
 	@include mt;
 	.item {
@@ -254,25 +258,31 @@ input::-webkit-inner-spin-button {
 	z-index: 2;
 }
 
-.selectize-input.items.not-full.has-options.dropdown-active.focus.input-active + .float-select,
-.selectize-input.items.has-options.focus.full.has-items.dropdown-active.input-active + .float-select,
-.selectize-input.items.has-options.full.has-items + .float-select{
-		position: absolute;
-		pointer-events: none;
-		text-align: start;
-		text-overflow: ellipsis;
-		// top: 0;
-		// left: 16px;
-		color:$gray-600;
+.float-select{
+			text-align: start;
+			pointer-events: none;
+			text-overflow: ellipsis;
+					transform-origin: 0 0;
+					transition: opacity .1s ease-in-out,transform .1s ease-in-out;
+					font-weight: 300;
+				}
+				.selectize-input.items.full  + .float-select,
+				.selectize-input.items.focus  + .float-select{
 		font-size: 12px;
-		font-weight: 400;
-		transform-origin: 0 0;
-		transition: opacity .1s ease-in-out,transform .1s ease-in-out;
-		white-space: nowrap;
-		z-index: 2;
-		max-width: calc(100% - 40px);
-		transform: translateY(-24px);
+			transform: translateY(-24px);
+			// color: $body-color;
+					color: #535353;
+
 }
+// .selectize-input.items.has-options.focus.full.has-items.dropdown-active + .float-select,
+// .selectize-input.items.has-options.full.has-items + .float-select{
+// 		position: absolute;
+// 		// top: 0;
+// 		// left: 16px;
+// 		white-space: nowrap;
+// 		z-index: 2;
+// 		max-width: calc(100% - 40px);
+// }
 .selectize-input.items.full.has-options.has-items.disabled.locked {
 	background-color: #F6F6F6;
 	opacity: 1;
