@@ -145,8 +145,8 @@ class JSCCommon {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
+				.closest('.' + tab).find('.' + tab + '__content').removeClass('active')
+				.eq($(this).index()).addClass('active');
 
 		});
 
