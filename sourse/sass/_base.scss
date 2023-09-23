@@ -154,7 +154,15 @@ main{
 .section-title {
 	margin-bottom: var(--sTPB);
 	&--link {
-		display: flex;
+		display: flex;		
+	}
+	&__return-link {
+		display: inline-block;
+		margin-right: 15px;
+		.icon {
+			stroke: $primary;
+			stroke-width: 2;
+		}
 	}
 }
 h1 {

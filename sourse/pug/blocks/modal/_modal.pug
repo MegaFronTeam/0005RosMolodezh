@@ -11,7 +11,18 @@ mixin modal()
 				+input("Ваше Имя")(required)  
 				+e.BUTTON.btn.btn(type="submit"  )  
 				+policy()
-				+policy()
+
+	div(id="modal-worker"  style="display: none" )
+		+b.modal-win
+			+e.modal-wrap
+				+e.name Костин Валентин Викторович
+				dl
+					dt Телефон
+					dd 8 800 658 66 88
+					dt E-mail
+					dd sample@sample.com
+					dt Регион
+					dd Краснодарский Край
 	// #modal-call
 
 	

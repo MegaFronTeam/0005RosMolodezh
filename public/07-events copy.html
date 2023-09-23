@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Организации</title>
+		<title>Журнал мероприятий</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -106,8 +106,14 @@
 						<div class="col-lg-9">
 							<!-- start sStaff-->
 							<section class="sStaff section" id="sStaff">
-								<div class="section-title">
-									<h1>Организации</h1>
+								<div class="section-title section-title section-title--link">
+									<a class="section-title__return-link" href="#">
+										<svg class="icon icon-arrow-left ">
+											<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+										</svg>
+									</a>
+									<h1 class="section-title__header">Журнал мероприятий в сфере молодежной политики
+									</h1>
 								</div>
 								<div class="filter">
 									<div class="filter__row row">
@@ -188,18 +194,18 @@
 									</form>
 								</div>
 								<ul class="sStaff__list">
-									<li class="sStaff__item sStaff__item--org add">
+									<li class="sStaff__item sStaff__item--event">
 										<div class="sStaff__item-top">
 											<div class="sStaff__badges">
 												<div class="sStaff__badge sStaff__badge--id">ID 458
 												</div>
-												<div class="sStaff__badge sStaff__badge--new">Новая
-												</div>
-												<div class="sStaff__badge sStaff__badge--grant">Субсидия
+												<div class="sStaff__badge sStaff__badge--new">Одобрено
 												</div>
 											</div>
-											<a class="sStaff__reg" href="#">Устав
+											<a class="sStaff__worker" data-fancybox="data-fancybox" data-type="ajax" href="modal/worker.html">Крайнов А.К.
 											</a>
+											<div class="sStaff__date">29.04.23 04:43
+											</div>
 											<div class="sStaff__dropdown-wrap">
 												<button class="sStaff__btn sStaff__btn--js btn">
 													<svg class="icon icon-more ">
@@ -224,27 +230,21 @@
 										</div>
 										<div class="sStaff__name">Управление федеральной службы исполнения наказаний по республике Коми
 										</div>
-										<div class="sStaff__contacts">
-											<a class="sStaff__tel" href="tel:">8 800 658 94 45
-											</a>
-											<a class="sStaff__mail" href="mailto:">Ufsin_komi@mail.ru
-											</a>
-											<div class="sStaff__tax">ИНН 1105585335598
-											</div>
+										<div class="sStaff__subtitle">Прочие государственные и муниципальные учреждения, федеральный уровень
 										</div>
 									</li>
-									<li class="sStaff__item sStaff__item--org">
+									<li class="sStaff__item sStaff__item--event">
 										<div class="sStaff__item-top">
 											<div class="sStaff__badges">
 												<div class="sStaff__badge sStaff__badge--id">ID 458
 												</div>
-												<div class="sStaff__badge sStaff__badge--existing">Статус
-												</div>
-												<div class="sStaff__badge sStaff__badge--grant">Субсидия
+												<div class="sStaff__badge sStaff__badge--existing">На рассмотрении
 												</div>
 											</div>
-											<a class="sStaff__reg" href="#">Устав
+											<a class="sStaff__worker" data-fancybox="data-fancybox" data-type="ajax" href="modal/worker.html">Крайнов А.К.
 											</a>
+											<div class="sStaff__date">29.04.23 04:43
+											</div>
 											<div class="sStaff__dropdown-wrap">
 												<button class="sStaff__btn sStaff__btn--js btn">
 													<svg class="icon icon-more ">
@@ -253,7 +253,15 @@
 												</button>
 												<ul class="sStaff__dropdown dropdown visually-hidden">
 													<li class="sStaff__dropdown-item">
-														<a class="sStaff__dropdown-link sStaff__dropdown-link--remove" href="#">Уволить
+														<a class="sStaff__dropdown-link sStaff__dropdown-link--confirm" href="#">Подтвердить
+														</a>
+													</li>
+													<li class="sStaff__dropdown-item">
+														<a class="sStaff__dropdown-link" href="#">Отклонить
+														</a>
+													</li>
+													<li class="sStaff__dropdown-item">
+														<a class="sStaff__dropdown-link sStaff__dropdown-link--remove" href="#">Удалить
 														</a>
 													</li>
 												</ul>
@@ -261,25 +269,21 @@
 										</div>
 										<div class="sStaff__name">Управление федеральной службы исполнения наказаний по республике Коми
 										</div>
-										<div class="sStaff__contacts">
-											<a class="sStaff__tel" href="tel:">8 800 658 94 45
-											</a>
-											<a class="sStaff__mail" href="mailto:">Ufsin_komi@mail.ru
-											</a>
-											<div class="sStaff__tax">ИНН 1105585335598
-											</div>
+										<div class="sStaff__subtitle">Прочие государственные и муниципальные учреждения, федеральный уровень
 										</div>
 									</li>
-									<li class="sStaff__item sStaff__item--org">
+									<li class="sStaff__item sStaff__item--event">
 										<div class="sStaff__item-top">
 											<div class="sStaff__badges">
 												<div class="sStaff__badge sStaff__badge--id">ID 458
 												</div>
-												<div class="sStaff__badge sStaff__badge--existing">Статус
+												<div class="sStaff__badge sStaff__badge--new">Одобрено
 												</div>
 											</div>
-											<a class="sStaff__reg" href="#">Устав
+											<a class="sStaff__worker" data-fancybox="data-fancybox" data-type="ajax" href="modal/worker.html">Крайнов А.К.
 											</a>
+											<div class="sStaff__date">29.04.23 04:43
+											</div>
 											<div class="sStaff__dropdown-wrap">
 												<button class="sStaff__btn sStaff__btn--js btn">
 													<svg class="icon icon-more ">
@@ -288,7 +292,15 @@
 												</button>
 												<ul class="sStaff__dropdown dropdown visually-hidden">
 													<li class="sStaff__dropdown-item">
-														<a class="sStaff__dropdown-link sStaff__dropdown-link--remove" href="#">Уволить
+														<a class="sStaff__dropdown-link sStaff__dropdown-link--confirm" href="#">Подтвердить
+														</a>
+													</li>
+													<li class="sStaff__dropdown-item">
+														<a class="sStaff__dropdown-link" href="#">Отклонить
+														</a>
+													</li>
+													<li class="sStaff__dropdown-item">
+														<a class="sStaff__dropdown-link sStaff__dropdown-link--remove" href="#">Удалить
 														</a>
 													</li>
 												</ul>
@@ -296,25 +308,21 @@
 										</div>
 										<div class="sStaff__name">Управление федеральной службы исполнения наказаний по республике Коми
 										</div>
-										<div class="sStaff__contacts">
-											<a class="sStaff__tel" href="tel:">8 800 658 94 45
-											</a>
-											<a class="sStaff__mail" href="mailto:">Ufsin_komi@mail.ru
-											</a>
-											<div class="sStaff__tax">ИНН 1105585335598
-											</div>
+										<div class="sStaff__subtitle">Прочие государственные и муниципальные учреждения, федеральный уровень
 										</div>
 									</li>
-									<li class="sStaff__item sStaff__item--org">
+									<li class="sStaff__item sStaff__item--event">
 										<div class="sStaff__item-top">
 											<div class="sStaff__badges">
 												<div class="sStaff__badge sStaff__badge--id">ID 458
 												</div>
-												<div class="sStaff__badge sStaff__badge--existing">Статус
+												<div class="sStaff__badge sStaff__badge--new">Одобрено
 												</div>
 											</div>
-											<a class="sStaff__reg" href="#">Устав
+											<a class="sStaff__worker" data-fancybox="data-fancybox" data-type="ajax" href="modal/worker.html">Крайнов А.К.
 											</a>
+											<div class="sStaff__date">29.04.23 04:43
+											</div>
 											<div class="sStaff__dropdown-wrap">
 												<button class="sStaff__btn sStaff__btn--js btn">
 													<svg class="icon icon-more ">
@@ -323,7 +331,15 @@
 												</button>
 												<ul class="sStaff__dropdown dropdown visually-hidden">
 													<li class="sStaff__dropdown-item">
-														<a class="sStaff__dropdown-link sStaff__dropdown-link--remove" href="#">Уволить
+														<a class="sStaff__dropdown-link sStaff__dropdown-link--confirm" href="#">Подтвердить
+														</a>
+													</li>
+													<li class="sStaff__dropdown-item">
+														<a class="sStaff__dropdown-link" href="#">Отклонить
+														</a>
+													</li>
+													<li class="sStaff__dropdown-item">
+														<a class="sStaff__dropdown-link sStaff__dropdown-link--remove" href="#">Удалить
 														</a>
 													</li>
 												</ul>
@@ -331,13 +347,39 @@
 										</div>
 										<div class="sStaff__name">Управление федеральной службы исполнения наказаний по республике Коми
 										</div>
-										<div class="sStaff__contacts">
-											<a class="sStaff__tel" href="tel:">8 800 658 94 45
-											</a>
-											<a class="sStaff__mail" href="mailto:">Ufsin_komi@mail.ru
-											</a>
-											<div class="sStaff__tax">ИНН 1105585335598
+										<div class="sStaff__subtitle">Прочие государственные и муниципальные учреждения, федеральный уровень
+										</div>
+									</li>
+									<li class="display-row">
+										<div class="display-row__block d-none d-sm-block">
+											<div class="display-row__input-wrap form-group">
+												<label><span class="display-row__title">Отображать по</span>
+													<select class="display-row__input form-control">
+														<option>20</option>
+														<option>40</option>
+													</select>
+												</label>
 											</div>
+										</div>
+										<div class="pagination-wrapper">
+											<ul class="page-numbers">
+														<li><span class="prev page-numbers"><img src="img/svg/prev.svg" alt=""/></span>
+														</li>
+														<li><span class="page-numbers current"> 1</span>
+														</li>
+														<li><a class="page-numbers" href="#">2</a>
+														</li>
+														<li><a class="page-numbers" href="#">3</a>
+														</li>
+														<li><a class="page-numbers" href="#">4</a>
+														</li>
+														<li><a class="next page-numbers" href="#">...</a>
+														</li>
+														<li><a class="page-numbers" href="#">25</a>
+														</li>
+														<li><a class="next page-numbers" href="#"><img src="img/svg/next.svg" alt=""/></a>
+														</li>
+											</ul>
 										</div>
 									</li>
 								</ul>

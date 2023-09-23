@@ -11,10 +11,39 @@
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(500);
+	width: rem(425);
 	// min-height: 100%; 
-	padding: 40px;
-
+	padding: 16px;
+	border-radius: $border-radius;
+	&__name {
+		margin-bottom: 16px;
+		font-size: rem(18);
+		font-weight: 500;
+	}
+	&__dl-row {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		&:not(:first-child) {
+			border-top: 1px solid #DDE2E5;
+		}
+	}
+	&__dt {
+		padding: 9px 0;
+		width: 72px;
+		color: $gray-700;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+	&__dd {
+		align-items: center;
+		width: calc(100% - 72px);
+		color: $gray-700;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 1.2;
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -25,6 +54,28 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+	.is-close-btn {
+		// top: 16px !important;
+		// right: 16px !important;
+		// --f-button-width: 16px;
+		// --f-button-hight: 16px;
+	}
+}
+.fancybox__content>.f-button.is-close-btn {
+	--f-button-width: 16px;
+	--f-button-height: 16px;
+	--f-button-border-radius: 4px;
+	--f-button-color: #000000;
+	--f-button-hover-color: $primary;
+	--f-button-bg: transparent;
+	--f-button-hover-bg: transparent;
+	--f-button-active-bg: transparent;
+	--f-button-svg-width: 14px;
+	--f-button-svg-height: 14px;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	opacity: 1;
 }
 
 a {

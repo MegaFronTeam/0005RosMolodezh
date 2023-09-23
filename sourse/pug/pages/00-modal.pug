@@ -25,8 +25,11 @@ block pagecontent
 		.section.container
 			h1 Modal page 
 			mixin btn(a, t)
-				a(data-fancybox data-type="ajax" href= a).btn.btn-primary= t
-			+btn("modal/call.html", 'call')
+				.col-auto.mb-2
+					a(data-fancybox data-type="ajax" href= a).btn.btn-primary= t
+			.row
+				//- +btn("modal/call.html", 'call')
+				+btn("modal/worker.html", 'call-worker')
 
 	+parts('footer')
       

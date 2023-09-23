@@ -1,0 +1,120 @@
+// start .sEventTable
+.sEventTable {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	padding: 8px;
+	border-radius: $border-radius;
+	background: #FFF;
+	overflow-y: hidden;
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+	table {
+		min-width: 665px;
+		margin-bottom: 0;
+	}
+	th {
+		padding: 8px;
+		background:$gray-100;
+		color: rgba($gray-600,.5);
+		vertical-align: middle;
+		font-size: 12px;
+		font-weight: 300;
+		border-bottom: none;
+	}
+	&__btn-text {
+		color: rgba($gray-600,.5);
+		font-size: 12px;
+		font-weight: 300;
+	}
+	&__header-btn {
+		display: flex;
+		align-items: center;
+		padding: 0;
+		// width: 29px;
+		// height: 22px;
+		img {
+			flex-shrink: 0;
+			&.trailing {
+				margin-right: 10px;
+			}
+		}
+	}
+	&__worker-td {
+		white-space: nowrap;
+	}
+	&__role-td {
+		max-width: 116px;
+	}
+	&__badge {
+		padding: 0 4px;
+		border-radius: 4px;
+		color: $gray-700;
+		font-size: 10px;
+		font-weight: 700;
+		&--accent {
+			background: $accent;
+		}
+	}
+	tbody {
+		font-size: 12px;
+		font-weight: 300;
+		color: #252525;
+		tr:last-child {
+			td {
+				border-bottom: none;
+			}
+		}
+	}
+	tr {
+		// @include media-breakpoint-down(md) {
+		// 	display: flex;
+		// 	flex-wrap: wrap;
+		// }
+	}
+	td {
+		vertical-align: middle;
+	}
+	&__name-td {
+		color: $body-color;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 140%;
+	}
+	&__dropdown-wrap {
+		position: relative;
+	}
+	&__more-btn {
+		padding: 5px 0 5px 5px;
+	}
+	&__dropdown {
+		position: absolute;
+		right: 100%;
+		top: 0;
+		padding: 8px;
+		min-width: 195px;
+		list-style-type: none;
+		border-radius: $border-radius;
+		background: $white;
+		box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.17);
+		z-index: 5;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sEventTable
