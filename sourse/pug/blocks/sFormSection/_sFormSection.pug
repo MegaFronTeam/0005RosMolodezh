@@ -1,0 +1,19 @@
+mixin fromSectionItem(active, badge, mod, title)
+	+e.item.LI
+		+e.link(href="#" class=active)
+			+e.section Раздел
+			if badge
+				div(class=`badge badge--${mod}`)= badge
+			+e.title= title
+
+mixin sFormSection(data)
+	// start sFormSection
+	+b.SECTION.sFormSection.section#sFormSection&attributes(attributes)
+		+e.list.UL
+			+fromSectionItem('active', 'Ошибки','alarm','Вовлеченность молодежи в инновационную деятельность и научно-техническое творчество')
+			+fromSectionItem('', 'Принято','succeed','Вовлеченность молодежи в инновационную')
+			+fromSectionItem('', 'Заполнено','filled','Вовлеченность молодежи в инновационную деятельность и научно-техническое творчество')
+			+fromSectionItem('', '','','Вовлеченность молодежи в инновационную деятельность ')
+			+fromSectionItem('', '','','Вовлеченность')
+			+fromSectionItem('', '','','Деятельность и научно- техническое творчество')
+	// end sFormSection

@@ -1,0 +1,68 @@
+// start .sFormSection
+.sFormSection {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(20)};
+	// --sTPB: #{rem()};
+	counter-reset: sections;
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__list {
+		list-style-type: none;
+	}
+	&__item{
+		border-bottom: 1px solid #DDE2E5;
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+	&__link {
+		display: block;
+		padding: 16px;
+		border-radius: $border-radius;
+		background: $white;
+		&.active {
+			border: 2px solid $primary;
+		}
+		&:hover {
+			.sFormSection__title {
+				color: $primary;
+			}
+		}
+	}
+	&__section {
+		display: inline-block;
+		margin-right: 8px;
+		margin-bottom: 8px;
+		color: $gray-700;
+		font-size: 12px;
+		font-weight: 300;
+		&::after {
+			counter-increment: sections;
+			content: counter(sections);
+		}
+	}
+	&__title {
+		font-size: 14px;
+		font-weight: 500;
+		color: $body-color;
+		line-height: 140%;
+		@include mt;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFormSection

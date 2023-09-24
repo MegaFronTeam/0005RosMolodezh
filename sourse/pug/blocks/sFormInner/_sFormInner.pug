@@ -1,0 +1,104 @@
+mixin comments
+	+e.comment-btn.comment-btn-js.btn.BUTTON
+		+icon('comment')
+		| Оставить комментарий 2
+	+e.comment-body.comment-body-js.visually-hidden
+		.sFormInner__comments
+			.sFormInner__comments-title Комментарии 2
+			.sFormInner__comment-input
+				+input('Написать комментарий','textarea').--comment
+				button.btn
+					+icon('send')
+			.sFormInner__comment.sFormInner__comment--invert
+				.sFormInner__comment-owner Викторовский Валентин Игоревич 18.06.2023 16:00
+				.sFormInner__comment-text Численность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям
+			.sFormInner__comment
+				.sFormInner__comment-owner Вы 18.06.2023 16:00
+				.sFormInner__comment-text Численность молодежи, зедействованной в программных мероприятиях по всем направлениямЧисленность молодежи, зедействованной в программных мероприятиях
+			+e.comment-btn.hide-comment-js.btn.BUTTON Скрыть комментарии
+
+mixin sFormInner(data)
+	// start sFormInner
+	+b.SECTION.sFormInner.section#sFormInner&attributes(attributes)
+		+b.alert--notice
+			+e.title Комментарий модератора
+			p Вот вам яркий пример современных тенденций — новая модель организационной деятельности позволяет выполнить важные задания по разработке переосмысления внешнеэкономических политик. Являясь всего лишь частью общей картины, элементы политического процесса, которые представляют собой яркий пример континентально-европейского типа
+		+e.section-descr
+			+e.subtitle Раздел 1
+			.section-title
+				h2 Вовлеченность молодежи в инновационную деятельность и научно-техническое творчество
+			p Вот вам яркий пример современных тенденций — новая модель организационной деятельности позволяет выполнить важные задания по разработке переосмысления внешнеэкономических политик. Являясь всего лишь частью общей картины, элементы политического процесса, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут подвергнуты целой серии независимых исследований. Учитывая ключевые сценарии поведения, глубокий уровень погружения в значительной степени обусловливает важность позиций, занимаемых участниками в отношении поставленных задач
+		+e.category-descr.hidden-wrap-js
+			.sFormInner__item-header
+				+e.subtitle Категория 1
+				+e.show-btn.show-btn-js.btn.BUTTON.hidden
+			+e.hidden.visually-hidden.hidden-js
+				.section-title
+					h3 Вовлеченность молодежи в инновационную деятельность и научно-техническое творчество
+				p Численность молодежи, зедействованной в программных мероприятиях по всем направлениямЧисленность молодежи, зедействованной в программных мероприятияхЧисленность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям
+		+form-wrap
+			.sFormInner__item
+				.sFormInner__item-header
+					+e.title Количество реализованных мероприятий в отчестном году (ед.)
+					.badge.badge--alarm Ошибки
+				p Численность молодежи, зедействованной в программных мероприятиях по всем направлениямЧисленность молодежи, зедействованной в программных мероприятияхЧисленность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям
+				+e.input-wrap
+					select(placeholder="Выбрано").floating-select.form-select
+						option
+						option placeholder1
+						option placeholder2
+						option placeholder3
+				+comments
+			.sFormInner__item
+				.sFormInner__item-header
+					+e.title Количество реализованных мероприятий в отчестном году (ед.)
+					.badge.badge--alarm Ошибки
+				p Численность молодежи, зедействованной в программных мероприятиях по всем направлениямЧисленность молодежи, зедействованной в программных мероприятияхЧисленность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям
+				+e.input-wrap
+					select(placeholder="Выбрать из списка").floating-select.form-select
+						option
+						option placeholder1
+						option placeholder2
+						option placeholder3
+			.sFormInner__item
+				.sFormInner__item-header
+					+e.title Количество реализованных поле с текстом
+					.badge
+				p Численность молодежи, зедействованной в программных мероприятиях по всем направлениямЧисленность молодежи, зедействованной в программных мероприятиях
+				.form-floating
+					textarea.form-control(placeholder="Свободный ввод" id="floatingTextarea1")
+					label(for="floatingTextarea1") Свободный ввод
+				+comments
+			.sFormInner__item.sFormInner__item--check
+				.sFormInner__item-header
+					+e.title Количество реализованных (ед.)
+				.sFormInner__checkbox-wrap
+					+in-c('radio','Численность молодежи, зедействованной','radio')
+					+in-c('radio','Численность молодежи','radio')
+					+in-c('radio','Вариант ответа','radio')
+					+in-c('radio','Иное','radio')
+				.form-floating
+					textarea.form-control(placeholder="Ваш вариант ответа" id="floatingTextarea1")
+					label(for="floatingTextarea1") Свободный ввод
+				+comments
+			.sFormInner__item.sFormInner__item--check
+				.sFormInner__item-header
+					+e.title Выберите возможные варианты ответа
+				.sFormInner__checkbox-wrap
+					+in-c('checkbox','Численность молодежи, зедействованной','radio')
+					+in-c('checkbox','Численность молодежи','radio')
+					+in-c('checkbox','Вариант ответа','radio')
+				+comments
+			.sFormInner__item.sFormInner__item--sm
+				.sFormInner__item-header
+					+e.title Введите количество начала реализации проектов на сегодняшний день еще кусок текста
+				+floatInput('number1','Введите число','number')
+				+comments
+			.sFormInner__item.sFormInner__item--sm
+				.sFormInner__item-header
+					+e.title Когда были реализованы данные проекты, введите дату начала реализации проектов на сегодняшний день
+				+floatInput('date','Выберите дату','date')
+				+comments
+			//- .sFormInner__bottom
+			//- 	+e.btn.btn.btn-primary Отправить на доработку
+	// end sFormInner

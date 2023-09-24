@@ -131,6 +131,39 @@ function eventHandler() {
 // 	})
 //  });
 
+//
+let showBtns = document.querySelectorAll('.show-btn-js');
+showBtns.forEach(btn => {
+	btn.addEventListener('click',function(event){
+		let hidden = btn.closest('.hidden-wrap-js').querySelector('.hidden-js');
+		hidden.classList.toggle('visually-hidden')
+		btn.classList.toggle('hidden')
+	});
+});
+
+//Показывает и скрывает комментарии
+
+let showCommentBtns = document.querySelectorAll('.comment-btn-js');
+let hideCommentBtns = document.querySelectorAll('.hide-comment-js');
+showCommentBtns.forEach(btn => {
+	btn.addEventListener('click',function(event){
+		event.preventDefault();
+		let comment = btn.nextElementSibling;
+		comment.classList.remove('visually-hidden');
+		btn.classList.add('visually-hidden');
+	});
+});
+hideCommentBtns.forEach(btn => {
+	btn.addEventListener('click',function(event){
+		event.preventDefault();
+		let comment = btn.closest('.comment-body-js');
+		comment.classList.add('visually-hidden');
+		let showBtn = comment.previousElementSibling;
+		showBtn.classList.remove('visually-hidden');
+	});
+});
+// /Показывает и скрывает комментарии
+
 function dropDown(btn,dropdown) {
 	let buttons = document.querySelectorAll('.' + btn);
 	let dropdowns = document.querySelectorAll('.' + dropdown);
