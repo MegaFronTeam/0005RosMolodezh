@@ -109,53 +109,98 @@ function eventHandler() {
 		})
 	});
 
-	const filterBtns = document.querySelectorAll('.filter__btn--js');
-	const filterDropdowns = document.querySelectorAll('.filter__dropdown');
-	filterBtns.forEach(btn => {
-		btn.addEventListener('click', (e) => {
-				let dropDown = btn.nextElementSibling;
-				dropDown.classList.toggle('active');
-				dropDown.forEach(el => {
-					if (el !== e.currentTarget.closest('.filter__item').querySelector('.filter__dropdown')) {
-						el.classList.remove('active');
-					}
+// 	const filterBtns = document.querySelectorAll('.filter__btn--js');
+// 	const filterDropdowns = document.querySelectorAll('.filter__dropdown');
+// 	filterBtns.forEach(btn => {
+// 		btn.addEventListener('click', (e) => {
+// 				let dropDown = btn.nextElementSibling;
+// 				dropDown.classList.toggle('active');
+// 				dropDown.forEach(el => {
+// 					if (el !== e.currentTarget.closest('.filter__item').querySelector('.filter__dropdown')) {
+// 						el.classList.remove('active');
+// 					}
 					
-				})
-		});
-	 document.addEventListener('click', (e) => {
-		if (!(e.target.closest('.filter__dropdown')) && (!e.target.classList.contains('filter__btn'))) {
-			filterDropdowns.forEach(el => {
-				el.classList.remove('active');
-			})
-		}
-	})
- });
+// 				})
+// 		});
+// 	 document.addEventListener('click', (e) => {
+// 		if (!(e.target.closest('.filter__dropdown')) && (!e.target.classList.contains('filter__btn'))) {
+// 			filterDropdowns.forEach(el => {
+// 				el.classList.remove('active');
+// 			})
+// 		}
+// 	})
+//  });
 
- function dropDown(btn,dropdown,wrap) {
+//
+let showBtns = document.querySelectorAll('.show-btn-js');
+showBtns.forEach(btn => {
+	btn.addEventListener('click',function(event){
+		let hidden = btn.closest('.hidden-wrap-js').querySelector('.hidden-js');
+		hidden.classList.toggle('visually-hidden')
+		btn.classList.toggle('hidden')
+	});
+});
+
+//Показывает и скрывает комментарии
+
+let showCommentBtns = document.querySelectorAll('.comment-btn-js');
+let hideCommentBtns = document.querySelectorAll('.hide-comment-js');
+showCommentBtns.forEach(btn => {
+	btn.addEventListener('click',function(event){
+		event.preventDefault();
+		let comment = btn.nextElementSibling;
+		comment.classList.remove('visually-hidden');
+		btn.classList.add('visually-hidden');
+	});
+});
+hideCommentBtns.forEach(btn => {
+	btn.addEventListener('click',function(event){
+		event.preventDefault();
+		let comment = btn.closest('.comment-body-js');
+		comment.classList.add('visually-hidden');
+		let showBtn = comment.previousElementSibling;
+		showBtn.classList.remove('visually-hidden');
+	});
+});
+// /Показывает и скрывает комментарии
+
+function dropDown(btn,dropdown) {
 	let buttons = document.querySelectorAll('.' + btn);
 	let dropdowns = document.querySelectorAll('.' + dropdown);
+	let openedDropdown;
 	buttons.forEach(btn => {
-		btn.addEventListener('click',(e) => {
-			// console.log(e.currentTarget);
-			// console.log(btn.nextElementSibling);
+		btn.addEventListener('click',function(event)  {
 			let dropDown = btn.nextElementSibling;
-			dropDown.classList.toggle('visually-hidden');
-			dropdowns.forEach(el => {
-				if (el !== e.currentTarget.closest('.' + wrap).querySelector('.dropdown')) {
-					el.classList.add('visually-hidden');
-				}
-			})
-	})
+			if (dropDown.classList.contains('visually-hidden')) {
+				document.querySelectorAll('.dropdown').forEach((dd) => {
+					if (dd !== event.target) {
+						dd.classList.add('visually-hidden');
+					}
+				})
+				dropDown.classList.remove('visually-hidden');
+				event._isOpen = true;
+			} else if (!dropDown.classList.contains('visually-hidden')) {
+				dropDown.classList.add('visually-hidden');
+			}
+		});
 	});
-	document.addEventListener('click', (e) => {
-		if (!(e.target.closest('.' + dropdown)) && (!e.target.classList.contains(btn)) && (!e.target.classList.contains('icon'))) {
-			dropdowns.forEach(el => {
-				el.classList.add('visually-hidden');
+	document.addEventListener('click', function(event) {
+		dropdowns.forEach((el) => {
+			if (!el.classList.contains('visually-hidden')) {
+				openedDropdown = el;
+			}
+		})
+		if (event.composedPath().includes(openedDropdown)) return;
+		if (!event._isOpen) {
+			dropdowns.forEach((dd) => {
+				dd.classList.add('visually-hidden');
 			})
-		}
+    }
 	})
  }
- dropDown('sStaff__btn','sStaff__dropdown','sStaff__dropdown-wrap');
+ dropDown('sStaff__btn','sStaff__dropdown');
+ dropDown('filter__btn--js','filter__dropdown');
+ dropDown('sEventTable__more-btn','sEventTable__dropdown');
 
 };
 if (document.readyState !== 'loading') {

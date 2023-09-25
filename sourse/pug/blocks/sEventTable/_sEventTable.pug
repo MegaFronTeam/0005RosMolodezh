@@ -1,0 +1,112 @@
+mixin sEventTable(data)
+	// start sEventTable
+	+b.SECTION.sEventTable.section#sEventTable&attributes(attributes)
+		table.table
+			thead
+				tr
+					th
+						+e.header-btn.btn.BUTTON
+							+img('img/trailing.svg').trailing
+							+img('img/number.svg')
+					th ID
+					th Короткое название
+					th Сотрудник
+					th
+						+e.header-btn.btn.BUTTON
+							+img('img/trailing.svg').trailing
+							+e.btn-text Роль
+					th
+						+e.header-btn.btn.BUTTON
+							+img('img/trailing.svg').trailing
+							+e.btn-text Отправлено
+					th
+						+e.header-btn.btn.BUTTON
+							+img('img/trailing.svg').trailing
+							+e.btn-text Статус
+					th
+			tbody
+				tr
+					td 1
+					td 23
+					+e.name-td.TD Управление федеральной службы исполнения наказаний по республике Коми
+					+e.worker-td.TD
+						a(data-fancybox data-type="ajax" href="modal/worker.html") Желудов Д.В.
+					+e.role-td.TD Прочие государственные и муниципальные учреждения, федеральный уровень
+					td 29.04.23 04:43
+					td
+						+e.badge--accent Одобрено
+					+e.action-td.TD
+						+e.dropdown-wrap
+							+e.more-btn--js.btn.BUTTON
+								+img('img/more-vertical.svg')
+							+e.dropdown.dropdown.visually-hidden.UL
+								+e.dropdown-item.LI
+									+e.dropdown-link--confirm(href="#") Подтвердить
+								+e.dropdown-item.LI
+									+e.dropdown-link(href="#") Отклонить
+								+e.dropdown-item.LI
+									+e.dropdown-link--remove(href="#") Удалить
+				tr
+					td 2
+					td 23
+					+e.name-td.TD Управление федеральной службы исполнения наказаний по республике Коми
+					+e.worker-td.TD
+						a(data-fancybox data-type="ajax" href="modal/worker.html") Желудов Д.В.
+					+e.role-td.TD Прочие государственные и муниципальные учреждения, федеральный уровень
+					td 29.04.23 04:43
+					td
+						+e.badge--accent Одобрено
+					+e.action-td.TD
+						+e.dropdown-wrap
+							+e.more-btn--js.btn.BUTTON
+								+img('img/more-vertical.svg')
+							+e.dropdown.dropdown.visually-hidden.UL
+								+e.dropdown-item.LI
+									+e.dropdown-link--confirm(href="#") Подтвердить
+								+e.dropdown-item.LI
+									+e.dropdown-link(href="#") Отклонить
+								+e.dropdown-item.LI
+									+e.dropdown-link--remove(href="#") Удалить
+				tr
+					td 3
+					td 23
+					+e.name-td.TD Управление федеральной службы исполнения наказаний по республике Коми
+					+e.worker-td.TD
+						a(data-fancybox data-type="ajax" href="modal/worker.html") Желудов Д.В.
+					+e.role-td.TD Прочие государственные и муниципальные учреждения, федеральный уровень
+					td 29.04.23 04:43
+					td
+						+e.badge--accent Одобрено
+					+e.action-td.TD
+						+e.dropdown-wrap
+							+e.more-btn--js.btn.BUTTON
+								+img('img/more-vertical.svg')
+							+e.dropdown.dropdown.visually-hidden.UL
+								+e.dropdown-item.LI
+									+e.dropdown-link--confirm(href="#") Подтвердить
+								+e.dropdown-item.LI
+									+e.dropdown-link(href="#") Отклонить
+								+e.dropdown-item.LI
+									+e.dropdown-link--remove(href="#") Удалить
+				tr
+					td 4
+					td 23
+					+e.name-td.TD Управление федеральной службы исполнения наказаний по республике Коми
+					+e.worker-td.TD
+						a(data-fancybox data-type="ajax" href="modal/worker.html") Желудов Д.В.
+					+e.role-td.TD Прочие государственные и муниципальные учреждения, федеральный уровень
+					td 29.04.23 04:43
+					td
+						+e.badge--accent Одобрено
+					+e.action-td.TD
+						+e.dropdown-wrap
+							+e.more-btn--js.btn.BUTTON
+								+img('img/more-vertical.svg')
+							+e.dropdown.dropdown.visually-hidden.UL
+								+e.dropdown-item.LI
+									+e.dropdown-link--confirm(href="#") Подтвердить
+								+e.dropdown-item.LI
+									+e.dropdown-link(href="#") Отклонить
+								+e.dropdown-item.LI
+									+e.dropdown-link--remove(href="#") Удалить
+	// end sEventTable

@@ -86,21 +86,52 @@ mixin userFormItem(done,name, date="Октябрь 2023")
 		else
 			+e.item-right--fill
 				+e.fill-btn.btn.btn-primary Заполнить
-mixin sStaff(header="Сотрудники")
+
+mixin eventItem(id="ID 458",add,worker="Крайнов А.К.",date="29.04.23 04:43", title="Управление федеральной службы исполнения наказаний по республике Коми",subtile="Прочие государственные и муниципальные учреждения, федеральный уровень")
+	+e.item--event.LI
+		+e.item-top
+			+e.badges
+				+e.badge--id= id
+				if add
+					+e.badge--new Одобрено
+				else
+					+e.badge--existing На рассмотрении
+			+e.worker(data-fancybox data-type="ajax" href="modal/worker.html")= worker
+			+e.date= date
+			+e.dropdown-wrap
+				+e.btn--js.btn.BUTTON
+					+icon('more')
+				+e.dropdown.dropdown.visually-hidden.UL
+					+e.dropdown-item.LI
+						+e.dropdown-link--confirm(href="#") Подтвердить
+					+e.dropdown-item.LI
+						+e.dropdown-link(href="#") Отклонить
+					+e.dropdown-item.LI
+						+e.dropdown-link--remove(href="#") Удалить
+		+e.name= title
+		+e.subtitle= subtile
+
+mixin sStaff(header="Сотрудники",link)
 	// start sStaff
 	+b.SECTION.sStaff.section#sStaff&attributes(attributes)
-		.container
+		//- .container
+		if link
+			+b.section-title.section-title--link
+				+e.return-link(href='#')
+					+icon('arrow-left')
+				+e.header.H1= header
+		else
 			+b.section-title
 				h1= header
-			+filter
-			+search
-			+e.list.UL
-				if block
-					block
-				else
-					+staffItem("ID 458",'add','8 800 658 94 45','victorovskiy.victor@mail.ru','Моджайский Виктор Валентинович')
-					+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Семенов Игорь Николаевич')
-					+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Сикорская Валентина Игоревна')
-					+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
-					+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
+		+filter
+		+search
+		+e.list.UL
+			if block
+				block
+			else
+				+staffItem("ID 458",'add','8 800 658 94 45','victorovskiy.victor@mail.ru','Моджайский Виктор Валентинович')
+				+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Семенов Игорь Николаевич')
+				+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Сикорская Валентина Игоревна')
+				+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
+				+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
 	// end sStaff

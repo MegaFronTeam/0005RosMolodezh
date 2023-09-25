@@ -51,17 +51,26 @@ mixin parts(elem)
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
 
+		//- +select('Регион','Все','Все1','Все2','Все3')
 mixin filter
 	+b.filter
-		//- +select('Регион','Все','Все1','Все2','Все3')
-		mixin filterItem(title,btn,...items)
-			+e.item
-				+e.title= title
-				+e.btn--js.btn.BUTTON= btn
-				+e.dropdown
-					each item in items
-						+in-c('checkbox',`${item}`).filter__checkbox
-		+filterItem('Регион','Все','Все1','Все2','Все3')
-		+filterItem('Месяц','Все','Все1','Все2','Все3')
-		+filterItem('Сотрудник','Выбрано 3','Все1','Все2','Все3')
-		+filterItem('Роль','Все','Все1','Все2','Все3')
+		+e.row.row
+			mixin filterItem(title,btn,...items)
+				.col-sm-6.col-md-3
+					+e.item
+						+e.title= title
+						+e.btn--js.btn.btn-outline-info.BUTTON= btn
+						+e.dropdown.dropdown.visually-hidden
+							each item in items
+								+in-c('checkbox',`${item}`).filter__checkbox
+			+filterItem('Регион','Все','Все1','Все2','Все3')
+			+filterItem('Месяц','Все','Все1','Все2','Все3')
+			+filterItem('Сотрудник','Выбрано 3','Все1','Все2','Все3')
+			+filterItem('Роль','Все','Все1','Все2','Все3')
+
+mixin displayRow
+	+b.display-wrap
+		+e.display-row
+			+e.block.d-none.d-sm-block
+				+select('Отображать по','20','40')
+			+pugin()

@@ -9,6 +9,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sStaff/_sStaff.pug
 include ../blocks/sProfileNav/_sProfileNav.pug
+include ../blocks/sEventTable/_sEventTable.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -29,11 +30,9 @@ block pagecontent
 					+sProfileNav
 				.col-lg-9
 					+sStaff('Журнал мероприятий в сфере молодежной политики','link')
-						+eventItem("ID 458",'add')
-						+eventItem
-						+eventItem("ID 458",'add')
-						+eventItem("ID 458",'add')
+						+sEventTable
 						+displayRow
+
 	+parts('footer')
 
 

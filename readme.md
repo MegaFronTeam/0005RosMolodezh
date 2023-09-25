@@ -6,3 +6,6 @@
 1. <https://megafronteam.github.io/0005RosMolodezh/05-organisations.html>
 1. <https://megafronteam.github.io/0005RosMolodezh/06-forms.html>
 1. <https://megafronteam.github.io/0005RosMolodezh/06-forms-02.html>
+1. <https://megafronteam.github.io/0005RosMolodezh/07-events.html>
+1. <https://megafronteam.github.io/0005RosMolodezh/07-events-02.html>
+1. <https://megafronteam.github.io/0005RosMolodezh/08-form-inner.html>

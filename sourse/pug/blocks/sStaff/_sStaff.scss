@@ -138,6 +138,42 @@
 				}
 			}
 		}
+		&--event {
+			.sStaff__badge {
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			.sStaff__date {
+				color:$gray-700;
+				font-size: 12px;
+				font-weight: 300;
+			}
+			.sStaff__dropdown-wrap {
+				order: 0;
+				@include media-breakpoint-down(sm) {
+					order: -1;
+					width: 100%;
+				}
+			}
+			.sStaff__badges {
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 5px;
+				}
+			}
+		}
+		
+	}
+	&__subtitle {
+		line-height: 1;
+		color:$gray-700;
+		font-size: 14px;
+		font-weight: 300;
+	}
+	&__worker {
+		margin-right: 8px;
+		font-size: 12px;
+		font-weight: 500;
 	}
 	&__fill-btn {
 		padding: 6px 23px;
