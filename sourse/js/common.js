@@ -70,14 +70,14 @@ function eventHandler() {
 			let uploadField = document.querySelectorAll('.upload-field__input-wrap');
 			for (let i=0;i<uploadField.length;i++){
 				let inputFile = uploadField[i].querySelector('.input-upload');
-				if (inputFile) {
-
+				if (inputFile) { 
 					inputFile.addEventListener('change',() => uploadField[i].querySelector('.upload-field__file-name').innerHTML = inputFile.files[0].name);
 				}
 			}
 		}
 	}
 	inputFile();
+
 	$(".floating-select").each(function(){
 		let self= this;
 		let customSelect;
