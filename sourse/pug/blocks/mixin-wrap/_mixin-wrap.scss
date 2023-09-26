@@ -189,6 +189,7 @@
 .display-wrap {
 	padding: 8px;
 	background-color: $white;
+	margin-bottom: 40px;
 	&__display-row {
 		display: flex;
 		align-items: center;
@@ -231,6 +232,9 @@
 		font-weight: 300;
 		border-radius: 4px;
 		border: none;
+	}
+	ul.page-numbers {
+		margin-bottom: 0;
 	}
 }
 

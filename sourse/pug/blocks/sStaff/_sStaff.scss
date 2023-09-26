@@ -1,7 +1,7 @@
 // start .sStaff
 .sStaff {
 	--sPT: #{rem(0)};
-	--sPB: #{rem(40)};
+	--sPB: #{rem(0)};
 	--sTPB: #{rem(16)};
 	counter-reset: staff-items;
 	&__row{
