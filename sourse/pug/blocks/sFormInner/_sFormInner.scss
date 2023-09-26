@@ -97,6 +97,9 @@
 		border-radius: $border-radius;
 		border-bottom: 1px solid #DDE2E5;
 		background-color: $white;
+		&--alarm {
+			border: 1px solid $red;
+		}
 		&:last-child {
 			margin-bottom: 24px;
 		}
