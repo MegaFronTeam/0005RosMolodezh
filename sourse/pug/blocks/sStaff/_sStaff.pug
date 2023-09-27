@@ -117,9 +117,13 @@ mixin sStaff(header="Сотрудники",link)
 		//- .container
 		if link
 			+b.section-title.section-title--link
-				+e.return-link(href='#')
-					+icon('arrow-left')
-				+e.header.H1= header
+				.row
+					.col.d-flex
+						+e.return-link(href='#')
+							+icon('arrow-left')
+						+e.header.H1= header
+					.col-auto
+						a.btn.btn-primary(href="#") Добавить мероприятие
 		else
 			+b.section-title
 				h1= header

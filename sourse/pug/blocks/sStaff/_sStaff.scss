@@ -9,6 +9,18 @@
 		// --bs-gutter-y: #{rem()};
 	}
 	.section-title{
+		.row{
+			flex-grow: 1;
+		}
+		.col{
+			h1{
+				max-width: rem(400);
+			}
+		}
+		.btn{
+			--bs-btn-padding-y: 0.3rem;
+			
+		}
 	}
 	&__col{
 		
