@@ -100,7 +100,8 @@ input::-webkit-inner-spin-button {
 	border: 1px solid $gray-300;
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-	color: rgba($gray-600, .5);
+	color: var(--bl-100, #252525);
+	font-weight: 400;
 }
 // .select2-selection__arrow {
 // 	background-image: url('../img/select-arrow.svg');

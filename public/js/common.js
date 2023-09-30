@@ -78,36 +78,53 @@ function eventHandler() {
 	}
 	inputFile();
 
-	$(".floating-select").each(function(){
-		let self= this;
-		let customSelect;
+	$(".form-wrap__input-wrap").each(function () {
+		let self = $(this);
 		let floatLabel;
-		let classSelectize = 'selectize-'+ (Math.round(Math.random() * 1000));
-		let targetSelect;
-		let placeholderName = this.getAttribute('placeholder');
-		let floatDiv = '<div class="float-select"><span class="name">' + placeholderName + '</span></div>';
-		customSelect = $(this).selectize({
-			persist: false,
-			closeAfterSelect: true,
-			onInitialize() {
-				targetSelect = this.$control[0];
-				targetSelect.classList.add(classSelectize)
-				let floatSelect = targetSelect.querySelector('.float-select');
-				// console.log(targetSelect);
-				
-				if (!floatSelect) {
-					targetSelect.insertAdjacentHTML("afterend", floatDiv);
-					floatLabel = placeholderName;
-				}
-			},
+		// let placeholderName = $(this)[0].querySelector("select").getAttribute('data-placeholder');
+		// let floatDiv = '<div class="float-select"><span class="name">' + placeholderName + '</span></div>';
+		let select = self.find("select").select2({
+			dropdownParent: self,
+			language: "ru",
+			//  tags: true
 		});
-		self.parentNode.addEventListener("click", function() {
-			let otherSelect = $(`.selectize-control .selectize-input.focus:not(.${classSelectize})`);
-			otherSelect.removeClass('dropdown-active  focus input-active')
-				.parent().find(".selectize-dropdown").hide();
-			// console.log(this);
-		})
-	});
+		// console.log(select2);
+	})
+
+	// $(".floating-select").each(function(){
+	// 	let self= this;
+	// 	let customSelect;
+	// 	let floatLabel;
+	// 	let classSelectize = 'selectize-'+ (Math.round(Math.random() * 1000));
+	// 	let targetSelect;
+	// 	let placeholderName = this.getAttribute('placeholder');
+	// 	let floatDiv = '<div class="float-select"><span class="name">' + placeholderName + '</span></div>';
+		
+	// 	customSelect = $(this).selectize({
+	// 		persist: false,
+	// 		closeAfterSelect: true,
+	// 		copyClassesToDropdown: false,
+	// 		searchConjunction: 'or',
+	// 		delimiter: " ",
+	// 		onInitialize() {
+	// 			targetSelect = this.$control[0];
+	// 			targetSelect.classList.add(classSelectize)
+	// 			let floatSelect = targetSelect.querySelector('.float-select');
+	// 			// console.log(targetSelect);
+				
+	// 			if (!floatSelect) {
+	// 				targetSelect.insertAdjacentHTML("afterend", floatDiv);
+	// 				floatLabel = placeholderName;
+	// 			}
+	// 		},
+	// 	});
+	// 	self.parentNode.addEventListener("click", function() {
+	// 		let otherSelect = $(`.selectize-control .selectize-input.focus:not(.${classSelectize})`);
+	// 		otherSelect.removeClass('dropdown-active  focus input-active')
+	// 			.parent().find(".selectize-dropdown").hide();
+	// 		// console.log(this);
+	// 	})
+	// });
 
 // 	const filterBtns = document.querySelectorAll('.filter__btn--js');
 // 	const filterDropdowns = document.querySelectorAll('.filter__dropdown');

@@ -102,3 +102,45 @@ $output-bourbon-deprecation-warnings: false;
 		// border-color: $pagination-active-border-color;
 	}
 }
+ .form-control {
+	font-weight: 300;
+	overflow: hidden;
+	box-shadow: none !important
+	// text-overflow: ellipsis;
+	// white-space: nowrap;
+}
+
+.select2-search__field{
+	@extend .form-control;
+}
+.select2-dropdown{
+	border-radius: 16px !important; 
+	box-shadow: 0px 41px 57px 0px rgba(0, 0, 0, 0.25);
+	border: none !important;
+}
+.select2-container--open .select2-dropdown{
+	border-radius: 16px !important; 
+	overflow: hidden;
+	position: relative;
+
+}
+.select2-container--default .select2-results__option{
+	padding: rem(12) rem(16);
+
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+	background-color: $primary !important;
+}
+
+.select2-selection__placeholder{
+	font-weight: 300;
+
+}
+
+
+.select2-container--default.select2-container.select2-container .select2-selection--single{
+	border-radius: 8px !important; 
+}
+.select2-container--default.select2-container--open.select2-container .select2-selection--single{
+	border-color: $primary !important;
+}

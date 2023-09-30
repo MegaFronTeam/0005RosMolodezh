@@ -24,11 +24,11 @@ mixin sRegistration(data)
 							+floatInput('position','Должность','text','position')
 						.col-12
 							+e.input-wrap
-								select(placeholder="Территориальный уровень").floating-select.form-select
+								select(data-placeholder="Территориальный уровень").floating-select.form-select
 									option
-									option placeholder1
-									option placeholder2
-									option placeholder3
+									option placeholder1 текст 1
+									option текст 1 placeholder2 текст 1
+									option начало placeholder3
 							//- .form-wrap__input-wrap.form-group
 							//- 	select.form-wrap__input.form-select(name="select")
 							//- 		option(selected value="Территориальный уровень") Территориальный уровень
@@ -37,7 +37,7 @@ mixin sRegistration(data)
 							//- 		option placeholder3
 						.col-12
 							+e.input-wrap
-								select(placeholder="Принадлежность к территориальному уровню").floating-select.form-select
+								select(data-placeholder="Принадлежность к территориальному уровню").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
@@ -78,28 +78,28 @@ mixin sRegistration2(data)
 							+floatInput('tax','ИНН','number','tax')
 						.col-12.col-sm-6
 							+e.input-wrap
-								select(placeholder="Тип").floating-select.form-select
+								select(data-placeholder="Тип").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
 									option placeholder3
 						.col-12
 							+e.input-wrap
-								select(placeholder="Уровень бюджетного финансирования").floating-select.form-select
+								select(data-placeholder="Уровень бюджетного финансирования").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
 									option placeholder3
 						.col-12.col-md-6
 							+e.input-wrap
-								select(placeholder="Регион").floating-select.form-select
+								select(data-placeholder="Регион").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
 									option placeholder3
 						.col-12.col-md-6
 							+e.input-wrap
-								select(placeholder="Муниципалитет").floating-select.form-select
+								select(data-placeholder="Муниципалитет").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
