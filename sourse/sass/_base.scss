@@ -158,8 +158,10 @@ main{
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	
 	&--link {
 		display: flex;
+		flex-wrap: wrap;
 	}
 	&--form-inner {
 		align-items: center;
@@ -171,18 +173,37 @@ main{
 		h1 {
 			margin-bottom: 0;
 			font-size: 14px;
+			flex: 1 0 0%;
+			width: 100%;
+			max-width: 100%;
 		}
 		.icon {
 			font-size: 10px;
 		}
 	}
+	&__asidue{
+		
+	}
 	&__return-link {
 		display: inline-block;
 		margin-right: 15px;
+		position: relative;
+		top: rem(-3);
 		.icon {
 			stroke: $primary;
 			stroke-width: 2;
+			font-size: rem(16);
+			stroke-linecap: square;
 		}
+	}
+	&__link{
+		font-size: rem(14);
+			.icon{
+				font-size: 1rem;
+				margin-right: rem(8);
+				position: relative;
+				top: rem(-2);
+			}
 	}
 }
 h1 {
