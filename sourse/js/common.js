@@ -155,6 +155,7 @@ showBtns.forEach(btn => {
 		let hidden = btn.closest('.hidden-wrap-js').querySelector('.hidden-js');
 		hidden.classList.toggle('visually-hidden')
 		btn.classList.toggle('hidden')
+		// JSCCommon.cropText();
 	});
 });
 
@@ -219,6 +220,13 @@ function dropDown(btn,dropdown) {
  dropDown('filter__btn--js','filter__dropdown');
  dropDown('sEventTable__more-btn','sEventTable__dropdown');
 
+
+ 
+//  $('.crop-text--js ').readmore({
+// 	 moreLink: '<a href="#">Показать весь текст</a>',
+// 	 lessLink: '<a href="#">Скрыть</a>',
+// 	 collapsedHeight: 60,
+//  });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

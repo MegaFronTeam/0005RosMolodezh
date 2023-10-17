@@ -349,6 +349,26 @@ class JSCCommon {
 
 	}
 
+	static cropText() {
+		// $('.crop-text--js ').readmore({
+		// 	moreLink: '<a href="#">Показать весь текст</a>',
+		// 	lessLink: '<a href="#">Скрыть</a>',
+		// 	collapsedHeight: 60,
+		// });
+
+		var destroy = $readMoreJS({
+			target: '.crop-text--js p ',
+			wordsCount: 40, // Alternatively use `charactersCount` if you wish to truncate by characters' length.
+			// charactersCount1: 3,
+			toggle: true,
+			moreLink: ' Показать',
+			lessLink: ' Скрыть',
+			linkClass: 'rm-link-classname'
+	 });
+	 
+	 // Bring back to initial state if no longer needed.
+	//  destroy();
+	}
 	static setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
 		if (!topNav) return;
@@ -367,6 +387,7 @@ class JSCCommon {
 		this.makeDDGroup();
 		this.disabledBtn();
 		this.setScreen();
+		this.cropText();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 
