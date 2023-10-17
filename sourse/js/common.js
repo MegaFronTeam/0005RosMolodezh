@@ -159,6 +159,10 @@ showBtns.forEach(btn => {
 	});
 });
 
+$(".btn-show-all-js").click(function() {
+	$('.show-btn-js').click()
+})
+
 //Показывает и скрывает комментарии
 
 let showCommentBtns = document.querySelectorAll('.comment-btn-js');
