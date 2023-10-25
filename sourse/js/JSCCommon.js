@@ -358,7 +358,7 @@ class JSCCommon {
 
 		var destroy = $readMoreJS({
 			target: '.crop-text--js p ',
-			wordsCount: 40, // Alternatively use `charactersCount` if you wish to truncate by characters' length.
+			wordsCount: 20, // Alternatively use `charactersCount` if you wish to truncate by characters' length.
 			// charactersCount1: 3,
 			toggle: true,
 			moreLink: ' Показать',

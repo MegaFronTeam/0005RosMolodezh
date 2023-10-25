@@ -78,14 +78,32 @@ mixin sRegistration2(data)
 							+floatInput('tax','ИНН','number','tax')
 						.col-12.col-sm-6
 							+e.input-wrap
-								select(data-placeholder="Тип").floating-select.form-select
+								button.btn.btn-primary.w-100 Проверить
+								//- select(data-placeholder="Тип").floating-select.form-select
+								//- 	option
+								//- 	option placeholder1
+								//- 	option placeholder2
+								//- 	option placeholder3
+						.col-6
+							+e.input-wrap
+								strong ИНН 7703672351 "ФЕДЕРАЛЬНОЕ АГЕНТСТВО ПО ДЕЛАМ МОЛОДЕЖИ"
+						.col-6
+							+e.input-wrap
+								button.btn.btn-secondary.w-100 Выбрать
+						.col-12
+							+e.input-wrap
+								select(data-placeholder="Группа").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
 									option placeholder3
 						.col-12
+							+in-c('checkbox','Субсидия от Росмолодежи')
+							+in-c('checkbox','Субсидия от РОИВ')
+							+in-c('checkbox','Субсидия от МО')
+						.col-12
 							+e.input-wrap
-								select(data-placeholder="Уровень бюджетного финансирования").floating-select.form-select
+								select(data-placeholder="Территориальный уровень").floating-select.form-select
 									option
 									option placeholder1
 									option placeholder2
@@ -104,10 +122,6 @@ mixin sRegistration2(data)
 									option placeholder1
 									option placeholder2
 						.col-12
-							+in-c('checkbox','Субсидия от Росмолодежи')
-							+in-c('checkbox','Субсидия от РОИВ')
-							+in-c('checkbox','Субсидия от МО')
-						.col-12
 							+e.subtitle--upload Положение или устав юридического лица
 							.upload-field__input-wrap
 								label.upload-field__btn.btn.btn-secondary
@@ -119,11 +133,11 @@ mixin sRegistration2(data)
 						.col-12.col-sm-6
 							+floatInput('leg-email','Электронная почта юр. лица', 'email', 'leg-email')
 						.col-12
-							+floatInput('leg-name','ФИО ответственного за регистрацию юридического лица','text','leg-name')
+							+floatInput('leg-name','ФИО руководителя юрлица','text','leg-name')
 						.col-12
-							+floatInput('leg-position','Должность ответственного за регистрацию юридического лица','text','leg-position')
+							+floatInput('leg-position','Должность руководителя юрлица','text','leg-position')
 						.col-12
-							+floatInput('leg2-email','Почта ответственного за регистрацию юридического лица', 'email', 'leg2-email')
+							+floatInput('leg2-email','Адрес электронной почты для восстановления пароля', 'email', 'leg2-email')
 						.col-12
 							+floatInput('address','Адрес юридического лица', 'text', 'address')
 						+e.subtitle Придумайте пароль для входа
