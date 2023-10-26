@@ -110,8 +110,8 @@
 				max-width: 190px;
 			}
 			.form-control {
-				min-height: 48px;
-				height: 48px;
+				// min-height: 48px;
+				// height: 48px;
 			}
 			.form-floating>label {
 				padding-top: 10px;
@@ -269,4 +269,8 @@
 	--bs-btn-padding-y: 0.425rem;
 	--bs-btn-padding-x: 1rem;
 	--bs-btn-font-size: .8rem;
+}
+
+.form-floating>label{
+	background: none !important;
 }

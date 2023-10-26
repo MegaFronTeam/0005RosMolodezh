@@ -98,8 +98,8 @@ input::-webkit-inner-spin-button {
 		width: 100% !important;
 	}
 .select2-container--default .select2-selection--single {
-	padding: rem(15) rem(16);
-	height: 56px;
+	padding: $form-floating-padding-y $form-floating-padding-x;
+	height: $form-floating-height;
 	border-radius: 8px;
 	border: 1px solid $gray-300;
 }
@@ -157,13 +157,13 @@ input::-webkit-inner-spin-button {
 	margin-bottom: 24px;
 }
 .selectize-control.single .selectize-input {
-	height: 56px;
+	height: $form-floating-height;
 	background-color: $white;
 	background-image: none;
 	border-radius: 8px;
 	border: 1px solid var(--Light_grey, #DCDCDC);
 	color: rgba($gray-600, .3);
-	font-size: rem(18);
+	font-size: rem(16);
 	font-weight: 300;
 	line-height: 150%;
 	// white-space: nowrap;
