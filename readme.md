@@ -9,3 +9,8 @@
 1. <https://megafronteam.github.io/0005RosMolodezh/07-events.html>
 1. <https://megafronteam.github.io/0005RosMolodezh/07-events-2.html>
 1. <https://megafronteam.github.io/0005RosMolodezh/08-form-inner.html>
+
+Правки от 31.10.23
+
+1. <https://megafronteam.github.io/0005RosMolodezh/09-producing-news.html>
+1. <https://megafronteam.github.io/0005RosMolodezh/10-press-login.html>

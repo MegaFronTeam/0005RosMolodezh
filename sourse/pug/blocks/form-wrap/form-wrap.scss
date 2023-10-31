@@ -17,6 +17,18 @@
 		width: 100%;
 		display: block;
 	}
+	&__instruction {
+		margin-bottom: 16px;
+		color:$gray-600;
+		font-size: rem(14);
+	}
+	&__descr {
+		margin-bottom: 48px;
+		display: block;
+		color:$gray-600;
+		font-size: rem(12);
+		font-weight: 300;
+	}
 }
 .form-floating {
 	label {
@@ -30,6 +42,20 @@
 }
 .form-floating>.form-control-plaintext~label, .form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
 	font-size: 12px;
+}
+.container--creating-news {
+	.form-wrap {
+		margin-bottom: 50px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 100px;
+		}
+	}
+	.form-floating>textarea {
+		height: 160px;
+	}
+	.upload-field__input-wrap {
+		margin-bottom: 16px;
+	}
 }
 
 //

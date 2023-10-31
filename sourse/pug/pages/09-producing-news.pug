@@ -1,0 +1,83 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sFormInner/_sFormInner.pug
+include ../blocks/sFormSection/_sFormSection.pug
+
+block variables
+	- let  mainPage= 'main-page main-page--news' 
+	- let  bg= null
+
+block title
+	- let  title= 'Создание новости'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		.container.container--creating-news
+			.section-title.section-title--main-headings
+				h1(data-title="Создание новости") Создание новости
+			+form-wrap
+				.row
+					.col-12
+						+floatInput('news-title','Название новости','text','surname')
+					.col-12
+						.form-floating.form-wrap__input-wrap
+							textarea.form-control(placeholder="Краткий анонс новости" id="floatingTextarea1")
+							label(for="floatingTextarea1") Краткий анонс новости
+					.col-12
+						.form-floating.form-wrap__input-wrap
+							textarea.form-control(placeholder="Текст новости" id="floatingTextarea1")
+							label(for="floatingTextarea1") Текст новости
+					.col-12.col-md-6
+						+e.input-wrap
+							select(data-placeholder="Регион").floating-select.form-select
+								option
+								option placeholder1
+								option placeholder2
+								option placeholder3
+					.col-12.col-md-6
+						+e.input-wrap
+							select(data-placeholder="Дата новости").floating-select.form-select
+								option
+								option placeholder1
+								option placeholder2
+								option placeholder3
+					.col-12
+						+floatInput('surname','ФИО регионального менеджера','text','surname')
+					.col-12
+							+floatInput('email','E-mail регионального менеджера ', 'email', 'email')
+					.col-12
+						.form-floating.form-wrap__input-wrap
+							textarea.form-control(placeholder="Комментарий к новости для модератора" id="floatingTextarea1")
+							label(for="floatingTextarea1") Комментарий к новости для модератора
+					.col-12
+						+e.instruction Прикрепить изображение к новости
+						.upload-field__input-wrap
+							label.upload-field__btn.btn.btn-outline-primary
+								input.input-upload(type="file" name="file")
+								span Выбрать файл
+							.upload-field__file-name
+						+e.descr Формат фала: jpeg, png размером до 10mb
+					.col-12
+						+e.btn.btn.btn-primary.BUTTON(type="submit") Отправить на модерацию
+					.col-12
+						+e.btn.btn.btn-primary.BUTTON(type="submit") Отправить на модерацию и заполнить еще одну новость
+
+
+
+
+	+parts('footer')
+
+
+
+

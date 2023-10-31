@@ -35,3 +35,21 @@ mixin sEnter(data)
 					+btn("Зарегистрироваться как юр. лицо").btn.btn-primary
 
 	// end sEnter
+
+mixin sPressEnter(data)
+	// start sEnter
+	+b.SECTION.sEnter--press.section#sEnter&attributes(attributes)
+		+e.press-container
+			+form-wrap
+				+e.title Создание новостей
+				p Введите ваши данные для входа чтобы перейти к форме создания новости
+				.row
+					.col-12
+						+floatInput('enter-email','Ваш логин','text','enter-email')(required value="lun@lkj.cd")
+					.col-12
+						+floatInput('password','Пароль','password','password')(required)
+					.col-12
+						+btn("Войти").btn.btn-accent
+					.col-12
+						+btn("Забыли пароль?").btn.btn-secondary
+		.container

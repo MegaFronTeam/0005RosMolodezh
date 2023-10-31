@@ -104,6 +104,9 @@ body {
 			padding-bottom: 55px;
 		}
 	}
+	&--news {
+		background-color: $white;
+	}
 	address p, .footer__schedule {
 		color: $body-color;
 	}
@@ -205,6 +208,39 @@ main{
 				top: rem(-2);
 			}
 	}
+	&--main-headings {
+		padding-top: rem(85);
+		color: $primary;
+		font-weight: 500;
+		h1 {
+			position: relative;
+			font-size: rem(32);
+			line-height: 1;
+			@include media-breakpoint-up(xl) {
+				font-size: rem(60);
+			}
+			&::before {
+				content: attr(data-title);
+				position: absolute;
+				z-index: -1;
+				left: 0;
+				bottom: -6px;
+				font-weight: 500;
+				line-height: 1;
+				font-size: rem(60);
+				color: transparent;
+				-webkit-text-stroke: 1px #252525;
+				text-stroke: 1px #252525;
+				opacity: 0.23;
+				white-space: nowrap;
+				@include media-breakpoint-up(xl) {
+					bottom: -8px;
+					font-size: rem(120);
+				}
+			}
+		}
+	}
+
 }
 h1 {
 	@include media-breakpoint-down(sm) {
