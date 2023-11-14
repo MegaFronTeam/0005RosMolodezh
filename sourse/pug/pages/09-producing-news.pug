@@ -46,12 +46,13 @@ block pagecontent
 								option placeholder2
 								option placeholder3
 					.col-12.col-md-6
-						+e.input-wrap
-							select(data-placeholder="Дата новости").floating-select.form-select
-								option
-								option placeholder1
-								option placeholder2
-								option placeholder3
+						+floatInput('','Дата новости','date')
+						//- +e.input-wrap
+						//- 	select(data-placeholder="Дата новости").floating-select.form-select
+						//- 		option
+						//- 		option placeholder1
+						//- 		option placeholder2
+						//- 		option placeholder3
 					.col-12
 						+floatInput('surname','ФИО регионального менеджера','text','surname')
 					.col-12

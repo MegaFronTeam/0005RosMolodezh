@@ -336,3 +336,17 @@ input::-webkit-inner-spin-button {
 	.form-select.selectize-control {
 		border: none;
 	}
+
+	.form-floating>.form-control-plaintext~label:after, .form-floating>.form-control:focus~label:after, .form-floating>.form-control:not(:placeholder-shown)~label:after, .form-floating>.form-select~label:after, .form-floating>.select2-search__field:focus~label:after, .form-floating>.select2-search__field:not(:placeholder-shown)~label:after {
+    background-color: transparent;
+    border-radius: var(--bs-border-radius);
+    content: "";
+    height: 1.5em;
+    inset: .5rem .5rem;
+    position: absolute;
+    z-index: -1;
+}
+
+// .form-control[type="date"]:not(:placeholder-shown){
+// 	color: #999999;
+// }
