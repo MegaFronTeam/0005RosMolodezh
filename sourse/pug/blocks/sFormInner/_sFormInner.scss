@@ -285,13 +285,23 @@
 		&__title {
 			margin-bottom: rem(24);
 		}
+		&__input-wrapper  {
+			.form-floating {
+				margin-bottom: 0;
+			}
+			p {
+				margin: rem(8) 0 rem(12) 0;
+			}
+		}
 	}
 	p {
 		color: $black;
 		line-height: 130%;
 	}
 	table {
+		margin-bottom: rem(24);
 		thead th {
+			padding: 0 rem(8) rem(24) rem(8);
 			vertical-align: bottom;
 			font-size: rem(12);
 			line-height: 130%;
@@ -301,6 +311,9 @@
 			&:first-child {
 				width: 20%;
 			}
+			&:last-child {
+				padding-right: 0;
+			}
 		}
 		tbody th {
 			vertical-align: middle;
@@ -308,8 +321,31 @@
 			color: $pagination-color;
 			font-weight: 300;
 		}
+		td {
+			padding: rem(8);
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+		tr {
+			border-bottom: rem(1) solid $table-border-color;
+			padding: rem(16);
+		}
 		.form-floating {
 			margin-bottom: 0;
 		}
+	}
+	// #participants-info .row {
+	// 	--bs-gutter-x: #{rem(8)};
+	// }
+	#feedback, #participants-info, #volunteers-info {
+		.row {
+			--bs-gutter-x: #{rem(16)};
+		}
+	}
+
+	#feedback p {
+		font-size: rem(14);
+		line-height: 140%;
 	}
 }
