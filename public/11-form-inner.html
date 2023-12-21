@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Форма мероприятия</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page main-page--bottom-btn">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="container">
+					<div class="row">
+						<div class="section-title section-title section-title--link section-title section-title--form-inner">
+							<a class="section-title__return-link" href="#">
+								<svg class="icon icon-arrow-left ">
+									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+								</svg>
+							</a>
+							<h1 class="section-title__header">Форма мероприятия
+							</h1>
+						</div>
+						<div class="col-lg-3">
+							<!-- start sFormSection-->
+							<section class="sFormSection section" id="sFormSection">
+								<ul class="sFormSection__list">
+									<li class="sFormSection__item">
+										<a class="sFormSection__link" href="#">
+											<div class="sFormSection__title">География
+											</div>
+										</a>
+									</li>
+									<li class="sFormSection__item">
+										<a class="sFormSection__link" href="#">
+											<div class="sFormSection__title">О мероприятии
+											</div>
+										</a>
+									</li>
+									<li class="sFormSection__item">
+										<a class="sFormSection__link" href="#">
+											<div class="sFormSection__title">Детали
+											</div>
+										</a>
+									</li>
+									<li class="sFormSection__item">
+										<a class="sFormSection__link" href="#">
+											<div class="sFormSection__title">Участники
+											</div>
+										</a>
+									</li>
+									<li class="sFormSection__item">
+										<a class="sFormSection__link" href="#">
+											<div class="sFormSection__title">Волонтеры
+											</div>
+										</a>
+									</li>
+									<li class="sFormSection__item">
+										<a class="sFormSection__link" href="#">
+											<div class="sFormSection__title">Ссылки
+											</div>
+										</a>
+									</li>
+									<li class="sFormSection__item">
+										<a class="sFormSection__link" href="#">
+											<div class="sFormSection__title">Организаторы
+											</div>
+										</a>
+									</li>
+									<li class="sFormSection__item">
+										<a class="sFormSection__link" href="#">
+											<div class="sFormSection__title">Обратная связь
+											</div>
+										</a>
+									</li>
+								</ul>
+							</section>
+							<!-- end sFormSection-->
+						</div>
+						<div class="col-lg-9">
+							<!-- start sFormInner11-->
+							<section class="sFormInner section" id="sFormInner11">
+								<div class="sFormInner__item">
+									<div class="form-wrap" id="event-geography">
+										<div class="form-wrap__subtitle">География мероприятия
+										</div>
+										<div class="form-wrap__row row">
+											<div class="col-12 col-sm-6">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Округ проведения мероприятия">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12 col-md-6">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Регион проведения мероприятия">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Муниципальное образование, в котором прошло мероприятие">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="city" placeholder="Место проведения мероприятия" type="text" name="city"/>
+													<label for="city">Место проведения мероприятия</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item">
+									<div class="form-wrap" id="event-info">
+										<div class="form-wrap__subtitle">Информация о мероприятии
+										</div>
+										<div class="form-wrap__row row">
+											<div class="col-12 col-sm-6">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="date-start" placeholder="Дата начала мероприятия" type="date" name="date-start"/>
+													<label for="date-start">Дата начала мероприятия</label>
+												</div>
+											</div>
+											<div class="col-12 col-md-6">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="date-end" placeholder="Дата окончания мероприятия" type="date" name="date-end"/>
+													<label for="date-end">Дата окончания мероприятия</label>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="event" placeholder="Наименование мероприятия" type="text" name="event"/>
+													<label for="event">Наименование мероприятия</label>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="event-stages" placeholder="Количество этапов мероприятия" type="text" name="event-stages"/>
+													<label for="event-stages">Количество этапов мероприятия</label>
+												</div>
+												<p>Заполняется, если проект состоял из нескольких мероприятий</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item">
+									<div class="form-wrap" id="event-detailes">
+										<div class="form-wrap__subtitle">Информация о деталях мероприятия, его направлении, формате, статусе и месте проведения
+										</div>
+										<div class="form-wrap__row row">
+											<div class="col-12 col-sm-6">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Статус мероприятия">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12 col-md-6">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Формат мероприятия">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12 col-sm-6">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Форма мероприятия">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12 col-md-6">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Направление молодежной политики">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Источник финансирования">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item">
+									<div class="form-wrap" id="participants-info">
+										<div class="form-wrap__subtitle">Информация об участниках меропрятий
+										</div>
+										<div class="form-wrap__title">Всего участников
+										</div>
+										<div class="form-wrap__row row">
+											<div class="col-4 col-md">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="less-13-years" placeholder="до 13 лет" type="number" name="less-13-years"/>
+													<label for="less-13-years">до 13 лет</label>
+												</div>
+											</div>
+											<div class="col-4 col-md">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="14-17-years" placeholder="14-17 лет" type="number" name="14-17-years"/>
+													<label for="14-17-years">14-17 лет</label>
+												</div>
+											</div>
+											<div class="col-4 col-md">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="18-24-years" placeholder="18-24 лет" type="number" name="18-24-years"/>
+													<label for="18-24-years">18-24 лет</label>
+												</div>
+											</div>
+											<div class="col-4 col-md">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="25-29-years" placeholder="25-29 лет" type="number" name="25-29-years"/>
+													<label for="25-29-years">25-29 лет</label>
+												</div>
+											</div>
+											<div class="col-4 col-md">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="30-35-years" placeholder="30-35 лет" type="number" name="30-35-years"/>
+													<label for="30-35-years">30-35 лет</label>
+												</div>
+											</div>
+											<div class="col-4 col-md">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="more-36-years" placeholder="от 36 лет" type="number" name="more-36-years"/>
+													<label for="more-36-years">от 36 лет</label>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Целевая аудитория мероприятия - граждане в трудной жизненной ситуации">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+												<p>В случае, если целевой аудиторией мероприятий являются дети (и их родители) и молодые граждане, попавшие в трудную жизненную ситуацию, в том числе: сироты и несовершеннолетние, оставшиеся без попечения родителей; инвалиды и люди с ограниченными возможностями здоровья (имеющие недостатки в физическом и (или) психическом развитии); жертвы вооруженных и межнациональных конфликтов, экологических и техногенных катастроф, стихийных бедствий; семьи беженцев и вынужденных переселенцев; оказавшиеся в экстремальных условиях; жертвы насилия; отбывающие наказание в виде лишения свободы в воспитательных колониях; находящиеся в образовательных организациях для обучающихся с девиантным (общественно опасным) поведением, нуждающиеся в особых условиях воспитания, обучения и требующие специального педагогического подхода (в специальных учебно-воспитательных учреждениях открытого и закрытого типа); проживающие в малоимущих семьях; имеющие отклонения в поведении; имеющие нарушения жизнедеятельности в результате сложившихся обстоятельств, которые невозможно преодолеть самостоятельно или с помощью семьи.</p>
+											</div>
+											<div class="form-wrap__title">Тут заголовок для блока
+											</div>
+											<div class="col-12">
+												<table>
+													<thead>
+														<tr>
+															<th>Возрастная группа</th>
+															<th>Находящихся в трудной жизненной ситуации и относящихся к категории "инвалиды"</th>
+															<th>Находящихся в трудной жизненной ситуации и относящихся к категории "дети-сироты и дети, оставшиеся без попечения родителей"</th>
+															<th>Находящихся в иной трудной жизненной ситуации</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th>14-17 лет</th>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th>18-24 лет</th>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th>25-29 лет</th>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th>30-35 лет</th>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-floating form-wrap__input-wrap">
+																	<input class="form-control" id="name" placeholder="0" type="number" name="id"/>
+																	<label for="name">0</label>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="col-12">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="views-media" placeholder="Число просмотров медиапродуктов" type="number" name="views-media"/>
+													<label for="views-media">Число просмотров медиапродуктов</label>
+												</div>
+												<p>Заполняется в случае проведения мероприятия в форме размещения медиапродукта в сети Интернет.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item">
+									<div class="form-wrap" id="volunteers-info">
+										<div class="form-wrap__subtitle">Информация о привлечении волонтеров
+										</div>
+										<div class="form-wrap__row row">
+											<div class="col-12">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Выберите направление волонтерской деятельности">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-wrap__title">Число волонтеров в возрасте, вовлеченных в организацию и проведение мероприятия
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="vol-less-13-years" placeholder="7-13 лет" type="number" name="vol-less-13-years"/>
+													<label for="vol-less-13-years">7-13 лет</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="vol-14-17-years" placeholder="14-17 лет" type="number" name="vol-14-17-years"/>
+													<label for="vol-14-17-years">14-17 лет</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="vol-18-35-years" placeholder="18-35 лет" type="number" name="vol-18-35-years"/>
+													<label for="vol-18-35-years">18-35 лет</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="vol-36-54-years" placeholder="36-54 лет" type="number" name="vol-36-54-years"/>
+													<label for="vol-36-54-years">36-54 лет</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="vol-55-years" placeholder="55 лет" type="number" name="vol-55-years"/>
+													<label for="vol-55-years">55 лет</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item">
+									<div class="form-wrap" id="links">
+										<div class="form-wrap__subtitle">Ссылки
+										</div>
+										<div class="form-wrap__row row">
+											<div class="col-12 col-sm-6">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Система регистрации участников">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12 col-md-6">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Cистема регистрации волонтеров">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="links-to-full-publ" placeholder="Ссылка на наиболее полную публикацию о мероприятии" type="text" name="links-to-full-publ"/>
+													<label for="links-to-full-publ">Ссылка на наиболее полную публикацию о мероприятии</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item">
+									<div class="form-wrap" id="organizers">
+										<div class="form-wrap__subtitle">Информация об организаторах мероприятия:
+										</div>
+										<div class="form-wrap__row row">
+											<div class="col-12">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Организаторы из органов власти">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Организаторы из государственных (муниципальных) организаций">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Организаторы из негосударственных некоммерческих организаций (кроме общественных)">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Организаторы из общественных объединений">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap">
+													<select class="floating-select form-select" data-placeholder="Организаторы из коммерческих организаций">
+														<option></option>
+														<option>placeholder1 текст 1</option>
+														<option>текст 1 placeholder2 текст 1</option>
+														<option>начало placeholder3</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item">
+									<div class="form-wrap" id="feedback">
+										<div class="form-wrap__subtitle">Обратная связь от участников мероприятия
+										</div>
+										<div class="form-wrap__row row">
+											<div class="col-12">
+												<p>Задайте участникам вопрос: Какова вероятность того, что вы порекомендуете принять участие в данном мероприятии своим знакомым? (где 1 - минимальная вероятность, 10 - максимальная). Посчитайте, сколько человек поставили каждый из баллов, и внесите данные в таблицу. Значение NPS рассчитывается по формуле: (число людей, поставивших 9-10 баллов / общее число ответов - чило людей, поставивших 1-6 баллов/общее число ответов)*100 от 71 балла - идеально 51-70 - отлично 31-50 - хорошо 1-30 - нормально меньше 1 - плохо Значение NPS расчитается автоматически.</p>
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__title">Оценки
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-1" placeholder="1 б" type="number" name="point-1"/>
+													<label for="point-1">1 б</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-2" placeholder="2 б" type="number" name="point-2"/>
+													<label for="point-2">2 б</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-3" placeholder="3 б" type="number" name="point-3"/>
+													<label for="point-3">3 б</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-4" placeholder="4 б" type="number" name="point-4"/>
+													<label for="point-4">4 б</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-5" placeholder="5 б" type="number" name="point-5"/>
+													<label for="point-5">5 б</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-6" placeholder="6 б" type="number" name="point-6"/>
+													<label for="point-6">6 б</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-7" placeholder="7 б" type="number" name="point-7"/>
+													<label for="point-7">7 б</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-8" placeholder="8 б" type="number" name="point-8"/>
+													<label for="point-8">8 б</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-9" placeholder="9 б" type="number" name="point-9"/>
+													<label for="point-9">9 б</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-floating form-wrap__input-wrap">
+													<input class="form-control" id="point-10" placeholder="10 б" type="number" name="point-10"/>
+													<label for="point-10">10 б</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item">
+									<div class="sFormInner__btn-row">
+										<button class="btn btn-primary">Сохранить</button>
+									</div>
+								</div>
+								<!-- end sFormInner11-->
+							</section>
+						</div>
+					</div>
+				</div>
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="libs/select2/js/i18n/ru.js"></script>
+		<script src="js/read-more.min.js"></script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

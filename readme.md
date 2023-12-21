@@ -14,3 +14,4 @@
 
 1. <https://megafronteam.github.io/0005RosMolodezh/09-producing-news.html>
 1. <https://megafronteam.github.io/0005RosMolodezh/10-press-login.html>
+1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner.html>

@@ -1,0 +1,40 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sFormInner/_sFormInner.pug
+include ../blocks/sFormSection/_sFormSection.pug
+
+block variables
+	- let  mainPage= 'main-page main-page--bottom-btn' 
+	- let  bg= null
+
+block title
+	- let  title= 'Форма мероприятия'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		.container
+			.row
+				+b.section-title.section-title--link.section-title--form-inner
+					+e.return-link(href='#')
+						+icon('arrow-left')
+					+e.header.H1 Форма мероприятия
+				.col-lg-3
+					+sFormSection11
+				.col-lg-9
+					+sFormInner11
+	+parts('footer')
+
+
+
+

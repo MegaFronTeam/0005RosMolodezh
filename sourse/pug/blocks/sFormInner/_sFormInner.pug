@@ -109,3 +109,248 @@ mixin sFormInner(data)
 						//- .sFormInner__bottom
 						//- 	+e.btn.btn.btn-primary Отправить на доработку
 	// end sFormInner
+
+mixin sFormInner11(data)
+	// start sFormInner11
+	+b.SECTION.sFormInner.section#sFormInner11&attributes(attributes)
+		.sFormInner__item
+			+b.form-wrap#event-geography
+				+e.subtitle География мероприятия
+				+e.row.row
+					.col-12.col-sm-6
+						+e.input-wrap
+							select(data-placeholder="Округ проведения мероприятия").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12.col-md-6
+						+e.input-wrap
+							select(data-placeholder="Регион проведения мероприятия").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12
+						+e.input-wrap
+							select(data-placeholder="Муниципальное образование, в котором прошло мероприятие").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12
+						+floatInput('city','Место проведения мероприятия','text','city')
+							//- .sFormInner__bottom
+							//- 	+e.btn.btn.btn-primary Отправить на доработку
+		.sFormInner__item
+			+b.form-wrap#event-info
+				+e.subtitle Информация о мероприятии
+				+e.row.row
+					.col-12.col-sm-6
+						+floatInput('date-start','Дата начала мероприятия','date','date-start')
+					.col-12.col-md-6
+						+floatInput('date-end','Дата окончания мероприятия','date','date-end')
+					.col-12
+						+floatInput('event','Наименование мероприятия','text','event')
+					.col-12
+						+floatInput('event-stages','Количество этапов мероприятия','text','event-stages')
+						p Заполняется, если проект состоял из нескольких мероприятий
+		.sFormInner__item
+			+b.form-wrap#event-detailes
+				+e.subtitle Информация о деталях мероприятия, его направлении, формате, статусе и месте проведения
+				+e.row.row
+					.col-12.col-sm-6
+						+e.input-wrap
+							select(data-placeholder="Статус мероприятия").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12.col-md-6
+						+e.input-wrap
+							select(data-placeholder="Формат мероприятия").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12.col-sm-6
+						+e.input-wrap
+							select(data-placeholder="Форма мероприятия").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12.col-md-6
+						+e.input-wrap
+							select(data-placeholder="Направление молодежной политики").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12
+						+e.input-wrap
+							select(data-placeholder="Источник финансирования").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+		.sFormInner__item
+			+b.form-wrap#participants-info
+				+e.subtitle Информация об участниках меропрятий
+				+e.title Всего участников
+				+e.row.row
+					.col-4.col-md
+						+floatInput('less-13-years','до 13 лет','number','less-13-years')
+					.col-4.col-md
+						+floatInput('14-17-years','14-17 лет','number','14-17-years')
+					.col-4.col-md
+						+floatInput('18-24-years','18-24 лет','number','18-24-years')
+					.col-4.col-md
+						+floatInput('25-29-years','25-29 лет','number','25-29-years')
+					.col-4.col-md
+						+floatInput('30-35-years','30-35 лет','number','30-35-years')
+					.col-4.col-md
+						+floatInput('more-36-years','от 36 лет','number','more-36-years')
+					.col-12
+						+e.input-wrap
+							select(data-placeholder="Целевая аудитория мероприятия - граждане в трудной жизненной ситуации").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+						p В случае, если целевой аудиторией мероприятий являются дети (и их родители) и молодые граждане, попавшие в трудную жизненную ситуацию, в том числе: сироты и несовершеннолетние, оставшиеся без попечения родителей; инвалиды и люди с ограниченными возможностями здоровья (имеющие недостатки в физическом и (или) психическом развитии); жертвы вооруженных и межнациональных конфликтов, экологических и техногенных катастроф, стихийных бедствий; семьи беженцев и вынужденных переселенцев; оказавшиеся в экстремальных условиях; жертвы насилия; отбывающие наказание в виде лишения свободы в воспитательных колониях; находящиеся в образовательных организациях для обучающихся с девиантным (общественно опасным) поведением, нуждающиеся в особых условиях воспитания, обучения и требующие специального педагогического подхода (в специальных учебно-воспитательных учреждениях открытого и закрытого типа); проживающие в малоимущих семьях; имеющие отклонения в поведении; имеющие нарушения жизнедеятельности в результате сложившихся обстоятельств, которые невозможно преодолеть самостоятельно или с помощью семьи.
+					+e.title Тут заголовок для блока
+					.col-12
+						table
+							thead
+								tr
+									th Возрастная группа
+									th Находящихся в трудной жизненной ситуации и относящихся к категории "инвалиды"
+									th Находящихся в трудной жизненной ситуации и относящихся к категории "дети-сироты и дети, оставшиеся без попечения родителей"
+									th Находящихся в иной трудной жизненной ситуации
+							tbody
+								each row in ['14-17 лет', '18-24 лет', '25-29 лет', '30-35 лет']
+									tr
+										th= row
+										td
+											+floatInput('name','0','number','id')
+										td
+											+floatInput('name','0','number','id')
+										td
+											+floatInput('name','0','number','id')
+					.col-12
+						+floatInput('views-media','Число просмотров медиапродуктов','number','views-media')
+						p Заполняется в случае проведения мероприятия в форме размещения медиапродукта в сети Интернет.
+		.sFormInner__item
+			+b.form-wrap#volunteers-info
+				+e.subtitle Информация о привлечении волонтеров
+				+e.row.row
+					.col-12
+						+e.input-wrap
+							select(data-placeholder="Выберите направление волонтерской деятельности").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					+e.title Число волонтеров в возрасте, вовлеченных в организацию и проведение мероприятия
+					.col
+						+floatInput('vol-less-13-years','7-13 лет','number','vol-less-13-years')
+					.col
+						+floatInput('vol-14-17-years','14-17 лет','number','vol-14-17-years')
+					.col
+						+floatInput('vol-18-35-years','18-35 лет','number','vol-18-35-years')
+					.col
+						+floatInput('vol-36-54-years','36-54 лет','number','vol-36-54-years')
+					.col
+						+floatInput('vol-55-years','55 лет','number','vol-55-years')
+		.sFormInner__item
+			+b.form-wrap#links
+				+e.subtitle Ссылки
+				+e.row.row
+					.col-12.col-sm-6
+						+e.input-wrap
+							select(data-placeholder="Система регистрации участников").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12.col-md-6
+						+e.input-wrap
+							select(data-placeholder="Cистема регистрации волонтеров").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12
+						+floatInput('links-to-full-publ','Ссылка на наиболее полную публикацию о мероприятии','text','links-to-full-publ')
+		.sFormInner__item
+			+b.form-wrap#organizers
+				+e.subtitle Информация об организаторах мероприятия:
+				+e.row.row
+					.col-12
+						+e.input-wrap
+							select(data-placeholder="Организаторы из органов власти").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12
+						+e.input-wrap
+							select(data-placeholder="Организаторы из государственных (муниципальных) организаций").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12
+						+e.input-wrap
+							select(data-placeholder="Организаторы из негосударственных некоммерческих организаций (кроме общественных)").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12
+						+e.input-wrap
+							select(data-placeholder="Организаторы из общественных объединений").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-12
+						+e.input-wrap
+							select(data-placeholder="Организаторы из коммерческих организаций").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+		.sFormInner__item
+			+b.form-wrap#feedback
+				+e.subtitle Обратная связь от участников мероприятия
+				+e.row.row
+					.col-12
+						p Задайте участникам вопрос: Какова вероятность того, что вы порекомендуете принять участие в данном мероприятии своим знакомым? (где 1 - минимальная вероятность, 10 - максимальная). Посчитайте, сколько человек поставили каждый из баллов, и внесите данные в таблицу. Значение NPS рассчитывается по формуле: (число людей, поставивших 9-10 баллов / общее число ответов - чило людей, поставивших 1-6 баллов/общее число ответов)*100 от 71 балла - идеально 51-70 - отлично 31-50 - хорошо 1-30 - нормально меньше 1 - плохо Значение NPS расчитается автоматически.
+					.col-12
+						+e.title Оценки
+					.col
+						+floatInput('point-1','1 б','number','point-1')
+					.col
+						+floatInput('point-2','2 б','number','point-2')
+					.col
+						+floatInput('point-3','3 б','number','point-3')
+					.col
+						+floatInput('point-4','4 б','number','point-4')
+					.col
+						+floatInput('point-5','5 б','number','point-5')
+					.col
+						+floatInput('point-6','6 б','number','point-6')
+					.col
+						+floatInput('point-7','7 б','number','point-7')
+					.col
+						+floatInput('point-8','8 б','number','point-8')
+					.col
+						+floatInput('point-9','9 б','number','point-9')
+					.col
+						+floatInput('point-10','10 б','number','point-10')
+		.sFormInner__item
+			+e.btn-row
+				button.btn.btn-primary Сохранить
+		// end sFormInner11

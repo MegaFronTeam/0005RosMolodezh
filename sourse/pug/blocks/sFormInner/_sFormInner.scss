@@ -254,6 +254,9 @@
 	.form-control--sm {
 		max-width: 190px;
 	}
+	&__btn-row {
+		text-align: right;
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -273,4 +276,40 @@
 
 .form-floating>label{
 	background: none !important;
+}
+#sFormInner11 {
+	.form-wrap {
+		&__input-wrap {
+			margin-bottom: rem(24);
+		}
+		&__title {
+			margin-bottom: rem(24);
+		}
+	}
+	p {
+		color: $black;
+		line-height: 130%;
+	}
+	table {
+		thead th {
+			vertical-align: bottom;
+			font-size: rem(12);
+			line-height: 130%;
+			font-weight: 300;
+			width: 26%;
+			color: $pagination-color;
+			&:first-child {
+				width: 20%;
+			}
+		}
+		tbody th {
+			vertical-align: middle;
+			line-height: 125%;
+			color: $pagination-color;
+			font-weight: 300;
+		}
+		.form-floating {
+			margin-bottom: 0;
+		}
+	}
 }

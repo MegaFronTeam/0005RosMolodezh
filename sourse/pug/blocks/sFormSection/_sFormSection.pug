@@ -17,3 +17,22 @@ mixin sFormSection(data)
 			+fromSectionItem('', '','','Вовлеченность')
 			+fromSectionItem('', '','','Деятельность и научно- техническое творчество')
 	// end sFormSection
+
+mixin fromSectionItem11(active, title)
+	+e.item.LI
+		+e.link(href="#" class=active)
+			+e.title= title
+
+mixin sFormSection11(data)
+	// start sFormSection
+	+b.SECTION.sFormSection.section#sFormSection&attributes(attributes)
+		+e.list.UL
+			+fromSectionItem11('', 'География')
+			+fromSectionItem11('', 'О мероприятии')
+			+fromSectionItem11('', 'Детали')
+			+fromSectionItem11('', 'Участники')
+			+fromSectionItem11('', 'Волонтеры')
+			+fromSectionItem11('', 'Ссылки')
+			+fromSectionItem11('', 'Организаторы')
+			+fromSectionItem11('', 'Обратная связь')
+	// end sFormSection
