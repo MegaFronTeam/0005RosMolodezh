@@ -278,6 +278,9 @@
 	background: none !important;
 }
 #sFormInner11 {
+	.select2-selection__rendered {
+		padding-right: rem(16);
+	}
 	.form-wrap {
 		[class*="col-"]:last-child {
 			margin-bottom: rem(12);
