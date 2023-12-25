@@ -86,7 +86,7 @@ function eventHandler() {
 		let select = self.find("select").select2({
 			dropdownParent: self,
 			language: "ru",
-			//  tags: true
+			 tags: true
 		});
 		// console.log(select2);
 	})

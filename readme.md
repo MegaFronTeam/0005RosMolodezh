@@ -12,5 +12,11 @@
 
 Правки от 31.10.23
 
+<<<<<<< HEAD
 1. <https://megafronteam.github.io/0005RosMolodezh/09-producing-news>
 1. <https://megafronteam.github.io/0005RosMolodezh/10-press-login>
+=======
+1. <https://megafronteam.github.io/0005RosMolodezh/09-producing-news.html>
+1. <https://megafronteam.github.io/0005RosMolodezh/10-press-login.html>
+1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner.html>
+>>>>>>> f33cb4a27bd85362f574d3864702b65e4ed42fa3
