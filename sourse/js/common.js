@@ -88,6 +88,11 @@ function eventHandler() {
 			language: "ru",
 			 tags: true
 		});
+
+		select.one('select2:open', function(e) {
+			// console.log(self.find("select")[0].dataset);
+			$('input.select2-search__field').prop('placeholder', self.find("select")[0].dataset.searchPlaceholder || 'Поиск или введите свой вариант ответа');
+	});
 		// console.log(select2);
 	})
 
