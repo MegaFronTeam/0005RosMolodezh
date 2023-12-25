@@ -89,10 +89,10 @@ function eventHandler() {
 			language: "ru"
 		});
 
-		if(tags !== true ) return; 
 		select.one('select2:open', function(e) {
 			// console.log(self.find("select")[0].dataset);
-			$('input.select2-search__field').prop('placeholder', self.find("select").data('search-placeholder') || 'Поиск или введите свой вариант ответа');
+			
+			$('input.select2-search__field').prop('placeholder',  tags === true ? 'Поиск или введите свой вариант ответа'  :' Поиск' );
 	});
 		// console.log(select2);
 	})
