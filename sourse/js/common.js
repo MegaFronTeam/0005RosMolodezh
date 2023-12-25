@@ -83,15 +83,16 @@ function eventHandler() {
 		let floatLabel;
 		// let placeholderName = $(this)[0].querySelector("select").getAttribute('data-placeholder');
 		// let floatDiv = '<div class="float-select"><span class="name">' + placeholderName + '</span></div>';
+		const tags = self.find("select").data('tags');
 		let select = self.find("select").select2({
 			dropdownParent: self,
-			language: "ru",
-			 tags: true
+			language: "ru"
 		});
 
+		if(tags !== true ) return; 
 		select.one('select2:open', function(e) {
 			// console.log(self.find("select")[0].dataset);
-			$('input.select2-search__field').prop('placeholder', self.find("select")[0].dataset.searchPlaceholder || 'Поиск или введите свой вариант ответа');
+			$('input.select2-search__field').prop('placeholder', self.find("select").data('search-placeholder') || 'Поиск или введите свой вариант ответа');
 	});
 		// console.log(select2);
 	})
