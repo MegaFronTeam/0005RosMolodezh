@@ -12,6 +12,25 @@
 	&__section-descr {
 
 	}
+  &__item--range {
+    .form-floating {
+      margin-bottom: 0 !important;
+    }
+    .form-wrap__input-wrap {
+      display: flex;
+      gap: rem(10);
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+      }
+    }
+    .form-floating {
+      width: 100%;
+      @include media-breakpoint-up(sm) {
+        max-width: rem(150);
+      }
+      
+    }
+  }
 	&__subtitle {
 		margin-bottom: 4px;
 		// color:  #ACB5BD;
