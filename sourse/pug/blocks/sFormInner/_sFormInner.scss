@@ -31,6 +31,9 @@
       
     }
   }
+  // .form-control::placeholder {
+  //   font-size: rem(14) !important;
+  // } //,.select2-search__field
 	&__subtitle {
 		margin-bottom: 4px;
 		// color:  #ACB5BD;
@@ -208,9 +211,9 @@
 	}
 	&__comment-text {
 		color: $gray-700;
-		font-size: 14px;
+		font-size: 12px;
 		font-weight: 300;
-		line-height: 140%;
+		line-height: 130%;
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -220,7 +223,7 @@
 		margin-bottom: 0;
 	}
 	.form-wrap__title {
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: 500;
 	}
 	.floating-select {
@@ -241,7 +244,16 @@
 	}
 	.form-floating {
 		margin-bottom: 16px;
+    // line-height: 1.2;
+    font-size: rem(14);
+    // height: rem(40);
+    // .form-control {
+    //   padding-bottom: rem(6);
+    // }
 	}
+  .select2-selection__placeholder {
+    font-size: rem(14);
+  }
 	.form-wrap__comment-btn {
 		padding: 2px;
 		margin: -2px;
@@ -253,13 +265,14 @@
 		}
 	}
 	.form-check {
-		margin-bottom: 16px;
+		margin-bottom: 12px;
 	}
 	.form-check-input {
 		margin-top: 0;
 	}
 	.custom-input__text {
 		font-weight: 300;
+    font-size: rem(14);
 	}
 	&__checkbox-wrap {
 		margin-bottom: 24px;
@@ -296,6 +309,7 @@
 .form-floating>label{
 	background: none !important;
 }
+
 #sFormInner11 {
 	.select2-selection__rendered {
 		padding-right: rem(16);
