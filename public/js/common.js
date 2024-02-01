@@ -204,7 +204,8 @@ function eventHandler() {
     if (selfToggle.hasClass("active")) {
       activeButtons.trigger("click").removeClass("btn-isActive-virtual");
     } else if (hiddenButtons.length > 0) {
-      hiddenButtons.trigger("click").addClass("btn-isActive-virtual");
+      hiddenButtons.trigger("click");
+      showButtons.addClass("btn-isActive-virtual");
     } else {
       showButtons.trigger("click");
       selfToggle.addClass("active");
