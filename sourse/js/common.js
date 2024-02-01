@@ -175,40 +175,40 @@ function eventHandler() {
     });
   });
 
-  $(".btn-show-all-js").on("click", function () {
-    let selfToggle = $(this);
-
-    if (!selfToggle.hasClass("active")) {
-      $(".show-btn-js.hidden")
-        .trigger("click")
-        .addClass("btn-isActive-virtual");
-      selfToggle.addClass("active");
-    } else {
-      $(".show-btn-js.btn-isActive-virtual")
-        .trigger("click")
-        .removeClass("btn-isActive-virtual");
-    }
-
-    selfToggle.toggleClass("active");
-  });
-
-  // $(".btn-show-all-js").click(function () {
+  // $(".btn-show-all-js").on("click", function () {
   //   let selfToggle = $(this);
-  //   let showButtons = $(".show-btn-js");
-  //   let hiddenButtons = showButtons.filter(".hidden");
-  //   let activeButtons = showButtons.filter(".btn-isActive-virtual");
 
-  //   if (selfToggle.hasClass("active")) {
-  //     activeButtons.trigger("click").removeClass("btn-isActive-virtual");
-  //   } else if (hiddenButtons.length > 0) {
-  //     hiddenButtons.trigger("click").addClass("btn-isActive-virtual");
-  //   } else {
-  //     showButtons.trigger("click");
+  //   if (!selfToggle.hasClass("active")) {
+  //     $(".show-btn-js.hidden")
+  //       .trigger("click")
+  //       .addClass("btn-isActive-virtual");
   //     selfToggle.addClass("active");
+  //   } else {
+  //     $(".show-btn-js.btn-isActive-virtual")
+  //       .trigger("click")
+  //       .removeClass("btn-isActive-virtual");
   //   }
 
   //   selfToggle.toggleClass("active");
   // });
+
+  $(".btn-show-all-js").click(function () {
+    let selfToggle = $(this);
+    let showButtons = $(".show-btn-js");
+    let hiddenButtons = showButtons.filter(".hidden");
+    let activeButtons = showButtons.filter(".btn-isActive-virtual");
+
+    if (selfToggle.hasClass("active")) {
+      activeButtons.trigger("click").removeClass("btn-isActive-virtual");
+    } else if (hiddenButtons.length > 0) {
+      hiddenButtons.trigger("click").addClass("btn-isActive-virtual");
+    } else {
+      showButtons.trigger("click");
+      selfToggle.addClass("active");
+    }
+
+    selfToggle.toggleClass("active");
+  });
 
   //Показывает и скрывает комментарии
 
