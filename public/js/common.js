@@ -172,6 +172,9 @@ function eventHandler() {
       hidden.classList.toggle("visually-hidden");
       btn.classList.toggle("hidden");
       // JSCCommon.cropText();
+      if (btn.classList.contains("btn-isActive-virtual")) {
+        btn.classList.remove("btn-isActive-virtual");
+      }
     });
   });
 
