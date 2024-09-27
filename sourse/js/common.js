@@ -164,11 +164,26 @@ function eventHandler() {
   //  });
 
   //
-  let showBtns = document.querySelectorAll(".show-btn-js");
-  showBtns.forEach((btn) => {
-    btn.addEventListener("click", function (event) {
-      let hidden = btn.closest(".hidden-wrap-js").querySelector(".hidden-js");
+  // let showBtns = document.querySelectorAll(".show-btn-js");
+  // showBtns.forEach((btn) => {
+  //   btn.addEventListener("click", function (event) {
+  //     let hidden = btn.closest(".hidden-wrap-js").querySelector(".hidden-js");
 
+  //     hidden.classList.toggle("visually-hidden");
+  //     btn.classList.toggle("hidden");
+  //     // JSCCommon.cropText();
+  //     if (btn.classList.contains("btn-isActive-virtual")) {
+  //       btn.classList.remove("btn-isActive-virtual");
+  //     }
+  //   });
+  // });
+  let headers = document.querySelectorAll(".sFormInner__item-header");
+  headers.forEach((header) => {
+    header.addEventListener("click", function (event) {
+      let hiddenWrap = header.closest(".hidden-wrap-js");
+      let hidden = hiddenWrap.querySelector(".hidden-js");
+      let btn = hiddenWrap.querySelector(".show-btn-js");
+  
       hidden.classList.toggle("visually-hidden");
       btn.classList.toggle("hidden");
       // JSCCommon.cropText();
@@ -177,7 +192,6 @@ function eventHandler() {
       }
     });
   });
-
   // $(".btn-show-all-js").on("click", function () {
   //   let selfToggle = $(this);
 

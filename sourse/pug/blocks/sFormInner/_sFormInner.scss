@@ -91,6 +91,16 @@
 			flex-wrap: wrap;
 		}
 	}
+  .hidden-wrap-js.item-lg {
+    .sFormInner__item-header {
+      cursor: pointer;
+      --pad-js: 16px;
+      padding-top: var(--pad-js);
+      padding-bottom: var(--pad-js);
+      margin-top: calc(var(--pad-js) * -1);
+      margin-bottom: calc(var(--pad-js) * -1);
+    }
+  }
 
   .item-lg &__item-header {
     margin-bottom: 3px;
