@@ -18,6 +18,30 @@ mixin sFormSection(data)
 			+fromSectionItem('', '','','Деятельность и научно- техническое творчество')
 	// end sFormSection
 
+mixin sFormSection2(data)
+	// start sFormSection
+	+b.SECTION.sFormSection.section#sFormSection&attributes(attributes)
+		+e.list.UL.list_large
+			+fromSectionItem('active', '','','Название раздела')
+			+fromSectionItem('', '','','Название раздела')
+			+fromSectionItem('', '','','Название раздела в несколько строк для наглядности')
+		+e.link.link-downl(href="#")
+			+icon("comment") 
+			| Скачать шаблон для ответов
+	// end sFormSection
+
+mixin sFormSection3(data)
+	// start sFormSection
+	+b.SECTION.sFormSection.section#sFormSection&attributes(attributes)
+		+e.list.UL.list_large
+			+fromSectionItem('', '','','Название раздела')
+			+fromSectionItem('active', '','','Название раздела')
+			+fromSectionItem('', '','','Название раздела в несколько строк для наглядности')
+		+e.link.link-downl(href="#")
+			+icon("comment") 
+			| Скачать шаблон для ответов
+	// end sFormSection
+
 mixin fromSectionItem11(active, title, id)
 	+e.item.LI
 		+e.link(href=`#${id}` class=active)

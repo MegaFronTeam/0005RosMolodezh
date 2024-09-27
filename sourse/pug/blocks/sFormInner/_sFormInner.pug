@@ -42,7 +42,7 @@ mixin sFormInner(data)
 					.section-title
 						h3 Вовлеченность молодежи в инновационную деятельность и научно-техническое творчество
 					+b.crop-text--js
-						p Численность молодежи, зедействованной в программных мероприятиях по всем направлениям Численность молодежи, зедействованной в программных мероприятиях Численность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям  в программных мероприятиях по всем направлениям по всем направлениям  в программных мероприятиях по всем направлениям по всем направлениям   в программных мероприятиях по всем направлениям по всем направлениям  в программных мероприятиях по всем направлениям по всем направлениям
+						p Численность молодежи, зедействованной в программных мероприятиях по всем направлениям Численность молодежи, зедействованной в программных мероприятиях Численность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям	в программных мероприятиях по всем направлениям по всем направлениям	в программных мероприятиях по всем направлениям по всем направлениям	 в программных мероприятиях по всем направлениям по всем направлениям	в программных мероприятиях по всем направлениям по всем направлениям
 					+form-wrap
 						.sFormInner__item.sFormInner__item--range
 							.sFormInner__item-header
@@ -131,7 +131,7 @@ mixin sFormInner11(data)
 				+e.row.row
 					.col-12.col-md-6
 						+e.input-wrap
-							select(data-placeholder="Округ проведения мероприятия"  data-tags="true").floating-select.form-select
+							select(data-placeholder="Округ проведения мероприятия"	data-tags="true").floating-select.form-select
 								option
 								option placeholder1 текст 1
 								option текст 1 placeholder2 текст 1
@@ -367,3 +367,130 @@ mixin sFormInner11(data)
 			+e.btn-row
 				button.btn.btn-primary Сохранить
 		// end sFormInner11
+
+mixin sFormInner2(data)
+	// start sFormInner11
+	+b.SECTION.sFormInner.section#sFormInner11&attributes(attributes)
+		.section-title.title
+			h2 Наименование организации
+		.sFormInner__item.item-lg
+			+pointItem('Название показателя', 1)
+		.sFormInner__item.item-lg
+			+pointItem('Еще показатель')
+		.sFormInner__item.item-lg
+			+pointItem('Снова показатель')
+		.sFormInner__item.item-lg
+			+pointItem('И опять показатель')
+		.sFormInner__item.item-lg.btn-wrap
+			+e.btn-row
+				button.btn.btn-primary.btn-mid Сохранить
+
+
+mixin sFormInner3(data)
+	// start sFormInner
+	+b.SECTION.sFormInner.section#sFormInner&attributes(attributes)
+		.section-title.title
+			h2 Название показателя
+		- for (var x = 0; x < 2; x++)
+			+e.item.hidden-wrap-js.item-lg
+				.sFormInner__item-header
+					+e.subtitle.subtitle_lg Название организации
+					+e.show-btn.show-btn-js.btn.BUTTON.hidden
+				+e.hidden.visually-hidden.hidden-js
+					+form-wrap
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
+							.col-auto: +in-c('radio','Да','radio1')
+							.col-auto: +in-c('radio','Нет','radio1')
+							.col-auto: +uploadFile
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование документа с длинным название в одну
+							.col-auto: +in-c('radio','Да','radio2')
+							.col-auto: +in-c('radio','Нет','radio2')
+							.col-auto: +uploadFile
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование поля
+							.col-auto: +in-c('radio','Да','radio3')
+							.col-auto: +in-c('radio','Нет','radio3')
+							.col-auto: +in-c('radio','Другое','radio3')
+						.form-floating.floating-gray
+							textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
+							label(for="floatingTextarea1") Текст вопроса
+						.form-floating.floating-gray
+							.field-min: +floatInput('','Баллов','number','')
+						+comments
+		+e.item.hidden-wrap-js.item-lg.sFormInner__item--alarm
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Название организации
+				+e.show-btn.show-btn-js.btn.BUTTON.hidden
+			+e.hidden.visually-hidden.hidden-js
+				+form-wrap
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
+						.col-auto: +in-c('radio','Да','radio1')
+						.col-auto: +in-c('radio','Нет','radio1')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну
+						.col-auto: +in-c('radio','Да','radio2')
+						.col-auto: +in-c('radio','Нет','radio2')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование поля
+						.col-auto: +in-c('radio','Да','radio3')
+						.col-auto: +in-c('radio','Нет','radio3')
+						.col-auto: +in-c('radio','Другое','radio3')
+					.form-floating.floating-gray
+						textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
+						label(for="floatingTextarea1") Текст вопроса
+					.form-floating.floating-gray
+						.field-min: +floatInput('','Баллов','number','')
+						+comments
+		+e.item.hidden-wrap-js.item-lg.sFormInner__item--success
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Название организации
+				+e.show-btn.show-btn-js.btn.BUTTON.hidden
+			+e.hidden.visually-hidden.hidden-js
+				+form-wrap
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
+						.col-auto: +in-c('radio','Да','radio1')
+						.col-auto: +in-c('radio','Нет','radio1')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну
+						.col-auto: +in-c('radio','Да','radio2')
+						.col-auto: +in-c('radio','Нет','radio2')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование поля
+						.col-auto: +in-c('radio','Да','radio3')
+						.col-auto: +in-c('radio','Нет','radio3')
+						.col-auto: +in-c('radio','Другое','radio3')
+					.form-floating.floating-gray
+						textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
+						label(for="floatingTextarea1") Текст вопроса
+					.form-floating.floating-gray
+						.field-min: +floatInput('','Баллов','number','')
+						+comments
+		.sFormInner__item.item-lg.btn-wrap
+			+e.btn-row
+				button.btn.btn-outline-primary.btn-mid Сохранить
+				button.btn.btn-primary.btn-mid Отправить на проверку
+
+mixin pointItem(text, val=5)
+	+b.point-item
+		+e.text= text
+		+e.points
+			+e.point Баллов
+			+input('', 'number')(disabled, value=`${val}`)
+
+mixin uploadFile
+	.file-container.file-container--js
+		.upload
+			label.file-label Загрузить файл
+			input.file-upload(type='file')
+		.file-info
+			span.file-icon: +icon('loadbar-doc')
+			span.file-name
+		.remove-file: +icon('close')

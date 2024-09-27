@@ -18,7 +18,7 @@
 	&__list {
 		list-style-type: none;
 	}
-	&__item{
+	&__item {
 		border-bottom: 1px solid #DDE2E5;
 		&:not(:last-child) {
 			margin-bottom: 4px;
@@ -38,6 +38,16 @@
 			}
 		}
 	}
+
+  .link-downl {
+    background: transparent;
+		border: 1px solid #DDE2E5;
+    font-size: 14px;
+    .icon {
+      margin-right: 8px;
+    }
+  }
+
 	&__section {
 		display: inline-block;
 		margin-right: 8px;
@@ -57,6 +67,16 @@
 		line-height: 140%;
 		@include mt;
 	}
+  .list_large {
+    margin-bottom: 0;
+    .sFormSection__title {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    li {
+      margin-bottom: rem(8);
+    }
+  } 
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

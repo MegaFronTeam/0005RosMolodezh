@@ -294,3 +294,38 @@ if (document.readyState !== "loading") {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+document.addEventListener('DOMContentLoaded', function() {
+  const fileUploads = document.querySelectorAll('.file-container--js')
+
+  if(fileUploads.length) {
+    fileUploads.forEach((element) => {
+      const fileInput = element.querySelector('.file-upload');
+      const fileNameElement = element.querySelector('.file-name');
+      const fileInfo = element.querySelector('.file-info');
+      const removeFileElement = element.querySelector('.remove-file');
+      const fileLabel = element.querySelector('.file-label');
+    
+      fileInfo.style.display = 'none';
+      removeFileElement.style.display = 'none';
+    
+      fileInput.addEventListener('change', () => {
+        const file = fileInput.files[0];
+        if (file) {
+          fileNameElement.textContent = file.name;
+          fileInfo.style.display = 'inline-block';
+          removeFileElement.style.display = 'inline-block';
+          fileLabel.style.display = 'none';
+        }
+      });
+  
+      removeFileElement.addEventListener('click', () => {
+        fileInput.value = '';
+        fileNameElement.textContent = '';
+        fileInfo.style.display = 'none';
+        removeFileElement.style.display = 'none';
+        fileLabel.style.display = 'inline-block';
+      });
+    })
+  }
+  
+});
