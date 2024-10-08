@@ -21,12 +21,12 @@ mixin arrow()
 mixin ie11()
 	//- modernizer and for ie11
 	 
-	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+	<!--[if lt IE 11]><p	 class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
 mixin addblock()
 	+b.addBlock
 		+e.btn--minus(type="button")
-		input(type="text" value="1"  inputmode='numeric')
+		input(type="text" value="1"	inputmode='numeric')
 		+e.btn--plus(type="button")
 
 
@@ -55,18 +55,29 @@ mixin parts(elem)
 mixin filter
 	+b.filter
 		+e.row.row
-			mixin filterItem(title,btn,...items)
-				.col-sm-6.col-md-3
-					+e.item
-						+e.title= title
-						+e.btn--js.btn.btn-outline-info.BUTTON= btn
-						+e.dropdown.dropdown.visually-hidden
-							each item in items
-								+in-c('checkbox',`${item}`).filter__checkbox
 			+filterItem('Регион','Все','Все1','Все2','Все3')
 			+filterItem('Месяц','Все','Все1','Все2','Все3')
 			+filterItem('Сотрудник','Выбрано 3','Все1','Все2','Все3')
 			+filterItem('Роль','Все','Все1','Все2','Все3')
+
+mixin filterItem(title,btn,...items)
+	.col-sm-6.col-md-3
+		+e.item
+			+e.title= title
+			+e.btn--js.btn.btn-outline-info.BUTTON= btn
+			+e.dropdown.dropdown.visually-hidden
+				each item in items
+					+in-c('checkbox',`${item}`).filter__checkbox
+
+
+mixin filterItem2(title,btn,...items)
+	.col-4
+		+e.item
+			+e.title= title
+			+e.btn--js.btn.btn-outline-info.BUTTON= btn
+			+e.dropdown.dropdown.visually-hidden
+				each item in items
+					+in-c('checkbox',`${item}`).filter__checkbox
 
 mixin displayRow
 	+b.display-wrap

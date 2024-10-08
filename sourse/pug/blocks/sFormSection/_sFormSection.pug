@@ -5,6 +5,8 @@ mixin fromSectionItem(active, badge, mod, title)
 			if badge
 				div(class=`badge badge--${mod}`)= badge
 			+e.title= title
+	if block
+		block
 
 mixin sFormSection(data)
 	// start sFormSection
@@ -40,6 +42,20 @@ mixin sFormSection3(data)
 		+e.link.link-downl(href="#")
 			+icon("comment") 
 			| Скачать шаблон для ответов
+	// end sFormSection
+
+mixin sFormSection4(data)
+	// start sFormSection
+	+b.SECTION.sFormSection.section#sFormSection&attributes(attributes)
+		+e.list.UL.list_large
+			+fromSectionItem('', '','','Название раздела')
+				+e.add-list.UL
+					li.sFormSection__additionail-item.active: a(href='#').sFormSection__link.sFormSection__link--sm Название показателя
+					li.sFormSection__additionail-item: a(href='#').sFormSection__link.sFormSection__link--sm Еще показатель
+					li.sFormSection__additionail-item: a(href='#').sFormSection__link.sFormSection__link--sm Снова показатель
+					li.sFormSection__additionail-item: a(href='#').sFormSection__link.sFormSection__link--sm И опять показатель
+			+fromSectionItem('', '','','Название раздела')
+			+fromSectionItem('', '','','Название раздела в несколько строк для наглядности')
 	// end sFormSection
 
 mixin fromSectionItem11(active, title, id)

@@ -31,6 +31,34 @@
       
     }
   }
+
+  .filter {
+    margin-bottom: rem(20);
+    label {
+      margin-right: rem(6);
+      font-size: rem(14);
+      font-weight: 500;
+    }
+    select {
+      color: $primary;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      font-size: rem(14);
+      font-weight: 500;
+      padding: rem(4) 0;
+      padding-right: rem(20);
+      cursor: pointer;
+      background-size: 0.85em auto;
+      appearance: none; /* для большинства браузеров */
+      -webkit-appearance: none; /* для Safari */
+      -moz-appearance: none; /* для Firefox */
+      background-repeat: no-repeat;
+      background-position: right 4px center;
+      background-size: 15px;
+        background-image:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.66699 5.33337L7.29322 9.9596C7.68374 10.3501 8.31691 10.3501 8.70743 9.9596L13.3337 5.33337' stroke='%238C64D8' stroke-width='2' stroke-linecap='round' /%3E%3C/svg%3E");
+    }
+  }
   // .form-control::placeholder {
   //   font-size: rem(14) !important;
   // } //,.select2-search__field
@@ -170,6 +198,11 @@
 				padding-top: 10px;
 			}
 		}
+
+    &--md {
+      padding: rem(16) rem(16) rem(15);
+    }
+
 		.form-wrap__input-wrap:last-child {
 			margin-bottom: 0;
 		}

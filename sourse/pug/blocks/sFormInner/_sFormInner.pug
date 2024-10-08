@@ -386,6 +386,30 @@ mixin sFormInner2(data)
 				button.btn.btn-primary.btn-mid Сохранить
 
 
+mixin sFormInner4(data)
+	// start sFormInner11
+	+b.SECTION.sFormInner.section#sFormInner&attributes(attributes)
+		+search()
+		+b.filter
+			label Сортировать:
+			select
+				option По алфавиту
+				option По алфавиту1
+				option По алфавиту2
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации', true)
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации', true)
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
+
+
 mixin sFormInner3(data)
 	// start sFormInner
 	+b.SECTION.sFormInner.section#sFormInner&attributes(attributes)
@@ -478,12 +502,21 @@ mixin sFormInner3(data)
 				button.btn.btn-outline-primary.btn-mid Сохранить
 				button.btn.btn-primary.btn-mid Отправить на проверку
 
-mixin pointItem(text, val=5)
+mixin pointItem(text, val=5, active)
 	+b.point-item
 		+e.text= text
-		+e.points
-			+e.point Баллов
-			+input('', 'number')(disabled, value=`${val}`)
+		if !active
+			+e.points
+				+e.point Баллов
+				+input('', 'number')(disabled, value=`${val}`)
+		if active
+			+img(src="img/svg/checkbox.svg", alt="")
+
+mixin pointItemIcon(text, active)
+	+b.point-item
+		+e.text= text
+		if active
+			+img(src="img/svg/checkbox.svg", alt="")
 
 mixin uploadFile
 	.file-container.file-container--js

@@ -37,7 +37,35 @@
 				color: $primary;
 			}
 		}
+    &--sm {
+      padding: rem(7) rem(16) rem(6);
+      border-radius: 0;
+      color: $body-color;
+      font-weight: 500;
+      &:hover {
+        color: $primary;
+      }
+      border-bottom: 1px solid #DDE2E5;
+      font-size: rem(14);
+
+    }
 	}
+  &__additionail-item {
+    margin-bottom: 0 !important;
+    &.active {
+      border: 2px solid $primary;
+    }
+  }
+  ul {
+    list-style-type: none;
+  }
+
+  &__add-list {
+    margin-top: rem(-10);
+    li:last-child a {
+      border-radius: 0 0 8px 8px;
+    }
+  }
 
   .link-downl {
     background: transparent;
