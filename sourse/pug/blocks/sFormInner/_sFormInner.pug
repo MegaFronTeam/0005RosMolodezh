@@ -385,6 +385,35 @@ mixin sFormInner2(data)
 			+e.btn-row
 				button.btn.btn-primary.btn-mid Сохранить
 
+mixin sFormInner5(data)
+	// start sFormInner11
+	+b.SECTION.sFormInner.section#sFormInner&attributes(attributes)
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации', 0.5)
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации')
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации')
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации')
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации', 3)
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации', 1)
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации', 2)
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации', 3)
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации', 2)
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации', 1)
+		.sFormInner__item.item-lg
+			+pointItemNotDis('Название организации', 1)
+		.sFormInner__item.item-lg.btn-wrap
+			+e.btn-row
+				button.btn.btn-outline-primary.btn-mid Сохранить
+				button.btn.btn-primary.btn-mid Опубликовать результат
 
 mixin sFormInner4(data)
 	// start sFormInner11
@@ -400,6 +429,18 @@ mixin sFormInner4(data)
 			+pointItemIcon('Название организации', true)
 		.sFormInner__item.sFormInner__item--md
 			+pointItemIcon('Название организации', true)
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
+		.sFormInner__item.sFormInner__item--md
+			+pointItemIcon('Название организации')
 		.sFormInner__item.sFormInner__item--md
 			+pointItemIcon('Название организации')
 		.sFormInner__item.sFormInner__item--md
@@ -502,15 +543,136 @@ mixin sFormInner3(data)
 				button.btn.btn-outline-primary.btn-mid Сохранить
 				button.btn.btn-primary.btn-mid Отправить на проверку
 
-mixin pointItem(text, val=5, active)
+mixin sFormInner31(data)
+	// start sFormInner
+	+b.SECTION.sFormInner.section#sFormInner&attributes(attributes)
+		.section-title.title
+			h2 Наименование организации
+		+e.hide-all
+			+icon('arrow-down')
+			| Свернуть все
+		- for (var x = 0; x < 2; x++)
+			+e.item.hidden-wrap-js.item-lg
+				.sFormInner__item-header
+					+e.subtitle.subtitle_lg Название организации
+					+e.show-btn.show-btn-js.btn.BUTTON.hidden
+				+e.hidden.visually-hidden.hidden-js
+					+form-wrap
+						.sFormInner__radio-wrap.row
+							.col-12: +in-c('checkbox','Вопрос на доработку','radio')
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
+							.col-auto: +in-c('radio','Да','radio1')
+							.col-auto: +in-c('radio','Нет','radio1')
+							.col-auto: +uploadFile
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование документа с длинным название в одну
+							.col-auto: +in-c('radio','Да','radio4')
+							.col-auto: +in-c('radio','Нет','radio4')
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование документа
+							.col-auto: +in-c('radio','Да','radio2')
+							.col-auto: +in-c('radio','Нет','radio2')
+							.col-auto: +uploadFile
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование поля
+							.col-auto: +in-c('radio','Да','radio3')
+							.col-auto: +in-c('radio','Нет','radio3')
+							.col-auto: +in-c('radio','Другое','radio3')
+						.form-floating.floating-gray
+							textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
+							label(for="floatingTextarea1") Текст вопроса
+						.form-floating.floating-gray
+							.field-min: +floatInput('','Баллов','number','')
+						+comments
+		+e.item.hidden-wrap-js.item-lg.sFormInner__item--alarm
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Название организации
+				+e.show-btn.show-btn-js.btn.BUTTON.hidden
+			+e.hidden.visually-hidden.hidden-js
+				+form-wrap
+					.sFormInner__radio-wrap.row
+						.col-12: +in-c('checkbox','Вопрос на доработку','radio')
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
+						.col-auto: +in-c('radio','Да','radio1')
+						.col-auto: +in-c('radio','Нет','radio1')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну
+						.col-auto: +in-c('radio','Да','radio4')
+						.col-auto: +in-c('radio','Нет','radio4')
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа
+						.col-auto: +in-c('radio','Да','radio2')
+						.col-auto: +in-c('radio','Нет','radio2')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование поля
+						.col-auto: +in-c('radio','Да','radio3')
+						.col-auto: +in-c('radio','Нет','radio3')
+						.col-auto: +in-c('radio','Другое','radio3')
+					.form-floating.floating-gray
+						textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
+						label(for="floatingTextarea1") Текст вопроса
+					.form-floating.floating-gray
+						.field-min: +floatInput('','Баллов','number','')
+						+comments
+		+e.item.hidden-wrap-js.item-lg.sFormInner__item--success
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Название организации
+				+e.show-btn.show-btn-js.btn.BUTTON.hidden
+			+e.hidden.visually-hidden.hidden-js
+				+form-wrap
+					.sFormInner__radio-wrap.row
+						.col-12: +in-c('checkbox','Вопрос на доработку','radio')
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
+						.col-auto: +in-c('radio','Да','radio1')
+						.col-auto: +in-c('radio','Нет','radio1')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну
+						.col-auto: +in-c('radio','Да','radio4')
+						.col-auto: +in-c('radio','Нет','radio4')
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа
+						.col-auto: +in-c('radio','Да','radio2')
+						.col-auto: +in-c('radio','Нет','radio2')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование поля
+						.col-auto: +in-c('radio','Да','radio3')
+						.col-auto: +in-c('radio','Нет','radio3')
+						.col-auto: +in-c('radio','Другое','radio3')
+					.form-floating.floating-gray
+						textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
+						label(for="floatingTextarea1") Текст вопроса
+					.form-floating.floating-gray
+						.field-min: +floatInput('','Баллов','number','')
+						+comments
+		.sFormInner__item.item-lg.btn-wrap
+			+e.btn-row
+				button.btn.btn-outline-primary.btn-mid Сохранить
+				button.btn.btn-primary.btn-mid Отправить на доработку
+				button.btn.btn-primary.btn-mid Подтвердить
+
+mixin pointItem(text, val=5)
 	+b.point-item
 		+e.text= text
 		if !active
 			+e.points
 				+e.point Баллов
 				+input('', 'number')(disabled, value=`${val}`)
-		if active
-			+img(src="img/svg/checkbox.svg", alt="")
+
+
+mixin pointItemNotDis(text, val=5)
+	+b.point-item
+		+e.text= text
+		if !active
+			+e.points
+				+e.point Баллов
+				+input('', 'number')(value=`${val}`)
 
 mixin pointItemIcon(text, active)
 	+b.point-item

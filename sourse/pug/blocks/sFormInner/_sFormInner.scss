@@ -12,6 +12,27 @@
 	&__section-descr {
 
 	}
+
+  &__hide-all {
+    color: $primary;
+		display: inline-block;
+		position: relative;
+    padding: 0 rem(6);
+    cursor: pointer;
+    font-size: rem(14);
+    transform: translateY(-6px);
+    margin-bottom: rem(24);
+		.icon {
+			stroke: $primary;
+			stroke-width: 2;
+			font-size: rem(16);
+			fill: none;
+      margin-right: 12px;
+		}
+    .icon {
+      transform: rotate(180deg) translateY(2px);
+    }
+  }
   &__item--range {
     .form-floating {
       margin-bottom: 0 !important;
@@ -358,10 +379,14 @@
 		margin-bottom: 40px;
 	}
   &__radio-wrap.row {
-		margin-bottom: 12px;
+		margin-bottom: 10px;
     --bs-gutter-x: #{rem(36)};
     p {
-      margin-bottom: rem(12);
+      margin-bottom: rem(10);
+      font-size: rem(14);
+    }
+    .custom-input span {
+      font-size: rem(16);
     }
   }
 	&__col{

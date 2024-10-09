@@ -192,6 +192,17 @@ function eventHandler() {
       }
     });
   });
+
+  const hideBtn = document.querySelector('.sFormInner__hide-all')
+  if (hideBtn) {
+    hideBtn.addEventListener('click', ()=> {
+      const allVisual = document.querySelectorAll('.sFormInner__hidden.hidden-js')
+      allVisual.forEach((el) => el.classList.add('visually-hidden'))
+
+      const allBtns = document.querySelectorAll('.show-btn-js')
+      allBtns.forEach((el) => el.classList.add('hidden'))
+    })
+  }
   // $(".btn-show-all-js").on("click", function () {
   //   let selfToggle = $(this);
 
