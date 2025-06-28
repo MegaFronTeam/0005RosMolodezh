@@ -1,0 +1,10 @@
+mixin sDashboard(data)
+	// start sDashboard
+	+b.SECTION.sDashboard.section#sDashboard&attributes(attributes)
+		.container
+			+b.section-title
+				h5 Динамика общей численности молодежи (14-35 лет)
+			+filter
+			canvas#myChart
+			+e.row.row
+	// end sDashboard

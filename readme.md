@@ -16,12 +16,14 @@
 1. <https://megafronteam.github.io/0005RosMolodezh/10-press-login.html>
 1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner.html>
 
-
-27.09.2024
+   27.09.2024
 
 1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp.html>
 1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp2.html>
+
 ---
+
 1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp3.html>
 1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp4.html>
 1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp5.html>
+1. <https://megafronteam.github.io/0005RosMolodezh/12-dashboard>

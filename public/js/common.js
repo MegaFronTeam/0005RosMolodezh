@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const $ = jQuery;
 
@@ -10,18 +10,18 @@ function eventHandler() {
   }
 
   window.addEventListener(
-    "scroll",
+    'scroll',
     () => {
       JSCCommon.setFixedNav();
     },
-    { passive: true }
+    { passive: true },
   );
   window.addEventListener(
-    "resize",
+    'resize',
     () => {
       whenResize();
     },
-    { passive: true }
+    { passive: true },
   );
 
   whenResize();
@@ -34,12 +34,12 @@ function eventHandler() {
     watchOverflow: true,
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     pagination: {
-      el: " .swiper-pagination",
-      type: "bullets",
+      el: ' .swiper-pagination',
+      type: 'bullets',
       clickable: true,
       // renderBullet: function (index, className) {
       // 	return '<span class="' + className + '">' + (index + 1) + '</span>';
@@ -47,17 +47,17 @@ function eventHandler() {
     },
   };
 
-  new Swiper(".breadcrumb-slider--js", {
-    slidesPerView: "auto",
+  new Swiper('.breadcrumb-slider--js', {
+    slidesPerView: 'auto',
     freeMode: true,
     watchOverflow: true,
   });
 
-  const swiper4 = new Swiper(".sBanners__slider--js", {
+  const swiper4 = new Swiper('.sBanners__slider--js', {
     // если не используешь методы swiper  - можно обращаться без нее к Swiper
     // slidesPerView: 5,
     ...defaultSl,
-    slidesPerView: "auto",
+    slidesPerView: 'auto',
     freeMode: true,
     loopFillGroupWithBlank: true,
     touchRatio: 0.2,
@@ -66,17 +66,16 @@ function eventHandler() {
   });
 
   function inputFile() {
-    if (document.querySelector(".upload-field__input-wrap ")) {
-      let uploadField = document.querySelectorAll(".upload-field__input-wrap");
+    if (document.querySelector('.upload-field__input-wrap ')) {
+      let uploadField = document.querySelectorAll('.upload-field__input-wrap');
       for (let i = 0; i < uploadField.length; i++) {
-        let inputFile = uploadField[i].querySelector(".input-upload");
+        let inputFile = uploadField[i].querySelector('.input-upload');
         if (inputFile) {
           inputFile.addEventListener(
-            "change",
+            'change',
             () =>
-              (uploadField[i].querySelector(
-                ".upload-field__file-name"
-              ).innerHTML = inputFile.files[0].name)
+              (uploadField[i].querySelector('.upload-field__file-name').innerHTML =
+                inputFile.files[0].name),
           );
         }
       }
@@ -84,23 +83,23 @@ function eventHandler() {
   }
   inputFile();
 
-  $(".form-wrap__input-wrap").each(function () {
+  $('.form-wrap__input-wrap').each(function () {
     let self = $(this);
     let floatLabel;
     // let placeholderName = $(this)[0].querySelector("select").getAttribute('data-placeholder');
     // let floatDiv = '<div class="float-select"><span class="name">' + placeholderName + '</span></div>';
-    const tags = self.find("select").data("tags");
-    let select = self.find("select").select2({
+    const tags = self.find('select').data('tags');
+    let select = self.find('select').select2({
       dropdownParent: self,
-      language: "ru",
+      language: 'ru',
     });
 
-    select.one("select2:open", function (e) {
+    select.one('select2:open', function (e) {
       // console.log(self.find("select")[0].dataset);
 
-      $("input.select2-search__field").prop(
-        "placeholder",
-        tags === true ? "Поиск или введите свой вариант ответа" : " Поиск"
+      $('input.select2-search__field').prop(
+        'placeholder',
+        tags === true ? 'Поиск или введите свой вариант ответа' : ' Поиск',
       );
     });
     // console.log(select2);
@@ -177,31 +176,31 @@ function eventHandler() {
   //     }
   //   });
   // });
-  let headers = document.querySelectorAll(".sFormInner__item-header");
+  let headers = document.querySelectorAll('.sFormInner__item-header');
   headers.forEach((header) => {
-    header.addEventListener("click", function (event) {
-      let hiddenWrap = header.closest(".hidden-wrap-js");
-      let hidden = hiddenWrap.querySelector(".hidden-js");
-      let btn = hiddenWrap.querySelector(".show-btn-js");
-  
-      hidden.classList.toggle("visually-hidden");
-      btn.classList.toggle("hidden");
+    header.addEventListener('click', function (event) {
+      let hiddenWrap = header.closest('.hidden-wrap-js');
+      let hidden = hiddenWrap.querySelector('.hidden-js');
+      let btn = hiddenWrap.querySelector('.show-btn-js');
+
+      hidden.classList.toggle('visually-hidden');
+      btn.classList.toggle('hidden');
       // JSCCommon.cropText();
-      if (btn.classList.contains("btn-isActive-virtual")) {
-        btn.classList.remove("btn-isActive-virtual");
+      if (btn.classList.contains('btn-isActive-virtual')) {
+        btn.classList.remove('btn-isActive-virtual');
       }
     });
   });
 
-  const hideBtn = document.querySelector('.sFormInner__hide-all')
+  const hideBtn = document.querySelector('.sFormInner__hide-all');
   if (hideBtn) {
-    hideBtn.addEventListener('click', ()=> {
-      const allVisual = document.querySelectorAll('.sFormInner__hidden.hidden-js')
-      allVisual.forEach((el) => el.classList.add('visually-hidden'))
+    hideBtn.addEventListener('click', () => {
+      const allVisual = document.querySelectorAll('.sFormInner__hidden.hidden-js');
+      allVisual.forEach((el) => el.classList.add('visually-hidden'));
 
-      const allBtns = document.querySelectorAll('.show-btn-js')
-      allBtns.forEach((el) => el.classList.add('hidden'))
-    })
+      const allBtns = document.querySelectorAll('.show-btn-js');
+      allBtns.forEach((el) => el.classList.add('hidden'));
+    });
   }
   // $(".btn-show-all-js").on("click", function () {
   //   let selfToggle = $(this);
@@ -220,85 +219,85 @@ function eventHandler() {
   //   selfToggle.toggleClass("active");
   // });
 
-  $(".btn-show-all-js").click(function () {
+  $('.btn-show-all-js').click(function () {
     let selfToggle = $(this);
-    let showButtons = $(".show-btn-js");
-    let hiddenButtons = showButtons.filter(".hidden");
-    let activeButtons = showButtons.filter(".btn-isActive-virtual");
+    let showButtons = $('.show-btn-js');
+    let hiddenButtons = showButtons.filter('.hidden');
+    let activeButtons = showButtons.filter('.btn-isActive-virtual');
 
-    if (selfToggle.hasClass("active")) {
-      activeButtons.trigger("click").removeClass("btn-isActive-virtual");
+    if (selfToggle.hasClass('active')) {
+      activeButtons.trigger('click').removeClass('btn-isActive-virtual');
     } else if (hiddenButtons.length > 0) {
-      hiddenButtons.trigger("click");
-      showButtons.addClass("btn-isActive-virtual");
+      hiddenButtons.trigger('click');
+      showButtons.addClass('btn-isActive-virtual');
     } else {
-      showButtons.trigger("click");
-      selfToggle.addClass("active");
+      showButtons.trigger('click');
+      selfToggle.addClass('active');
     }
 
-    selfToggle.toggleClass("active");
+    selfToggle.toggleClass('active');
   });
 
   //Показывает и скрывает комментарии
 
-  let showCommentBtns = document.querySelectorAll(".comment-btn-js");
-  let hideCommentBtns = document.querySelectorAll(".hide-comment-js");
+  let showCommentBtns = document.querySelectorAll('.comment-btn-js');
+  let hideCommentBtns = document.querySelectorAll('.hide-comment-js');
   showCommentBtns.forEach((btn) => {
-    btn.addEventListener("click", function (event) {
+    btn.addEventListener('click', function (event) {
       event.preventDefault();
       let comment = btn.nextElementSibling;
-      comment.classList.remove("visually-hidden");
-      btn.classList.add("visually-hidden");
+      comment.classList.remove('visually-hidden');
+      btn.classList.add('visually-hidden');
     });
   });
   hideCommentBtns.forEach((btn) => {
-    btn.addEventListener("click", function (event) {
+    btn.addEventListener('click', function (event) {
       event.preventDefault();
-      let comment = btn.closest(".comment-body-js");
-      comment.classList.add("visually-hidden");
+      let comment = btn.closest('.comment-body-js');
+      comment.classList.add('visually-hidden');
       let showBtn = comment.previousElementSibling;
-      showBtn.classList.remove("visually-hidden");
+      showBtn.classList.remove('visually-hidden');
     });
   });
   // /Показывает и скрывает комментарии
 
   function dropDown(btn, dropdown) {
-    let buttons = document.querySelectorAll("." + btn);
-    let dropdowns = document.querySelectorAll("." + dropdown);
+    let buttons = document.querySelectorAll('.' + btn);
+    let dropdowns = document.querySelectorAll('.' + dropdown);
     let openedDropdown;
     buttons.forEach((btn) => {
-      btn.addEventListener("click", function (event) {
+      btn.addEventListener('click', function (event) {
         let dropDown = btn.nextElementSibling;
-        if (dropDown.classList.contains("visually-hidden")) {
-          document.querySelectorAll(".dropdown").forEach((dd) => {
+        if (dropDown.classList.contains('visually-hidden')) {
+          document.querySelectorAll('.dropdown').forEach((dd) => {
             if (dd !== event.target) {
-              dd.classList.add("visually-hidden");
+              dd.classList.add('visually-hidden');
             }
           });
-          dropDown.classList.remove("visually-hidden");
+          dropDown.classList.remove('visually-hidden');
           event._isOpen = true;
-        } else if (!dropDown.classList.contains("visually-hidden")) {
-          dropDown.classList.add("visually-hidden");
+        } else if (!dropDown.classList.contains('visually-hidden')) {
+          dropDown.classList.add('visually-hidden');
         }
       });
     });
-    document.addEventListener("click", function (event) {
+    document.addEventListener('click', function (event) {
       dropdowns.forEach((el) => {
-        if (!el.classList.contains("visually-hidden")) {
+        if (!el.classList.contains('visually-hidden')) {
           openedDropdown = el;
         }
       });
       if (event.composedPath().includes(openedDropdown)) return;
       if (!event._isOpen) {
         dropdowns.forEach((dd) => {
-          dd.classList.add("visually-hidden");
+          dd.classList.add('visually-hidden');
         });
       }
     });
   }
-  dropDown("sStaff__btn", "sStaff__dropdown");
-  dropDown("filter__btn--js", "filter__dropdown");
-  dropDown("sEventTable__more-btn", "sEventTable__dropdown");
+  dropDown('sStaff__btn', 'sStaff__dropdown');
+  dropDown('filter__btn--js', 'filter__dropdown');
+  dropDown('sEventTable__more-btn', 'sEventTable__dropdown');
 
   //  $('.crop-text--js ').readmore({
   // 	 moreLink: '<a href="#">Показать весь текст</a>',
@@ -306,10 +305,10 @@ function eventHandler() {
   // 	 collapsedHeight: 60,
   //  });
 }
-if (document.readyState !== "loading") {
+if (document.readyState !== 'loading') {
   eventHandler();
 } else {
-  document.addEventListener("DOMContentLoaded", eventHandler);
+  document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
 // window.onload = function () {
@@ -319,20 +318,20 @@ if (document.readyState !== "loading") {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
-document.addEventListener('DOMContentLoaded', function() {
-  const fileUploads = document.querySelectorAll('.file-container--js')
+document.addEventListener('DOMContentLoaded', function () {
+  const fileUploads = document.querySelectorAll('.file-container--js');
 
-  if(fileUploads.length) {
+  if (fileUploads.length) {
     fileUploads.forEach((element) => {
       const fileInput = element.querySelector('.file-upload');
       const fileNameElement = element.querySelector('.file-name');
       const fileInfo = element.querySelector('.file-info');
       const removeFileElement = element.querySelector('.remove-file');
       const fileLabel = element.querySelector('.file-label');
-    
+
       fileInfo.style.display = 'none';
       removeFileElement.style.display = 'none';
-    
+
       fileInput.addEventListener('change', () => {
         const file = fileInput.files[0];
         if (file) {
@@ -342,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
           fileLabel.style.display = 'none';
         }
       });
-  
+
       removeFileElement.addEventListener('click', () => {
         fileInput.value = '';
         fileNameElement.textContent = '';
@@ -350,7 +349,124 @@ document.addEventListener('DOMContentLoaded', function() {
         removeFileElement.style.display = 'none';
         fileLabel.style.display = 'inline-block';
       });
-    })
+    });
   }
-  
+
+  const labels = ['ДФО', 'ПФО', 'СЗФО', 'СКФО', 'СФО', 'УФО', 'ЦФО', 'ЮФО'];
+
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: '2022',
+        data: [3256889, 3256889, 3256889, 3256889, 3562998, 3256889, 3256889, 3256889],
+        backgroundColor: '#9c4dcc',
+      },
+      {
+        label: '2023',
+        data: [3256889, 3256889, 3256889, 3256889, 3256889, 3256889, 3256889, 3256889],
+        backgroundColor: '#a866d6',
+      },
+      {
+        label: '2024',
+        data: [3256889, 3256889, 3256889, 3256889, 3256889, 3256889, 3256889, 3256889],
+        backgroundColor: '#b87de0',
+      },
+    ],
+  };
+
+  // Плагин для подписей сверху и снизу
+  const topBottomLabelsPlugin = {
+    id: 'topBottomLabels',
+    afterDatasetsDraw(chart) {
+      const { ctx } = chart;
+      chart.data.datasets.forEach((dataset, datasetIndex) => {
+        const meta = chart.getDatasetMeta(datasetIndex);
+        meta.data.forEach((bar, index) => {
+          const value = dataset.data[index].toLocaleString('ru-RU');
+          const label = dataset.label;
+
+          // Верхняя подпись (значение)
+          ctx.save();
+          ctx.translate(bar.x + 3, bar.y);
+          ctx.rotate(-Math.PI / 2);
+          ctx.fillStyle = '#000';
+          ctx.font = '300 12px sans-serif';
+          // ctx.textAlign = 'дуае';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(value, 5, 0);
+          ctx.restore();
+
+          // Нижняя подпись (год)
+          ctx.save();
+          ctx.translate(bar.x, bar.y + bar.height + 10);
+          ctx.rotate(-Math.PI / 2);
+          ctx.fillStyle = '#444';
+          ctx.font = '10px sans-serif';
+          ctx.textAlign = 'right';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(label, 0, 0);
+          ctx.restore();
+        });
+      });
+    },
+  };
+
+  const allValues = data.datasets.flatMap((ds) => ds.data);
+  const minValue = Math.min(...allValues);
+
+  // Вычислим отступ, например, 5% от минимального значения
+  const bottomOffset = minValue * 0.05;
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {
+      responsive: true,
+      animation: false,
+      layout: {
+        padding: {
+          // top: 50,
+          // bottom: 110,
+        },
+      },
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: function (context) {
+              const value = context.raw.toLocaleString('ru-RU');
+              return `${context.dataset.label}: ${value} чел`;
+            },
+          },
+        },
+        legend: false,
+      },
+      scales: {
+        x: {
+          stacked: false,
+          // categoryPercentage: 0.8, // 1 = все пространство, меньше — уже группы
+          // barPercentage: 1.6,
+          ticks: {
+            padding: 30, // ← отступ между осью и подписью
+          },
+        },
+        y: {
+          display: false, // ← отключает ось
+          suggestedMin: 1000000, // опускает базу графика
+          min: 0,
+          stacked: false,
+          grace: '50%',
+          // suggestedMin: minValue - bottomOffset + 1000000,
+          ticks: {
+            callback: function (value) {
+              return value.toLocaleString('ru-RU');
+            },
+          },
+        },
+      },
+    },
+    plugins: [topBottomLabelsPlugin],
+  };
+
+  new Chart(document.getElementById('myChart').getContext('2d'), config);
 });

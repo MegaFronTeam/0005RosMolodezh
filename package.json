@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.15",
-    "bootstrap": "^5.3.2",
+    "bootstrap": "5.3.2",
     "browser-sync": "^2.29.3",
     "browserslist": "^4.21.10",
     "colors": "^1.4.0",
@@ -40,7 +40,7 @@
     "postcss-scss": "^4.0.7",
     "postcss-sort-media-queries": "^5.2.0",
     "postcss-syntax": "^0.36.2",
-    "sass": "^1.66.1"
+    "sass": "1.66.1"
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.22",
