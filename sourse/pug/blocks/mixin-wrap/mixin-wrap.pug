@@ -59,6 +59,13 @@ mixin filter
 			+filterItem('Месяц','Все','Все1','Все2','Все3')
 			+filterItem('Сотрудник','Выбрано 3','Все1','Все2','Все3')
 			+filterItem('Роль','Все','Все1','Все2','Все3')
+mixin filterDashboard
+	+b.filter
+		+e.row.row
+			+filterItem('Возраст:','Все','Все1','Все2','Все3')
+			+filterItem('Округ:','Все','Все1','Все2','Все3')
+			+filterItem('Регион:','Выбрано 3','Все1','Все2','Все3')
+			+filterItem('Год:','Все','Все1','Все2','Все3')
 
 mixin filterItem(title,btn,...items)
 	.col-sm-6.col-md-3

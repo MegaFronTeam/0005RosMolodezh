@@ -1,21 +1,34 @@
 // start .sDashboard
 .sDashboard {
-  // --sPT: #{rem()};
+  --sPT: #{rem(0)};
   // --sPB: #{rem()};
   // --sTPB: #{rem()};
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: rem(8);
+  &__bg {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: rem(8);
+    margin-bottom: 2rem;
+  }
 
+  &__chart-wrap {
+    overflow-x: auto;
+    canvas {
+      width: 800px !important;
+      height: 400px !important;
+    }
+  }
   &__row {
     // --bs-gutter-x: #{rem()};
-    // --bs-gutter-y: #{rem()};
+    --bs-gutter-y: var(--bs-gutter-x);
   }
   .section-title {
   }
   &__col {
   }
   &__item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: rem(8);
   }
 
   @include media-breakpoint-up(xl) {

@@ -1,10 +1,20 @@
 mixin sDashboard(data)
 	// start sDashboard
 	+b.SECTION.sDashboard.section#sDashboard&attributes(attributes)
-		.container
-			+b.section-title
-				h5 Динамика общей численности молодежи (14-35 лет)
-			+filter
-			canvas#myChart
-			+e.row.row
+		+e.bg
+			h5 Динамика общей численности молодежи (14-35 лет)
+			+filterDashboard
+			+e.chart-wrap
+				canvas#myChart
+		h5.mb-4 По Российской Федерации
+		+e.row.row
+			mixin item(t)
+				+e.col.col-xl-3.col-md-4.col-sm-6
+					+e.item
+						+e.item-title.fw-300= t
+						+e.item-count.h5.mb-0 37 565 568 чел. 
+			+item("2021")
+			+item("2022")
+			+item("2023")
+			+item("2024")
 	// end sDashboard
