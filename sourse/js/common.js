@@ -304,6 +304,62 @@ function eventHandler() {
   // 	 lessLink: '<a href="#">Скрыть</a>',
   // 	 collapsedHeight: 60,
   //  });
+
+  document.querySelectorAll('.file-container-group').forEach((group) => {
+    group.addEventListener('change', function (e) {
+      if (e.target.matches('.file-upload')) {
+        const container = e.target.closest('.file-container');
+        const fileNameSpan = container.querySelector('.file-name');
+        const file = e.target.files[0];
+
+        if (file) {
+          // 1. Заполняем название файла
+          fileNameSpan.textContent = file.name;
+
+          // 2. Добавляем класс на контейнер
+          container.classList.add('file-container--filled');
+
+          // 3. Проверяем последний блок
+          const lastContainer = group.querySelector('.file-container:last-of-type');
+          const hasEmptyInput = lastContainer.querySelector('.file-upload').files.length === 0;
+
+          if (!hasEmptyInput) {
+            // Клонируем HTML, который уже есть
+            const clone = lastContainer.cloneNode(true);
+
+            // Очищаем значения
+            const cloneInput = clone.querySelector('.file-upload');
+            const cloneName = clone.querySelector('.file-name');
+            cloneInput.value = '';
+            cloneName.textContent = '';
+            clone.classList.remove('file-container--filled');
+
+            lastContainer.after(clone);
+          }
+        }
+      }
+    });
+
+    // Удаление файла по клику
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.remove-file')) {
+      const container = e.target.closest('.file-container');
+
+      // Очищаем текущее поле
+      const input = container.querySelector('.file-upload');
+      const fileNameSpan = container.querySelector('.file-name');
+      input.value = '';
+      fileNameSpan.textContent = '';
+      container.classList.remove('file-container--filled');
+
+      // Если это не единственный блок и он пустой — удаляем
+      const allContainers = document.querySelectorAll('.file-container');
+      if (allContainers.length > 1 && !input.files.length) {
+        container.remove();
+      }
+    }
+  });
 }
 if (document.readyState !== 'loading') {
   eventHandler();

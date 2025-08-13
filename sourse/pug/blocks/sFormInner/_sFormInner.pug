@@ -461,18 +461,20 @@ mixin sFormInner3(data)
 				.sFormInner__item-header
 					+e.subtitle.subtitle_lg Название организации
 					+e.show-btn.show-btn-js.btn.BUTTON.hidden
-				+e.hidden.visually-hidden.hidden-js
+				+e.hidden
+					//- .visually-hidden.hidden-js
 					+form-wrap
 						.sFormInner__radio-wrap.row
 							.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
 							.col-auto: +in-c('radio','Да','radio1')
 							.col-auto: +in-c('radio','Нет','radio1')
-							.col-auto: +uploadFile
+							.col-12
+								+uploadFile2
 						.sFormInner__radio-wrap.row
 							.col-12: p Наименование документа с длинным название в одну
 							.col-auto: +in-c('radio','Да','radio2')
 							.col-auto: +in-c('radio','Нет','radio2')
-							.col-auto: +uploadFile
+							.col-12: +uploadFile2
 						.sFormInner__radio-wrap.row
 							.col-12: p Наименование поля
 							.col-auto: +in-c('radio','Да','radio3')
@@ -494,12 +496,12 @@ mixin sFormInner3(data)
 						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
 						.col-auto: +in-c('radio','Да','radio1')
 						.col-auto: +in-c('radio','Нет','radio1')
-						.col-auto: +uploadFile
+						.col-12: +uploadFile2
 					.sFormInner__radio-wrap.row
 						.col-12: p Наименование документа с длинным название в одну
 						.col-auto: +in-c('radio','Да','radio2')
 						.col-auto: +in-c('radio','Нет','radio2')
-						.col-auto: +uploadFile
+						.col-12: +uploadFile2
 					.sFormInner__radio-wrap.row
 						.col-12: p Наименование поля
 						.col-auto: +in-c('radio','Да','radio3')
@@ -521,12 +523,12 @@ mixin sFormInner3(data)
 						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
 						.col-auto: +in-c('radio','Да','radio1')
 						.col-auto: +in-c('radio','Нет','radio1')
-						.col-auto: +uploadFile
+						.col-12: +uploadFile2
 					.sFormInner__radio-wrap.row
 						.col-12: p Наименование документа с длинным название в одну
 						.col-auto: +in-c('radio','Да','radio2')
 						.col-auto: +in-c('radio','Нет','radio2')
-						.col-auto: +uploadFile
+						.col-12: +uploadFile2
 					.sFormInner__radio-wrap.row
 						.col-12: p Наименование поля
 						.col-auto: +in-c('radio','Да','radio3')
@@ -564,7 +566,7 @@ mixin sFormInner31(data)
 							.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
 							.col-auto: +in-c('radio','Да','radio1')
 							.col-auto: +in-c('radio','Нет','radio1')
-							.col-auto: +uploadFile
+							.col-12: +uploadFile2
 						.sFormInner__radio-wrap.row
 							.col-12: p Наименование документа с длинным название в одну
 							.col-auto: +in-c('radio','Да','radio4')
@@ -573,7 +575,7 @@ mixin sFormInner31(data)
 							.col-12: p Наименование документа
 							.col-auto: +in-c('radio','Да','radio2')
 							.col-auto: +in-c('radio','Нет','radio2')
-							.col-auto: +uploadFile
+							.col-12: +uploadFile2
 						.sFormInner__radio-wrap.row
 							.col-12: p Наименование поля
 							.col-auto: +in-c('radio','Да','radio3')
@@ -597,7 +599,7 @@ mixin sFormInner31(data)
 						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
 						.col-auto: +in-c('radio','Да','radio1')
 						.col-auto: +in-c('radio','Нет','radio1')
-						.col-auto: +uploadFile
+						.col-12: +uploadFile2
 					.sFormInner__radio-wrap.row
 						.col-12: p Наименование документа с длинным название в одну
 						.col-auto: +in-c('radio','Да','radio4')
@@ -606,7 +608,7 @@ mixin sFormInner31(data)
 						.col-12: p Наименование документа
 						.col-auto: +in-c('radio','Да','radio2')
 						.col-auto: +in-c('radio','Нет','radio2')
-						.col-auto: +uploadFile
+						.col-12: +uploadFile2
 					.sFormInner__radio-wrap.row
 						.col-12: p Наименование поля
 						.col-auto: +in-c('radio','Да','radio3')
@@ -684,8 +686,19 @@ mixin uploadFile
 	.file-container.file-container--js
 		.upload
 			label.file-label Загрузить файл
-			input.file-upload(type='file')
+				input.file-upload(type='file')
 		.file-info
 			span.file-icon: +icon('loadbar-doc')
 			span.file-name
 		.remove-file: +icon('close')
+
+mixin uploadFile2
+	.file-container-group
+		.file-container.file-container--js
+			.upload
+				label.file-label Загрузить файл
+					input.file-upload(type='file')
+				span.file-icon: +icon('loadbar-doc')
+			.file-info
+				span.file-name
+				.remove-file: +icon('close')
