@@ -13,8 +13,8 @@
   &__chart-wrap {
     overflow-x: auto;
     canvas {
-      width: 800px !important;
-      height: 400px !important;
+      width: 1040px !important;
+      height: 550px !important;
     }
   }
   &__row {
@@ -26,7 +26,7 @@
   &__col {
   }
   &__item {
-    background-color: #fff;
+    background-color: #f8f9fa;
     padding: 1rem;
     border-radius: rem(8);
   }
