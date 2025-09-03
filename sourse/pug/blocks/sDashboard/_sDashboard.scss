@@ -12,6 +12,7 @@
 
   &__chart-wrap {
     overflow-x: auto;
+    margin-bottom: 1rem;
     canvas {
       width: 1040px !important;
       height: 550px !important;
@@ -46,3 +47,23 @@
   @include media-breakpoint-down(xl) {
   }
 } // end.sDashboard
+
+.table-wrap {
+  overflow-x: auto;
+}
+.table__chart {
+  min-width: 800px;
+  td,
+  th {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      text-align: right;
+    }
+  }
+  tfoot {
+    td {
+      background: #f8f9fa;
+    }
+  }
+}

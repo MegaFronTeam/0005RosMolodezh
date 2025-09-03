@@ -42,4 +42,47 @@ mixin sDashboard(data)
 				+item0-dash("18-24 лет")
 				+item0-dash("25-29 лет")
 				+item0-dash("30-35 лет")
+		
+		+e.bg
+			h5 Динамика городской и сельской молодежи по возрастным группам
+			+filterDashboard
+			+e.chart-wrap
+				canvas#myChart3
+			h5.mb-4 Динамика сельской молодежи в Российской Федерации по сравнению с предыдущим годом
+			.table-wrap
+				table.table.table__chart
+					thead
+					thead
+						tr
+							th Возраст
+							th 2021-2022
+							th 2022-2023
+							th 2023-2024
+					tbody
+						tr
+							td 14-17
+							td  25 568
+							td  30 000
+							td 456 488
+						tr
+							td 18-24
+							td  30 000
+							td  35 000
+							td  40 000
+						tr
+							td 25-29
+							td  35 000
+							td  40 000
+							td  45 000
+						tr
+							td 30-35
+							td  40 000
+							td.text-success  +45 000
+							td.text-danger  -50 000
+					tfoot
+						tr
+							td Всего
+							td  25 568 
+							td.text-success  +35 000
+							td.text-danger  -40 000
 	// end sDashboard
