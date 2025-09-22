@@ -24,6 +24,11 @@
 ---
 
 1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp3.html>
-1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp4.html>
-1. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp5.html>
-1. <https://megafronteam.github.io/0005RosMolodezh/12-dashboard>
+2. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp4.html>
+3. <https://megafronteam.github.io/0005RosMolodezh/11-form-inner-skp5.html>
+4. <https://megafronteam.github.io/0005RosMolodezh/12-dashboard>
+
+---
+
+1. <https://megafronteam.github.io/0005RosMolodezh/13-form-of-indicators>
+2. <https://megafronteam.github.io/0005RosMolodezh/13-form-of-indicators-inner>

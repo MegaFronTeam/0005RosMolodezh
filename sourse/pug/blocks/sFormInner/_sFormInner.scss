@@ -413,6 +413,11 @@
     padding: rem(13) rem(16);
   }
 
+  &--13 {
+    p {
+      font-size: 14px;
+    }
+  }
   @include media-breakpoint-up(xl) {
   }
   @include media-breakpoint-up(lg) {

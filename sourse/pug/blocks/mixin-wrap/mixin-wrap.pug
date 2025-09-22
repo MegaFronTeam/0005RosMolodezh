@@ -66,9 +66,15 @@ mixin filterDashboard
 			+filterItem('Округ:','Все','Все1','Все2','Все3')
 			+filterItem('Регион:','Выбрано 3','Все1','Все2','Все3')
 			+filterItem('Год:','Все','Все1','Все2','Все3')
+mixin filter13
+	+b.filter
+		+e.row.row
+			+filterItem('Региональный проект:','Все','Все1','Все2','Все3')
+			+filterItem('Показатели:','Все','Все1','Все2','Все3')
+			+filterItem('Плановое значение на конец года:','Выбрано 3','Все1','Все2','Все3')
 
 mixin filterItem(title,btn,...items)
-	.col-sm-6.col-md-3
+	.col-sm-6.col-md
 		+e.item
 			+e.title= title
 			+e.btn--js.btn.btn-outline-info.BUTTON= btn

@@ -24,6 +24,35 @@ mixin staffItem(id="ID 458",add,tel="8 800 658 94 45", email='victorovskiy.victo
 							+e.dropdown-link--remove(href="#") Уволить
 		+e.name= name
 		+e.position= position
+mixin staffItem13(id="ID 458",add,tel="8 800 658 94 45", email='victorovskiy.victor@mail.ru',name,position="Администратор ресепшн")
+	+e.item.TR(class=add)
+		td 1
+		td 23
+		td.strong Название регионального проекта в одну или несколько строк
+		td 1254
+		td 1254
+		td 29.04.23 04:43 
+		+e.item-top.TD
+			+e.badge--id= id
+			if add
+				+e.badge--new Новый
+			else
+				+e.badge--existing Действующий
+		td
+			+e.dropdown-wrap
+				+e.btn--js.btn.BUTTON
+					+icon('more')
+				+e.dropdown.dropdown.visually-hidden.UL
+					if add
+						+e.dropdown-item.LI
+							+e.dropdown-link--confirm(href="#") Подтвердить
+						+e.dropdown-item.LI
+							+e.dropdown-link(href="#") Отклонить
+						+e.dropdown-item.LI
+							+e.dropdown-link--remove(href="#") Удалить
+					else
+						+e.dropdown-item.LI
+							+e.dropdown-link--remove(href="#") Уволить
 
 mixin orgItem(id="ID 458",add,grant,tel="8 800 658 94 45", email='Ufsin_komi@mail.ru',name)
 	+e.item--org.LI(class=add)
@@ -138,5 +167,63 @@ mixin sStaff(header="Сотрудники",link)
 				+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Сикорская Валентина Игоревна')
 				+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
 				+staffItem("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
+		//- +displayRow
+	// end sStaff
+mixin iconF()
+	<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1.5 8L3.5 10L5.5 8" stroke="#A7ACBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M3.5 10L3.5 2" stroke="#A7ACBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M5.5 2L10.5 2" stroke="#A7ACBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M5.5 4L9 4" stroke="#A7ACBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M5.5 6H7.5" stroke="#A7ACBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>
+mixin sStaff13(header="Сотрудники",link,linkTitle="Добавить мероприятие")
+	// start sStaff
+	+b.SECTION.sStaff.section#sStaff&attributes(attributes)
+		//- .container
+		if link
+			+b.section-title.section-title--link
+				.row
+					.col.d-flex
+						+e.return-link(href='#')
+							+icon('arrow-left')
+						+e.header.H1= header
+					.col-md-auto
+						a.btn.btn-primary.w-100(href="#")= linkTitle
+		else
+			+b.section-title
+				h1= header
+		+filter13
+		+search
+
+		table
+			thead
+				tr
+					th: .th-inner
+						+iconF()
+						| #
+					th
+						| ID
+					th Региональный проект
+						
+					th: .th-inner
+						+iconF()
+						| Показатель
+					th: .th-inner
+						+iconF()
+						| Показатель на конец года
+					th: .th-inner
+						+iconF()
+						| Дата отправки
+					th: .th-inner
+						+iconF()
+						| Статус
+					th
+			tbody
+				+staffItem13("ID 458",'add','8 800 658 94 45','victorovskiy.victor@mail.ru','Моджайский Виктор Валентинович')
+				+staffItem13("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Семенов Игорь Николаевич')
+				+staffItem13("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Сикорская Валентина Игоревна')
+				+staffItem13("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
+				+staffItem13("ID 458",'','8 800 658 94 45','victorovskiy.victor@mail.ru','Викторовский Валентин Игоревич')
 		//- +displayRow
 	// end sStaff

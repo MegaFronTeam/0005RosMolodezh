@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Форма Показателей</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page main-page--bottom-btn">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="container">
+					<div class="row">
+						<div class="section-title section-title section-title--link section-title section-title--form-inner">
+							<a class="section-title__return-link" href="#">
+								<svg class="icon icon-arrow-left ">
+									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+								</svg>
+							</a>
+							<h1 class="section-title__header">Форма Показателей
+							</h1>
+						</div>
+						<div class="col-lg-3">
+							<section class="sFormSection section" id="sFormSection">
+								<a class="sFormSection__link link active" href="#">Показатели
+								</a>
+							</section>
+						</div>
+						<div class="col-lg-9">
+							<!-- start sFormInner-->
+							<section class="sFormInner sFormInner--13 section" id="sFormInner">
+								<div class="alert alert-warning" role="alert">
+									<div class="row">
+										<div class="col-auto"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3322_5104)">
+<path d="M8.00033 1.33317C4.31843 1.33317 1.33366 4.31794 1.33366 7.99984C1.33366 11.6817 4.31843 14.6665 8.00033 14.6665C11.6822 14.6665 14.667 11.6817 14.667 7.99984C14.667 4.31794 11.6822 1.33317 8.00033 1.33317Z" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 5.33333L8 8" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 10.6665L7.99333 10.6665" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_3322_5104">
+<rect width="16" height="16" fill="white" transform="translate(16 16) rotate(-180)"/>
+</clipPath>
+</defs>
+</svg>
+										</div>
+										<div class="col"> 
+											<h5>Комментарий модератора</h5>
+											<p>Вот вам яркий пример современных тенденций — новая модель организационной деятельности позволяет выполнить важные задания по разработке переосмысления внешнеэкономических политик. Являясь всего лишь частью общей картины, элементы политического процесса, которые представляют собой яркий пример континентально-европейского типа</p>
+										</div>
+									</div>
+								</div>
+								<div class="section-title title">
+									<h2>Описание формы если нужно</h2>
+								</div>
+								<p>Вот вам яркий пример современных тенденций — новая модель организационной деятельности позволяет выполнить важные задания по разработке переосмысления внешнеэкономических политик. Являясь всего лишь частью общей картины, элементы политического процесса, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут подвергнуты целой серии независимых исследований. Учитывая ключевые сценарии поведения, глубокий уровень погружения в значительной степени обусловливает важность позиций, занимаемых участниками в отношении поставленных задач</p>
+								<div class="sFormInner__hide-all">
+									<svg class="icon icon-arrow-down ">
+										<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+									</svg>Свернуть все
+								</div>
+								<div class="sFormInner__item hidden-wrap-js item-lg">
+									<div class="sFormInner__item-header">
+										<div class="sFormInner__subtitle subtitle_lg">Название организации
+										</div>
+										<button class="sFormInner__show-btn show-btn-js btn hidden">
+										</button>
+									</div>
+									<div class="sFormInner__hidden visually-hidden hidden-js">
+										<div class="form-wrap">
+											<form>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="checkbox"/><span class="custom-input__text form-check-label">Вопрос на доработку</span>
+														</label>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio1" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio1" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-12">
+														<div class="file-container-group">
+															<div class="file-container file-container--js">
+																<div class="upload">
+																	<label class="file-label">Загрузить файл
+																		<input class="file-upload" type="file"/>
+																	</label><span class="file-icon">
+																		<svg class="icon icon-loadbar-doc ">
+																			<use xlink:href="img/svg/sprite.svg#loadbar-doc"></use>
+																		</svg></span>
+																</div>
+																<div class="file-info"><span class="file-name"></span>
+																	<div class="remove-file">
+																		<svg class="icon icon-close ">
+																			<use xlink:href="img/svg/sprite.svg#close"></use>
+																		</svg>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа с длинным название в одну</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio4" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio4" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio2" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio2" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-12">
+														<div class="file-container-group">
+															<div class="file-container file-container--js">
+																<div class="upload">
+																	<label class="file-label">Загрузить файл
+																		<input class="file-upload" type="file"/>
+																	</label><span class="file-icon">
+																		<svg class="icon icon-loadbar-doc ">
+																			<use xlink:href="img/svg/sprite.svg#loadbar-doc"></use>
+																		</svg></span>
+																</div>
+																<div class="file-info"><span class="file-name"></span>
+																	<div class="remove-file">
+																		<svg class="icon icon-close ">
+																			<use xlink:href="img/svg/sprite.svg#close"></use>
+																		</svg>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование поля</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Другое</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-floating floating-gray">
+													<textarea class="form-control" placeholder="Текст вопроса" id="floatingTextarea1"></textarea>
+													<label for="floatingTextarea1">Текст вопроса</label>
+												</div>
+												<div class="form-floating floating-gray">
+													<div class="field-min">
+														<div class="form-floating form-wrap__input-wrap">
+															<input class="form-control" id="" placeholder="Баллов" type="number" name=""/>
+															<label for="">Баллов</label>
+														</div>
+													</div>
+												</div>
+												<button class="form-wrap__comment-btn comment-btn-js btn">
+													<svg class="icon icon-comment ">
+														<use xlink:href="img/svg/sprite.svg#comment"></use>
+													</svg>Оставить комментарий 2
+												</button>
+												<div class="form-wrap__comment-body comment-body-js visually-hidden">
+													<div class="sFormInner__comments">
+														<div class="sFormInner__comments-title">Комментарии 2</div>
+														<div class="sFormInner__comment-input">
+															<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Написать комментарий"></textarea>
+															</div>
+															<!-- +e.input-wrap-->
+															<button class="btn">
+																<svg class="icon icon-send ">
+																	<use xlink:href="img/svg/sprite.svg#send"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="sFormInner__comment sFormInner__comment--invert">
+															<div class="sFormInner__comment-owner">Викторовский Валентин Игоревич 18.06.2023 16:00</div>
+															<div class="sFormInner__comment-text">Численность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям</div>
+														</div>
+														<div class="sFormInner__comment">
+															<div class="sFormInner__comment-owner">Вы 18.06.2023 16:00</div>
+															<div class="sFormInner__comment-text">Численность молодежи, зедействованной в программных мероприятиях по всем направлениям Численность молодежи, зедействованной в программных мероприятиях</div>
+														</div>
+														<button class="form-wrap__comment-btn hide-comment-js btn">Скрыть комментарии
+														</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item hidden-wrap-js item-lg">
+									<div class="sFormInner__item-header">
+										<div class="sFormInner__subtitle subtitle_lg">Название организации
+										</div>
+										<button class="sFormInner__show-btn show-btn-js btn hidden">
+										</button>
+									</div>
+									<div class="sFormInner__hidden visually-hidden hidden-js">
+										<div class="form-wrap">
+											<form>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="checkbox"/><span class="custom-input__text form-check-label">Вопрос на доработку</span>
+														</label>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio1" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio1" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-12">
+														<div class="file-container-group">
+															<div class="file-container file-container--js">
+																<div class="upload">
+																	<label class="file-label">Загрузить файл
+																		<input class="file-upload" type="file"/>
+																	</label><span class="file-icon">
+																		<svg class="icon icon-loadbar-doc ">
+																			<use xlink:href="img/svg/sprite.svg#loadbar-doc"></use>
+																		</svg></span>
+																</div>
+																<div class="file-info"><span class="file-name"></span>
+																	<div class="remove-file">
+																		<svg class="icon icon-close ">
+																			<use xlink:href="img/svg/sprite.svg#close"></use>
+																		</svg>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа с длинным название в одну</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio4" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio4" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio2" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio2" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-12">
+														<div class="file-container-group">
+															<div class="file-container file-container--js">
+																<div class="upload">
+																	<label class="file-label">Загрузить файл
+																		<input class="file-upload" type="file"/>
+																	</label><span class="file-icon">
+																		<svg class="icon icon-loadbar-doc ">
+																			<use xlink:href="img/svg/sprite.svg#loadbar-doc"></use>
+																		</svg></span>
+																</div>
+																<div class="file-info"><span class="file-name"></span>
+																	<div class="remove-file">
+																		<svg class="icon icon-close ">
+																			<use xlink:href="img/svg/sprite.svg#close"></use>
+																		</svg>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование поля</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Другое</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-floating floating-gray">
+													<textarea class="form-control" placeholder="Текст вопроса" id="floatingTextarea1"></textarea>
+													<label for="floatingTextarea1">Текст вопроса</label>
+												</div>
+												<div class="form-floating floating-gray">
+													<div class="field-min">
+														<div class="form-floating form-wrap__input-wrap">
+															<input class="form-control" id="" placeholder="Баллов" type="number" name=""/>
+															<label for="">Баллов</label>
+														</div>
+													</div>
+												</div>
+												<button class="form-wrap__comment-btn comment-btn-js btn">
+													<svg class="icon icon-comment ">
+														<use xlink:href="img/svg/sprite.svg#comment"></use>
+													</svg>Оставить комментарий 2
+												</button>
+												<div class="form-wrap__comment-body comment-body-js visually-hidden">
+													<div class="sFormInner__comments">
+														<div class="sFormInner__comments-title">Комментарии 2</div>
+														<div class="sFormInner__comment-input">
+															<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Написать комментарий"></textarea>
+															</div>
+															<!-- +e.input-wrap-->
+															<button class="btn">
+																<svg class="icon icon-send ">
+																	<use xlink:href="img/svg/sprite.svg#send"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="sFormInner__comment sFormInner__comment--invert">
+															<div class="sFormInner__comment-owner">Викторовский Валентин Игоревич 18.06.2023 16:00</div>
+															<div class="sFormInner__comment-text">Численность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям</div>
+														</div>
+														<div class="sFormInner__comment">
+															<div class="sFormInner__comment-owner">Вы 18.06.2023 16:00</div>
+															<div class="sFormInner__comment-text">Численность молодежи, зедействованной в программных мероприятиях по всем направлениям Численность молодежи, зедействованной в программных мероприятиях</div>
+														</div>
+														<button class="form-wrap__comment-btn hide-comment-js btn">Скрыть комментарии
+														</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item hidden-wrap-js item-lg sFormInner__item sFormInner__item--alarm">
+									<div class="sFormInner__item-header">
+										<div class="sFormInner__subtitle subtitle_lg">Название организации
+										</div>
+										<button class="sFormInner__show-btn show-btn-js btn hidden">
+										</button>
+									</div>
+									<div class="sFormInner__hidden visually-hidden hidden-js">
+										<div class="form-wrap">
+											<form>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="checkbox"/><span class="custom-input__text form-check-label">Вопрос на доработку</span>
+														</label>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio1" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio1" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-12">
+														<div class="file-container-group">
+															<div class="file-container file-container--js">
+																<div class="upload">
+																	<label class="file-label">Загрузить файл
+																		<input class="file-upload" type="file"/>
+																	</label><span class="file-icon">
+																		<svg class="icon icon-loadbar-doc ">
+																			<use xlink:href="img/svg/sprite.svg#loadbar-doc"></use>
+																		</svg></span>
+																</div>
+																<div class="file-info"><span class="file-name"></span>
+																	<div class="remove-file">
+																		<svg class="icon icon-close ">
+																			<use xlink:href="img/svg/sprite.svg#close"></use>
+																		</svg>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа с длинным название в одну</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio4" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio4" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio2" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio2" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-12">
+														<div class="file-container-group">
+															<div class="file-container file-container--js">
+																<div class="upload">
+																	<label class="file-label">Загрузить файл
+																		<input class="file-upload" type="file"/>
+																	</label><span class="file-icon">
+																		<svg class="icon icon-loadbar-doc ">
+																			<use xlink:href="img/svg/sprite.svg#loadbar-doc"></use>
+																		</svg></span>
+																</div>
+																<div class="file-info"><span class="file-name"></span>
+																	<div class="remove-file">
+																		<svg class="icon icon-close ">
+																			<use xlink:href="img/svg/sprite.svg#close"></use>
+																		</svg>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование поля</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Другое</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-floating floating-gray">
+													<textarea class="form-control" placeholder="Текст вопроса" id="floatingTextarea1"></textarea>
+													<label for="floatingTextarea1">Текст вопроса</label>
+												</div>
+												<div class="form-floating floating-gray">
+													<div class="field-min">
+														<div class="form-floating form-wrap__input-wrap">
+															<input class="form-control" id="" placeholder="Баллов" type="number" name=""/>
+															<label for="">Баллов</label>
+														</div>
+													</div>
+													<button class="form-wrap__comment-btn comment-btn-js btn">
+														<svg class="icon icon-comment ">
+															<use xlink:href="img/svg/sprite.svg#comment"></use>
+														</svg>Оставить комментарий 2
+													</button>
+													<div class="form-wrap__comment-body comment-body-js visually-hidden">
+														<div class="sFormInner__comments">
+															<div class="sFormInner__comments-title">Комментарии 2</div>
+															<div class="sFormInner__comment-input">
+																<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Написать комментарий"></textarea>
+																</div>
+																<!-- +e.input-wrap-->
+																<button class="btn">
+																	<svg class="icon icon-send ">
+																		<use xlink:href="img/svg/sprite.svg#send"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="sFormInner__comment sFormInner__comment--invert">
+																<div class="sFormInner__comment-owner">Викторовский Валентин Игоревич 18.06.2023 16:00</div>
+																<div class="sFormInner__comment-text">Численность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям</div>
+															</div>
+															<div class="sFormInner__comment">
+																<div class="sFormInner__comment-owner">Вы 18.06.2023 16:00</div>
+																<div class="sFormInner__comment-text">Численность молодежи, зедействованной в программных мероприятиях по всем направлениям Численность молодежи, зедействованной в программных мероприятиях</div>
+															</div>
+															<button class="form-wrap__comment-btn hide-comment-js btn">Скрыть комментарии
+															</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item hidden-wrap-js item-lg sFormInner__item sFormInner__item--success">
+									<div class="sFormInner__item-header">
+										<div class="sFormInner__subtitle subtitle_lg">Название организации
+										</div>
+										<button class="sFormInner__show-btn show-btn-js btn hidden">
+										</button>
+									</div>
+									<div class="sFormInner__hidden visually-hidden hidden-js">
+										<div class="form-wrap">
+											<form>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="checkbox"/><span class="custom-input__text form-check-label">Вопрос на доработку</span>
+														</label>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio1" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio1" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="file-container file-container--js">
+															<div class="upload">
+																<label class="file-label">Загрузить файл
+																	<input class="file-upload" type="file"/>
+																</label>
+															</div>
+															<div class="file-info"><span class="file-icon">
+																	<svg class="icon icon-loadbar-doc ">
+																		<use xlink:href="img/svg/sprite.svg#loadbar-doc"></use>
+																	</svg></span><span class="file-name"></span></div>
+															<div class="remove-file">
+																<svg class="icon icon-close ">
+																	<use xlink:href="img/svg/sprite.svg#close"></use>
+																</svg>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа с длинным название в одну</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio4" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio4" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование документа</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio2" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio2" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="file-container file-container--js">
+															<div class="upload">
+																<label class="file-label">Загрузить файл
+																	<input class="file-upload" type="file"/>
+																</label>
+															</div>
+															<div class="file-info"><span class="file-icon">
+																	<svg class="icon icon-loadbar-doc ">
+																		<use xlink:href="img/svg/sprite.svg#loadbar-doc"></use>
+																	</svg></span><span class="file-name"></span></div>
+															<div class="remove-file">
+																<svg class="icon icon-close ">
+																	<use xlink:href="img/svg/sprite.svg#close"></use>
+																</svg>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="sFormInner__radio-wrap row">
+													<div class="col-12">
+														<p>Наименование поля</p>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Да</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+														</label>
+													</div>
+													<div class="col-auto">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio3" type="radio"/><span class="custom-input__text form-check-label">Другое</span>
+														</label>
+													</div>
+												</div>
+												<div class="form-floating floating-gray">
+													<textarea class="form-control" placeholder="Текст вопроса" id="floatingTextarea1"></textarea>
+													<label for="floatingTextarea1">Текст вопроса</label>
+												</div>
+												<div class="form-floating floating-gray">
+													<div class="field-min">
+														<div class="form-floating form-wrap__input-wrap">
+															<input class="form-control" id="" placeholder="Баллов" type="number" name=""/>
+															<label for="">Баллов</label>
+														</div>
+													</div>
+													<button class="form-wrap__comment-btn comment-btn-js btn">
+														<svg class="icon icon-comment ">
+															<use xlink:href="img/svg/sprite.svg#comment"></use>
+														</svg>Оставить комментарий 2
+													</button>
+													<div class="form-wrap__comment-body comment-body-js visually-hidden">
+														<div class="sFormInner__comments">
+															<div class="sFormInner__comments-title">Комментарии 2</div>
+															<div class="sFormInner__comment-input">
+																<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Написать комментарий"></textarea>
+																</div>
+																<!-- +e.input-wrap-->
+																<button class="btn">
+																	<svg class="icon icon-send ">
+																		<use xlink:href="img/svg/sprite.svg#send"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="sFormInner__comment sFormInner__comment--invert">
+																<div class="sFormInner__comment-owner">Викторовский Валентин Игоревич 18.06.2023 16:00</div>
+																<div class="sFormInner__comment-text">Численность молодежи, зедействованной в программных мероприятиях по всем направлениям по всем направлениям</div>
+															</div>
+															<div class="sFormInner__comment">
+																<div class="sFormInner__comment-owner">Вы 18.06.2023 16:00</div>
+																<div class="sFormInner__comment-text">Численность молодежи, зедействованной в программных мероприятиях по всем направлениям Численность молодежи, зедействованной в программных мероприятиях</div>
+															</div>
+															<button class="form-wrap__comment-btn hide-comment-js btn">Скрыть комментарии
+															</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="sFormInner__item item-lg btn-wrap">
+									<div class="sFormInner__btn-row">
+										<button class="btn btn-outline-primary btn-mid">Сохранить</button>
+										<button class="btn btn-primary btn-mid">Отправить на доработку</button>
+										<button class="btn btn-primary btn-mid">Подтвердить</button>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="libs/select2/js/i18n/ru.js"></script>
+		<script src="js/read-more.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

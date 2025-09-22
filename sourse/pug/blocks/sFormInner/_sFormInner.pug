@@ -659,6 +659,140 @@ mixin sFormInner31(data)
 				button.btn.btn-primary.btn-mid Отправить на доработку
 				button.btn.btn-primary.btn-mid Подтвердить
 
+mixin sFormInner13(data)
+	// start sFormInner
+	+b.SECTION.sFormInner--13.section#sFormInner&attributes(attributes)
+		div(class="alert alert-warning" role="alert")
+			.row
+				.col-auto
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_3322_5104)">
+						<path d="M8.00033 1.33317C4.31843 1.33317 1.33366 4.31794 1.33366 7.99984C1.33366 11.6817 4.31843 14.6665 8.00033 14.6665C11.6822 14.6665 14.667 11.6817 14.667 7.99984C14.667 4.31794 11.6822 1.33317 8.00033 1.33317Z" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M8 5.33333L8 8" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M8 10.6665L7.99333 10.6665" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</g>
+						<defs>
+						<clipPath id="clip0_3322_5104">
+						<rect width="16" height="16" fill="white" transform="translate(16 16) rotate(-180)"/>
+						</clipPath>
+						</defs>
+						</svg>
+
+				.col 
+					h5 Комментарий модератора
+					p Вот вам яркий пример современных тенденций — новая модель организационной деятельности позволяет выполнить важные задания по разработке переосмысления внешнеэкономических политик. Являясь всего лишь частью общей картины, элементы политического процесса, которые представляют собой яркий пример континентально-европейского типа
+		.section-title.title
+			h2 Описание формы если нужно
+		p Вот вам яркий пример современных тенденций — новая модель организационной деятельности позволяет выполнить важные задания по разработке переосмысления внешнеэкономических политик. Являясь всего лишь частью общей картины, элементы политического процесса, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут подвергнуты целой серии независимых исследований. Учитывая ключевые сценарии поведения, глубокий уровень погружения в значительной степени обусловливает важность позиций, занимаемых участниками в отношении поставленных задач
+		+e.hide-all
+			+icon('arrow-down')
+			| Свернуть все
+		- for (var x = 0; x < 2; x++)
+			+e.item.hidden-wrap-js.item-lg
+				.sFormInner__item-header
+					+e.subtitle.subtitle_lg Название организации
+					+e.show-btn.show-btn-js.btn.BUTTON.hidden
+				+e.hidden.visually-hidden.hidden-js
+					+form-wrap
+						.sFormInner__radio-wrap.row
+							.col-12: +in-c('checkbox','Вопрос на доработку','radio')
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
+							.col-auto: +in-c('radio','Да','radio1')
+							.col-auto: +in-c('radio','Нет','radio1')
+							.col-12: +uploadFile2
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование документа с длинным название в одну
+							.col-auto: +in-c('radio','Да','radio4')
+							.col-auto: +in-c('radio','Нет','radio4')
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование документа
+							.col-auto: +in-c('radio','Да','radio2')
+							.col-auto: +in-c('radio','Нет','radio2')
+							.col-12: +uploadFile2
+						.sFormInner__radio-wrap.row
+							.col-12: p Наименование поля
+							.col-auto: +in-c('radio','Да','radio3')
+							.col-auto: +in-c('radio','Нет','radio3')
+							.col-auto: +in-c('radio','Другое','radio3')
+						.form-floating.floating-gray
+							textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
+							label(for="floatingTextarea1") Текст вопроса
+						.form-floating.floating-gray
+							.field-min: +floatInput('','Баллов','number','')
+						+comments
+		+e.item.hidden-wrap-js.item-lg.sFormInner__item--alarm
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Название организации
+				+e.show-btn.show-btn-js.btn.BUTTON.hidden
+			+e.hidden.visually-hidden.hidden-js
+				+form-wrap
+					.sFormInner__radio-wrap.row
+						.col-12: +in-c('checkbox','Вопрос на доработку','radio')
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
+						.col-auto: +in-c('radio','Да','radio1')
+						.col-auto: +in-c('radio','Нет','radio1')
+						.col-12: +uploadFile2
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну
+						.col-auto: +in-c('radio','Да','radio4')
+						.col-auto: +in-c('radio','Нет','radio4')
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа
+						.col-auto: +in-c('radio','Да','radio2')
+						.col-auto: +in-c('radio','Нет','radio2')
+						.col-12: +uploadFile2
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование поля
+						.col-auto: +in-c('radio','Да','radio3')
+						.col-auto: +in-c('radio','Нет','radio3')
+						.col-auto: +in-c('radio','Другое','radio3')
+					.form-floating.floating-gray
+						textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
+						label(for="floatingTextarea1") Текст вопроса
+					.form-floating.floating-gray
+						.field-min: +floatInput('','Баллов','number','')
+						+comments
+		+e.item.hidden-wrap-js.item-lg.sFormInner__item--success
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Название организации
+				+e.show-btn.show-btn-js.btn.BUTTON.hidden
+			+e.hidden.visually-hidden.hidden-js
+				+form-wrap
+					.sFormInner__radio-wrap.row
+						.col-12: +in-c('checkbox','Вопрос на доработку','radio')
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
+						.col-auto: +in-c('radio','Да','radio1')
+						.col-auto: +in-c('radio','Нет','radio1')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа с длинным название в одну
+						.col-auto: +in-c('radio','Да','radio4')
+						.col-auto: +in-c('radio','Нет','radio4')
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование документа
+						.col-auto: +in-c('radio','Да','radio2')
+						.col-auto: +in-c('radio','Нет','radio2')
+						.col-auto: +uploadFile
+					.sFormInner__radio-wrap.row
+						.col-12: p Наименование поля
+						.col-auto: +in-c('radio','Да','radio3')
+						.col-auto: +in-c('radio','Нет','radio3')
+						.col-auto: +in-c('radio','Другое','radio3')
+					.form-floating.floating-gray
+						textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
+						label(for="floatingTextarea1") Текст вопроса
+					.form-floating.floating-gray
+						.field-min: +floatInput('','Баллов','number','')
+						+comments
+		.sFormInner__item.item-lg.btn-wrap
+			+e.btn-row
+				button.btn.btn-outline-primary.btn-mid Сохранить
+				button.btn.btn-primary.btn-mid Отправить на доработку
+				button.btn.btn-primary.btn-mid Подтвердить
+
 mixin pointItem(text, val=5)
 	+b.point-item
 		+e.text= text
