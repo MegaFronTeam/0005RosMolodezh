@@ -86,7 +86,7 @@
 .form-check-label {
 }
 
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -108,21 +108,17 @@ input::-webkit-inner-spin-button {
 // 	padding-left: rem(10);
 // }
 
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__rendered {
+.select2-container--default .select2-selection--single .select2-selection__rendered {
   padding: 0;
 }
 
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__arrow {
+.select2-container--default .select2-selection--single .select2-selection__arrow {
   width: 24px;
   height: 24px;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  background-image: url("../img/select-arrow.svg");
+  background-image: url('../img/select-arrow.svg');
   background-repeat: no-repeat;
   background-size: cover;
   b {
@@ -131,7 +127,7 @@ input::-webkit-inner-spin-button {
 }
 .select2-dropdown,
 .select2-container {
-  width: 100%;
+  width: 100% !important;
 }
 .select2-container--default .select2-selection--single {
   padding: $form-floating-padding-y $form-floating-padding-x;
@@ -139,9 +135,7 @@ input::-webkit-inner-spin-button {
   border-radius: 8px;
   border: 1px solid $gray-300;
 }
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__rendered {
+.select2-container--default .select2-selection--single .select2-selection__rendered {
   color: var(--bl-100, #252525);
   font-weight: 400;
 }
@@ -218,7 +212,7 @@ input::-webkit-inner-spin-button {
   margin-top: 0;
   width: 24px;
   height: 24px;
-  background-image: url("../img/select-arrow.svg");
+  background-image: url('../img/select-arrow.svg');
   background-repeat: no-repeat;
   background-size: cover;
   top: 50%;
@@ -339,7 +333,12 @@ input::-webkit-inner-spin-button {
   font-weight: 300;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+}
+.form-floating textarea.form-control {
+  text-overflow: clip;
+  overflow-y: auto;
+  min-height: 5em;
+  white-space: normal;
 }
 .form-select {
   padding: 0;
@@ -358,7 +357,7 @@ input::-webkit-inner-spin-button {
 .form-floating > .select2-search__field:not(:placeholder-shown) ~ label:after {
   background-color: transparent;
   border-radius: var(--bs-border-radius);
-  content: "";
+  content: '';
   height: 1.5em;
   inset: 0.5rem 0.5rem;
   position: absolute;

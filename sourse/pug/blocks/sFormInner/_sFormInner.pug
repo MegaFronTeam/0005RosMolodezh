@@ -1,7 +1,7 @@
-mixin comments
+mixin comments(t="Оставить комментарий 2")
 	+e.comment-btn.comment-btn-js.btn.BUTTON
 		+icon('comment')
-		| Оставить комментарий 2
+		= t
 	+e.comment-body.comment-body-js.visually-hidden
 		.sFormInner__comments
 			.sFormInner__comments-title Комментарии 2
@@ -684,115 +684,162 @@ mixin sFormInner13(data)
 		.section-title.title
 			h2 Описание формы если нужно
 		p Вот вам яркий пример современных тенденций — новая модель организационной деятельности позволяет выполнить важные задания по разработке переосмысления внешнеэкономических политик. Являясь всего лишь частью общей картины, элементы политического процесса, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут подвергнуты целой серии независимых исследований. Учитывая ключевые сценарии поведения, глубокий уровень погружения в значительной степени обусловливает важность позиций, занимаемых участниками в отношении поставленных задач
-		+e.hide-all
-			+icon('arrow-down')
-			| Свернуть все
-		- for (var x = 0; x < 2; x++)
-			+e.item.hidden-wrap-js.item-lg
-				.sFormInner__item-header
-					+e.subtitle.subtitle_lg Название организации
-					+e.show-btn.show-btn-js.btn.BUTTON.hidden
-				+e.hidden.visually-hidden.hidden-js
-					+form-wrap
-						.sFormInner__radio-wrap.row
-							.col-12: +in-c('checkbox','Вопрос на доработку','radio')
-						.sFormInner__radio-wrap.row
-							.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
-							.col-auto: +in-c('radio','Да','radio1')
-							.col-auto: +in-c('radio','Нет','radio1')
-							.col-12: +uploadFile2
-						.sFormInner__radio-wrap.row
-							.col-12: p Наименование документа с длинным название в одну
-							.col-auto: +in-c('radio','Да','radio4')
-							.col-auto: +in-c('radio','Нет','radio4')
-						.sFormInner__radio-wrap.row
-							.col-12: p Наименование документа
-							.col-auto: +in-c('radio','Да','radio2')
-							.col-auto: +in-c('radio','Нет','radio2')
-							.col-12: +uploadFile2
-						.sFormInner__radio-wrap.row
-							.col-12: p Наименование поля
-							.col-auto: +in-c('radio','Да','radio3')
-							.col-auto: +in-c('radio','Нет','radio3')
-							.col-auto: +in-c('radio','Другое','radio3')
-						.form-floating.floating-gray
-							textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
-							label(for="floatingTextarea1") Текст вопроса
-						.form-floating.floating-gray
-							.field-min: +floatInput('','Баллов','number','')
-						+comments
-		+e.item.hidden-wrap-js.item-lg.sFormInner__item--alarm
+		hr
+		+e.item.item-lg
 			.sFormInner__item-header
-				+e.subtitle.subtitle_lg Название организации
-				+e.show-btn.show-btn-js.btn.BUTTON.hidden
-			+e.hidden.visually-hidden.hidden-js
-				+form-wrap
-					.sFormInner__radio-wrap.row
-						.col-12: +in-c('checkbox','Вопрос на доработку','radio')
-					.sFormInner__radio-wrap.row
-						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
-						.col-auto: +in-c('radio','Да','radio1')
-						.col-auto: +in-c('radio','Нет','radio1')
-						.col-12: +uploadFile2
-					.sFormInner__radio-wrap.row
-						.col-12: p Наименование документа с длинным название в одну
-						.col-auto: +in-c('radio','Да','radio4')
-						.col-auto: +in-c('radio','Нет','radio4')
-					.sFormInner__radio-wrap.row
-						.col-12: p Наименование документа
-						.col-auto: +in-c('radio','Да','radio2')
-						.col-auto: +in-c('radio','Нет','radio2')
-						.col-12: +uploadFile2
-					.sFormInner__radio-wrap.row
-						.col-12: p Наименование поля
-						.col-auto: +in-c('radio','Да','radio3')
-						.col-auto: +in-c('radio','Нет','radio3')
-						.col-auto: +in-c('radio','Другое','radio3')
-					.form-floating.floating-gray
-						textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
-						label(for="floatingTextarea1") Текст вопроса
-					.form-floating.floating-gray
-						.field-min: +floatInput('','Баллов','number','')
-						+comments
-		+e.item.hidden-wrap-js.item-lg.sFormInner__item--success
+				+e.subtitle.subtitle_lg Дата заполнения и проект
+			+form-wrap
+				.sFormInner__radio-wrap.row.gy-4
+					.col-lg-6
+						+floatInput('date','Выберите дату','date')
+					.col-lg-6
+						+e.input-wrap
+							select(data-placeholder="Наименование регионального проекта"	data-tags="true").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					.col-lg-12
+						+e.input-wrap
+							select(data-placeholder="Наименование показателя регионального проекта" data-tags="true").floating-select.form-select
+								option
+								option placeholder1 текст 1
+								option текст 1 placeholder2 текст 1
+								option начало placeholder3
+					
+				+comments('Комментарии 1')
+
+
+				
+		+e.item.item-lg
 			.sFormInner__item-header
-				+e.subtitle.subtitle_lg Название организации
-				+e.show-btn.show-btn-js.btn.BUTTON.hidden
-			+e.hidden.visually-hidden.hidden-js
-				+form-wrap
-					.sFormInner__radio-wrap.row
-						.col-12: +in-c('checkbox','Вопрос на доработку','radio')
-					.sFormInner__radio-wrap.row
-						.col-12: p Наименование документа с длинным название в одну или несколько строк для наглядности отображения в две строки с большим количеством символов
-						.col-auto: +in-c('radio','Да','radio1')
-						.col-auto: +in-c('radio','Нет','radio1')
-						.col-auto: +uploadFile
-					.sFormInner__radio-wrap.row
-						.col-12: p Наименование документа с длинным название в одну
-						.col-auto: +in-c('radio','Да','radio4')
-						.col-auto: +in-c('radio','Нет','radio4')
-					.sFormInner__radio-wrap.row
-						.col-12: p Наименование документа
-						.col-auto: +in-c('radio','Да','radio2')
-						.col-auto: +in-c('radio','Нет','radio2')
-						.col-auto: +uploadFile
-					.sFormInner__radio-wrap.row
-						.col-12: p Наименование поля
-						.col-auto: +in-c('radio','Да','radio3')
-						.col-auto: +in-c('radio','Нет','radio3')
-						.col-auto: +in-c('radio','Другое','radio3')
-					.form-floating.floating-gray
-						textarea.form-control(placeholder="Текст вопроса" id="floatingTextarea1")
-						label(for="floatingTextarea1") Текст вопроса
-					.form-floating.floating-gray
-						.field-min: +floatInput('','Баллов','number','')
-						+comments
+				+e.subtitle.subtitle_lg Характеристика результата
+			p Текстовая подсказка для заполнения поля для наглядности отображения
+			+form-wrap
+				.form-floating
+					textarea.form-control(placeholder="Свободный ввод" id="floatingTextarea2")
+						| Численность молодежи, зедействованной в программных мероприятиях по всем направлениямЧисленность молодежи, зедействованной в программных мероприятиях
+					label(for="floatingTextarea2") Свободный ввод
+				+comments('Комментарии 1')
+
+		+e.item.item-lg
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Детализированная часть характеристики со значениями
+			p Текстовая подсказка для заполнения поля для наглядности отображения
+			+form-wrap
+				.form-floating
+					textarea.form-control(placeholder="Свободный ввод" id="floatingTextarea2")
+						| Численность молодежи, зедействованной в программных мероприятиях по всем направлениямЧисленность молодежи, зедействованной в программных мероприятиях
+					label(for="floatingTextarea2") Свободный ввод
+				+comments('Комментарии 1')
+
+		+e.item.item-lg
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Значение результата
+			+form-wrap
+				.row
+					.col-xl-4.col-lg-6
+						label.form-floating
+							input.form-control(placeholder="Свободный ввод" value='1234')
+							label() Плановое значение
+					.col-xl-4.col-lg-6
+						label.form-floating
+							input.form-control(placeholder="Фактическое значение" value='1234')
+							label() Плановое значение
+					.col-xl-4.col-lg-6
+						label.form-floating
+							input.form-control(placeholder="Достижение значения результата" disabled value='1234')
+							label() Достижение значения результата
+				+comments('Комментарии 1')
+
+		+e.item.item-lg
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Реквизиты соглашения о предоставлении субсидии
+			p Текстовая подсказка для заполнения поля для наглядности отображения
+			+form-wrap
+				.form-floating
+					textarea.form-control(placeholder="Свободный ввод" id="floatingTextarea2")
+						| Реквизиты
+					label(for="floatingTextarea2") Свободный ввод
+				+comments('Комментарии 1')
+
+
+		+e.item.item-lg
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Наименование организации получателя субсидии из средств федерального бюджета
+			p Текстовая подсказка для заполнения поля для наглядности отображения
+			+form-wrap
+				.form-floating
+					textarea.form-control(placeholder="Свободный ввод" id="floatingTextarea2")
+						| Численность молодежи, зедействованной в программных мероприятиях по всем направлениямЧисленность молодежи, зедействованной в программных мероприятиях
+					label(for="floatingTextarea2") Свободный ввод
+				+comments('Комментарии 1')
+
+		+e.item.item-lg
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Финансы
+			+form-wrap
+				.row
+					.col-12
+						label.form-floating
+							input.form-control(placeholder="Сумма субсидии в соответствии с соглашением (тыс. руб.). " value='1234')
+							label() Сумма субсидии в соответствии с соглашением (тыс. руб.).
+					.col-12
+						label.form-floating
+							input.form-control(placeholder="Кассовое исполнение по результату в отчетном периоде (тыс.руб.) " value='1234')
+							label() Кассовое исполнение по результату в отчетном периоде (тыс.руб.)
+					.col-12
+						label.form-floating
+							input.form-control(placeholder="Уровень кассового достижения в отчетном периоде (%) " value='1234')
+							label() Уровень кассового достижения в отчетном периоде (%)
+				+comments('Комментарии 1')
+
+
+		+e.item.item-lg
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Информация о проделанной работе по достижению значений и характеристики результата
+			p Текстовая подсказка для заполнения поля для наглядности отображения
+			+form-wrap
+				.form-floating
+					textarea.form-control(placeholder="Свободный ввод" id="floatingTextarea2" style="min-height: 175px;")
+						| Текст
+					label(for="floatingTextarea2") Свободный ввод
+				+comments('Комментарии 1')
+				
+
+		+e.item.item-lg
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Информация о рисках недостижения планового значения результата и планового объема кассового исполнения
+			p Текстовая подсказка для заполнения поля для наглядности отображения
+			+form-wrap
+				.form-floating
+					textarea.form-control(placeholder="Свободный ввод" id="floatingTextarea2" style="min-height: 175px;")
+						| Текст
+					label(for="floatingTextarea2") Свободный ввод
+				+comments('Комментарии 1')
+
 		.sFormInner__item.item-lg.btn-wrap
 			+e.btn-row
-				button.btn.btn-outline-primary.btn-mid Сохранить
-				button.btn.btn-primary.btn-mid Отправить на доработку
-				button.btn.btn-primary.btn-mid Подтвердить
+				button.btn.btn-outline-primary.btn-mid Скачать документ для подписи
+				button.btn.btn-primary.btn-mid Сохранить черновик
 
+		+e.item.item-lg
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Загрузите подписанный документ
+			p Дополнительное описание для формы
+			+form-wrap
+				.col-12
+					+uploadFile2
+			.sFormInner__item-header
+				+e.subtitle.subtitle_lg Загрузите дополнительные подтверждающие документы
+			p Вы можете загрузить несколько файлов
+			+form-wrap
+				.col-12
+					+uploadFile2
+
+		.sFormInner__item.item-lg.btn-wrap
+			+e.btn-row
+				button.btn.btn-primary.btn-mid Отправить на проверку
 mixin pointItem(text, val=5)
 	+b.point-item
 		+e.text= text
